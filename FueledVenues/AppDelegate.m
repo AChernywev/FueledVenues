@@ -19,7 +19,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [MenuViewController new];
+    self.window.rootViewController = [[MenuViewController alloc]initWithPresenter:[MenuViewPresenter new]];
     
     [self.window makeKeyAndVisible];
     return YES;

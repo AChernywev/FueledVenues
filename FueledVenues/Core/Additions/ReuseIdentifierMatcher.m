@@ -50,8 +50,6 @@
 
 - (NSString*)reuseIdentifierForItem:(id)item
 {
-    if ([item respondsToSelector:@selector(reuseIdentifier)])
-        return [item reuseIdentifier];
     for (ItemMatching* matching in self.itemMatchings) {
         if (matching.matchingBlock(item))
             return matching.reuseIdentifier;

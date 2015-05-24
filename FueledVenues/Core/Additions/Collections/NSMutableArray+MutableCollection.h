@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Alexandr Chernyshev. All rights reserved.
 //
 
-#import "IDMutableCollectionProtocol.h"
+#import "MutableCollectionProtocol.h"
 
-@interface NSMutableArray (MutableCollection) <IDMutableCollectionProtocol>
+@interface NSMutableArray (MutableCollection) <MutableCollectionProtocol>
 
 @end

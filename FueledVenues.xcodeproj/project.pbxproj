@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		CB114FA02124C90E2E1EC1DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC345F8B1DDD5F1CC155D26 /* libPods.a */; };
+		FA826F361B10D3500082B943 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F351B10D3500082B943 /* RatingView.m */; };
+		FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3C1B10F74E0082B943 /* UIColor+FVColors.m */; };
+		FA826F401B10F8420082B943 /* UIFont+FVFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3F1B10F8420082B943 /* UIFont+FVFonts.m */; };
+		FA826F481B10F9B90082B943 /* UIView+FVStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F471B10F9B90082B943 /* UIView+FVStyles.m */; };
+		FA826F4C1B10FAF40082B943 /* FVNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F4B1B10FAF40082B943 /* FVNavigationBar.m */; };
 		FAC950B71B10666A00A89F9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC950B61B10666A00A89F9C /* AppDelegate.m */; };
 		FAC950CE1B10666A00A89F9C /* FueledVenuesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC950CD1B10666A00A89F9C /* FueledVenuesTests.m */; };
 		FAC950DE1B1068B700A89F9C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC950DD1B1068B700A89F9C /* MenuViewController.m */; };
 		FAC950E11B10695700A89F9C /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC950E01B10695700A89F9C /* MenuItem.m */; };
 		FADA927F1B10701A0094BAA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADA927C1B10701A0094BAA2 /* Images.xcassets */; };
 		FADA92801B10701A0094BAA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADA927D1B10701A0094BAA2 /* LaunchScreen.xib */; };
-		FADA92811B10701A0094BAA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADA927E1B10701A0094BAA2 /* Main.storyboard */; };
+		FADA92811B10701A0094BAA2 /* Venues.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADA927E1B10701A0094BAA2 /* Venues.storyboard */; };
 		FADA92861B1070300094BAA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92841B1070300094BAA2 /* main.m */; };
 		FADA928E1B10727F0094BAA2 /* SectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA928D1B10727F0094BAA2 /* SectionItem.m */; };
 		FADA92911B1072880094BAA2 /* MutableSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92901B1072880094BAA2 /* MutableSectionItem.m */; };
@@ -33,6 +38,23 @@
 		FADA92CA1B107CDA0094BAA2 /* MutableSectionsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92C91B107CDA0094BAA2 /* MutableSectionsPresenter.m */; };
 		FADA92CD1B107FBD0094BAA2 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92CC1B107FBD0094BAA2 /* TableViewController.m */; };
 		FADA92D01B107FFF0094BAA2 /* ReuseIdentifierMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92CF1B107FFF0094BAA2 /* ReuseIdentifierMatcher.m */; };
+		FADA92D61B1085480094BAA2 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92D51B1085480094BAA2 /* BaseEntity.m */; };
+		FADA92D91B1085530094BAA2 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92D81B1085530094BAA2 /* Venue.m */; };
+		FADA92DD1B1089380094BAA2 /* VenuesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92DC1B1089380094BAA2 /* VenuesListViewController.m */; };
+		FADA92E01B1092070094BAA2 /* VenuesPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92DF1B1092070094BAA2 /* VenuesPresenter.m */; };
+		FADA92E41B10928E0094BAA2 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92E21B10928E0094BAA2 /* VenueCell.m */; };
+		FADA92E51B10928E0094BAA2 /* VenueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADA92E31B10928E0094BAA2 /* VenueCell.xib */; };
+		FADA92E81B10953C0094BAA2 /* BaseEntity+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92E71B10953C0094BAA2 /* BaseEntity+Parser.m */; };
+		FADA92EB1B10969E0094BAA2 /* Venue+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92EA1B10969E0094BAA2 /* Venue+Parser.m */; };
+		FADF411C1B11C1290083AE96 /* FoursquareAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF411B1B11C1290083AE96 /* FoursquareAPI.m */; };
+		FADF41211B11D07F0083AE96 /* UIStoryboard+Links.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41201B11D07F0083AE96 /* UIStoryboard+Links.m */; };
+		FADF412B1B11D42F0083AE96 /* MenuViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF412A1B11D42F0083AE96 /* MenuViewPresenter.m */; };
+		FADF412E1B11D77C0083AE96 /* PlaceholderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF412D1B11D77C0083AE96 /* PlaceholderTableView.m */; };
+		FADF41301B11E0BC0083AE96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FADF412F1B11E0BC0083AE96 /* Localizable.strings */; };
+		FADF41331B11E28A0083AE96 /* TitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41321B11E28A0083AE96 /* TitleLabel.m */; };
+		FADF41371B11E4500083AE96 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41361B11E4500083AE96 /* BaseTableViewCell.m */; };
+		FADF413A1B11E6C20083AE96 /* TextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41391B11E6C20083AE96 /* TextLabel.m */; };
+		FADF413E1B11F6010083AE96 /* RatingStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF413D1B11F6010083AE96 /* RatingStarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +71,16 @@
 		4DC345F8B1DDD5F1CC155D26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC432F46997FABFFF9157CA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DCFDEC1D33375EB9363000B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FA826F341B10D3500082B943 /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
+		FA826F351B10D3500082B943 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
+		FA826F3B1B10F74E0082B943 /* UIColor+FVColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FVColors.h"; sourceTree = "<group>"; };
+		FA826F3C1B10F74E0082B943 /* UIColor+FVColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FVColors.m"; sourceTree = "<group>"; };
+		FA826F3E1B10F8420082B943 /* UIFont+FVFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FVFonts.h"; sourceTree = "<group>"; };
+		FA826F3F1B10F8420082B943 /* UIFont+FVFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FVFonts.m"; sourceTree = "<group>"; };
+		FA826F461B10F9B90082B943 /* UIView+FVStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FVStyles.h"; sourceTree = "<group>"; };
+		FA826F471B10F9B90082B943 /* UIView+FVStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FVStyles.m"; sourceTree = "<group>"; };
+		FA826F4A1B10FAF40082B943 /* FVNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FVNavigationBar.h; sourceTree = "<group>"; };
+		FA826F4B1B10FAF40082B943 /* FVNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FVNavigationBar.m; sourceTree = "<group>"; };
 		FAC950AE1B10666A00A89F9C /* FueledVenues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FueledVenues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC950B51B10666A00A89F9C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAC950B61B10666A00A89F9C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,7 +95,7 @@
 		FAC950E31B106BD700A89F9C /* Macroses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macroses.h; sourceTree = "<group>"; };
 		FADA927C1B10701A0094BAA2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FADA927D1B10701A0094BAA2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		FADA927E1B10701A0094BAA2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FADA927E1B10701A0094BAA2 /* Venues.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Venues.storyboard; sourceTree = "<group>"; };
 		FADA92831B1070300094BAA2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FADA92841B1070300094BAA2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FADA92871B1070DA0094BAA2 /* CollectionPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionPresenterProtocol.h; sourceTree = "<group>"; };
@@ -109,6 +141,39 @@
 		FADA92CE1B107FFF0094BAA2 /* ReuseIdentifierMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReuseIdentifierMatcher.h; sourceTree = "<group>"; };
 		FADA92CF1B107FFF0094BAA2 /* ReuseIdentifierMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReuseIdentifierMatcher.m; sourceTree = "<group>"; };
 		FADA92D11B1081110094BAA2 /* ViewItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewItemProtocol.h; sourceTree = "<group>"; };
+		FADA92D41B1085480094BAA2 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
+		FADA92D51B1085480094BAA2 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
+		FADA92D71B1085530094BAA2 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		FADA92D81B1085530094BAA2 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		FADA92DB1B1089380094BAA2 /* VenuesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesListViewController.h; sourceTree = "<group>"; };
+		FADA92DC1B1089380094BAA2 /* VenuesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenuesListViewController.m; sourceTree = "<group>"; };
+		FADA92DE1B1092070094BAA2 /* VenuesPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesPresenter.h; sourceTree = "<group>"; };
+		FADA92DF1B1092070094BAA2 /* VenuesPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenuesPresenter.m; sourceTree = "<group>"; };
+		FADA92E11B10928E0094BAA2 /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
+		FADA92E21B10928E0094BAA2 /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
+		FADA92E31B10928E0094BAA2 /* VenueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueCell.xib; sourceTree = "<group>"; };
+		FADA92E61B10953C0094BAA2 /* BaseEntity+Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseEntity+Parser.h"; sourceTree = "<group>"; };
+		FADA92E71B10953C0094BAA2 /* BaseEntity+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseEntity+Parser.m"; sourceTree = "<group>"; };
+		FADA92E91B10969E0094BAA2 /* Venue+Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venue+Parser.h"; sourceTree = "<group>"; };
+		FADA92EA1B10969E0094BAA2 /* Venue+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Venue+Parser.m"; sourceTree = "<group>"; };
+		FADF411A1B11C1290083AE96 /* FoursquareAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareAPI.h; sourceTree = "<group>"; };
+		FADF411B1B11C1290083AE96 /* FoursquareAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareAPI.m; sourceTree = "<group>"; };
+		FADF411D1B11C9900083AE96 /* VenuesPresenterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesPresenterInput.h; sourceTree = "<group>"; };
+		FADF411F1B11D07F0083AE96 /* UIStoryboard+Links.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Links.h"; sourceTree = "<group>"; };
+		FADF41201B11D07F0083AE96 /* UIStoryboard+Links.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Links.m"; sourceTree = "<group>"; };
+		FADF41291B11D42F0083AE96 /* MenuViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewPresenter.h; sourceTree = "<group>"; };
+		FADF412A1B11D42F0083AE96 /* MenuViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewPresenter.m; sourceTree = "<group>"; };
+		FADF412C1B11D77C0083AE96 /* PlaceholderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTableView.h; sourceTree = "<group>"; };
+		FADF412D1B11D77C0083AE96 /* PlaceholderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTableView.m; sourceTree = "<group>"; };
+		FADF412F1B11E0BC0083AE96 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		FADF41311B11E28A0083AE96 /* TitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLabel.h; sourceTree = "<group>"; };
+		FADF41321B11E28A0083AE96 /* TitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleLabel.m; sourceTree = "<group>"; };
+		FADF41351B11E4500083AE96 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		FADF41361B11E4500083AE96 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		FADF41381B11E6C20083AE96 /* TextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextLabel.h; sourceTree = "<group>"; };
+		FADF41391B11E6C20083AE96 /* TextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLabel.m; sourceTree = "<group>"; };
+		FADF413C1B11F6010083AE96 /* RatingStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingStarView.h; sourceTree = "<group>"; };
+		FADF413D1B11F6010083AE96 /* RatingStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingStarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +212,84 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA826F331B10D3350082B943 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				FADF413B1B11F5EA0083AE96 /* RatingStarView */,
+				FADF41231B11D1A90083AE96 /* PlaceholderTableView */,
+				FA826F371B10E6B70082B943 /* RatingView */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		FA826F371B10E6B70082B943 /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				FA826F341B10D3500082B943 /* RatingView.h */,
+				FA826F351B10D3500082B943 /* RatingView.m */,
+			);
+			name = RatingView;
+			sourceTree = "<group>";
+		};
+		FA826F381B10F7250082B943 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				FA826F3A1B10F7330082B943 /* Fonts */,
+				FA826F391B10F72D0082B943 /* Colors */,
+				FA826F451B10F9A70082B943 /* Views */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		FA826F391B10F72D0082B943 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				FA826F3B1B10F74E0082B943 /* UIColor+FVColors.h */,
+				FA826F3C1B10F74E0082B943 /* UIColor+FVColors.m */,
+			);
+			name = Colors;
+			sourceTree = "<group>";
+		};
+		FA826F3A1B10F7330082B943 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA826F3E1B10F8420082B943 /* UIFont+FVFonts.h */,
+				FA826F3F1B10F8420082B943 /* UIFont+FVFonts.m */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		FA826F441B10F9300082B943 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				FADF41311B11E28A0083AE96 /* TitleLabel.h */,
+				FADF41321B11E28A0083AE96 /* TitleLabel.m */,
+				FADF41381B11E6C20083AE96 /* TextLabel.h */,
+				FADF41391B11E6C20083AE96 /* TextLabel.m */,
+			);
+			name = Labels;
+			sourceTree = "<group>";
+		};
+		FA826F451B10F9A70082B943 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA826F461B10F9B90082B943 /* UIView+FVStyles.h */,
+				FA826F471B10F9B90082B943 /* UIView+FVStyles.m */,
+				FA826F491B10FAD70082B943 /* NavigationBar */,
+				FA826F441B10F9300082B943 /* Labels */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FA826F491B10FAD70082B943 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				FA826F4A1B10FAF40082B943 /* FVNavigationBar.h */,
+				FA826F4B1B10FAF40082B943 /* FVNavigationBar.m */,
+			);
+			name = NavigationBar;
+			sourceTree = "<group>";
+		};
 		FAC950A51B10666A00A89F9C = {
 			isa = PBXGroup;
 			children = (
@@ -172,9 +315,14 @@
 			children = (
 				FAC950B51B10666A00A89F9C /* AppDelegate.h */,
 				FAC950B61B10666A00A89F9C /* AppDelegate.m */,
+				FADA92D31B1083790094BAA2 /* Model */,
+				FADF41181B11C1050083AE96 /* Services */,
+				FA826F331B10D3350082B943 /* Controls */,
 				FAC950D91B10676900A89F9C /* Modules */,
 				FAC950E41B106ED200A89F9C /* Core */,
+				FADF411E1B11D06D0083AE96 /* Categories */,
 				FAC950E21B106BC600A89F9C /* Common */,
+				FA826F381B10F7250082B943 /* Styles */,
 				FAC950E81B106F2100A89F9C /* Resources */,
 				FADA92821B1070300094BAA2 /* SupportingFiles */,
 			);
@@ -202,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC950DA1B10676900A89F9C /* Menu */,
+				FADA92DA1B1089240094BAA2 /* VenuesList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -212,6 +361,8 @@
 				FAC950DB1B10677B00A89F9C /* MenuViewProtocol.h */,
 				FAC950DC1B1068B700A89F9C /* MenuViewController.h */,
 				FAC950DD1B1068B700A89F9C /* MenuViewController.m */,
+				FADF41291B11D42F0083AE96 /* MenuViewPresenter.h */,
+				FADF412A1B11D42F0083AE96 /* MenuViewPresenter.m */,
 				FAC950DF1B10695700A89F9C /* MenuItem.h */,
 				FAC950E01B10695700A89F9C /* MenuItem.m */,
 			);
@@ -265,8 +416,8 @@
 		FAC950E71B106ED200A89F9C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FADA92CB1B107FBD0094BAA2 /* TableViewController.h */,
-				FADA92CC1B107FBD0094BAA2 /* TableViewController.m */,
+				FADF41341B11E4400083AE96 /* TableViewCell */,
+				FADF41241B11D1B30083AE96 /* TableViewController */,
 				FADA92D11B1081110094BAA2 /* ViewItemProtocol.h */,
 			);
 			path = View;
@@ -275,9 +426,10 @@
 		FAC950E81B106F2100A89F9C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FADF412F1B11E0BC0083AE96 /* Localizable.strings */,
 				FADA927C1B10701A0094BAA2 /* Images.xcassets */,
 				FADA927D1B10701A0094BAA2 /* LaunchScreen.xib */,
-				FADA927E1B10701A0094BAA2 /* Main.storyboard */,
+				FADA927E1B10701A0094BAA2 /* Venues.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -357,6 +509,106 @@
 				FADA92B91B107A170094BAA2 /* PresenterChangeSectionReload.m */,
 			);
 			path = SectionChanges;
+			sourceTree = "<group>";
+		};
+		FADA92D31B1083790094BAA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FADA92D41B1085480094BAA2 /* BaseEntity.h */,
+				FADA92D51B1085480094BAA2 /* BaseEntity.m */,
+				FADA92E61B10953C0094BAA2 /* BaseEntity+Parser.h */,
+				FADA92E71B10953C0094BAA2 /* BaseEntity+Parser.m */,
+				FADA92D71B1085530094BAA2 /* Venue.h */,
+				FADA92D81B1085530094BAA2 /* Venue.m */,
+				FADA92E91B10969E0094BAA2 /* Venue+Parser.h */,
+				FADA92EA1B10969E0094BAA2 /* Venue+Parser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FADA92DA1B1089240094BAA2 /* VenuesList */ = {
+			isa = PBXGroup;
+			children = (
+				FADA92DB1B1089380094BAA2 /* VenuesListViewController.h */,
+				FADA92DC1B1089380094BAA2 /* VenuesListViewController.m */,
+				FADF411D1B11C9900083AE96 /* VenuesPresenterInput.h */,
+				FADA92DE1B1092070094BAA2 /* VenuesPresenter.h */,
+				FADA92DF1B1092070094BAA2 /* VenuesPresenter.m */,
+				FADA92E11B10928E0094BAA2 /* VenueCell.h */,
+				FADA92E21B10928E0094BAA2 /* VenueCell.m */,
+				FADA92E31B10928E0094BAA2 /* VenueCell.xib */,
+			);
+			path = VenuesList;
+			sourceTree = "<group>";
+		};
+		FADF41181B11C1050083AE96 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FADF41191B11C10C0083AE96 /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FADF41191B11C10C0083AE96 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FADF411A1B11C1290083AE96 /* FoursquareAPI.h */,
+				FADF411B1B11C1290083AE96 /* FoursquareAPI.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		FADF411E1B11D06D0083AE96 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FADF41221B11D0980083AE96 /* UIStoryboard */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		FADF41221B11D0980083AE96 /* UIStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				FADF411F1B11D07F0083AE96 /* UIStoryboard+Links.h */,
+				FADF41201B11D07F0083AE96 /* UIStoryboard+Links.m */,
+			);
+			name = UIStoryboard;
+			sourceTree = "<group>";
+		};
+		FADF41231B11D1A90083AE96 /* PlaceholderTableView */ = {
+			isa = PBXGroup;
+			children = (
+				FADF412C1B11D77C0083AE96 /* PlaceholderTableView.h */,
+				FADF412D1B11D77C0083AE96 /* PlaceholderTableView.m */,
+			);
+			name = PlaceholderTableView;
+			sourceTree = "<group>";
+		};
+		FADF41241B11D1B30083AE96 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FADA92CB1B107FBD0094BAA2 /* TableViewController.h */,
+				FADA92CC1B107FBD0094BAA2 /* TableViewController.m */,
+			);
+			name = TableViewController;
+			sourceTree = "<group>";
+		};
+		FADF41341B11E4400083AE96 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FADF41351B11E4500083AE96 /* BaseTableViewCell.h */,
+				FADF41361B11E4500083AE96 /* BaseTableViewCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		FADF413B1B11F5EA0083AE96 /* RatingStarView */ = {
+			isa = PBXGroup;
+			children = (
+				FADF413C1B11F6010083AE96 /* RatingStarView.h */,
+				FADF413D1B11F6010083AE96 /* RatingStarView.m */,
+			);
+			name = RatingStarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,7 +692,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FADA92811B10701A0094BAA2 /* Main.storyboard in Resources */,
+				FADF41301B11E0BC0083AE96 /* Localizable.strings in Resources */,
+				FADA92811B10701A0094BAA2 /* Venues.storyboard in Resources */,
+				FADA92E51B10928E0094BAA2 /* VenueCell.xib in Resources */,
 				FADA92801B10701A0094BAA2 /* LaunchScreen.xib in Resources */,
 				FADA927F1B10701A0094BAA2 /* Images.xcassets in Resources */,
 			);
@@ -494,26 +748,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADA92A21B1078E50094BAA2 /* SectionsPresenter+Protected.m in Sources */,
+				FA826F481B10F9B90082B943 /* UIView+FVStyles.m in Sources */,
 				FADA92C31B107A170094BAA2 /* PresenterChangeSectionReload.m in Sources */,
+				FADF411C1B11C1290083AE96 /* FoursquareAPI.m in Sources */,
 				FADA929C1B1075AB0094BAA2 /* SectionItem+Protected.m in Sources */,
 				FADA92CD1B107FBD0094BAA2 /* TableViewController.m in Sources */,
 				FADA928E1B10727F0094BAA2 /* SectionItem.m in Sources */,
 				FADA92D01B107FFF0094BAA2 /* ReuseIdentifierMatcher.m in Sources */,
 				FADA929F1B1078080094BAA2 /* SectionsPresenter.m in Sources */,
+				FADF412E1B11D77C0083AE96 /* PlaceholderTableView.m in Sources */,
 				FADA92C01B107A170094BAA2 /* PresenterChangeSection.m in Sources */,
+				FADF413A1B11E6C20083AE96 /* TextLabel.m in Sources */,
+				FADF41211B11D07F0083AE96 /* UIStoryboard+Links.m in Sources */,
 				FADA92C11B107A170094BAA2 /* PresenterChangeSectionDelete.m in Sources */,
 				FADA92861B1070300094BAA2 /* main.m in Sources */,
 				FADA92C21B107A170094BAA2 /* PresenterChangeSectionInsert.m in Sources */,
+				FADF41331B11E28A0083AE96 /* TitleLabel.m in Sources */,
+				FA826F401B10F8420082B943 /* UIFont+FVFonts.m in Sources */,
+				FADA92E81B10953C0094BAA2 /* BaseEntity+Parser.m in Sources */,
 				FADA92CA1B107CDA0094BAA2 /* MutableSectionsPresenter.m in Sources */,
+				FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */,
 				FADA92BD1B107A170094BAA2 /* PresenterChangeItemDelete.m in Sources */,
+				FADF41371B11E4500083AE96 /* BaseTableViewCell.m in Sources */,
 				FADA92911B1072880094BAA2 /* MutableSectionItem.m in Sources */,
 				FAC950B71B10666A00A89F9C /* AppDelegate.m in Sources */,
+				FADA92EB1B10969E0094BAA2 /* Venue+Parser.m in Sources */,
+				FADA92E41B10928E0094BAA2 /* VenueCell.m in Sources */,
 				FADA92BC1B107A170094BAA2 /* PresenterChangeItem.m in Sources */,
 				FAC950DE1B1068B700A89F9C /* MenuViewController.m in Sources */,
+				FADA92D61B1085480094BAA2 /* BaseEntity.m in Sources */,
+				FADA92E01B1092070094BAA2 /* VenuesPresenter.m in Sources */,
 				FADA92BF1B107A170094BAA2 /* PresenterChangeItemReload.m in Sources */,
 				FADA92C71B107BE80094BAA2 /* PresenterChangeReload.m in Sources */,
+				FA826F4C1B10FAF40082B943 /* FVNavigationBar.m in Sources */,
 				FADA92BE1B107A170094BAA2 /* PresenterChangeItemInsert.m in Sources */,
 				FAC950E11B10695700A89F9C /* MenuItem.m in Sources */,
+				FADF413E1B11F6010083AE96 /* RatingStarView.m in Sources */,
+				FADA92DD1B1089380094BAA2 /* VenuesListViewController.m in Sources */,
+				FADA92D91B1085530094BAA2 /* Venue.m in Sources */,
+				FADF412B1B11D42F0083AE96 /* MenuViewPresenter.m in Sources */,
+				FA826F361B10D3500082B943 /* RatingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +846,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -609,7 +883,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

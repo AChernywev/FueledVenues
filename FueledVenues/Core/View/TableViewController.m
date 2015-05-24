@@ -46,20 +46,25 @@
 }
 
 #pragma mark - public methods
-- (UINib *)registerNibForClass:(Class)cellClass
+- (void)registerCellClass:(Class)cellClass
+                  fotItem:(Class)itemClass
+          reuseIdentifier:(NSString*)reuseIdentifier
 {
-    return [self registerNibForClass:cellClass forReuseIdentifier:NSStringFromClass(cellClass)];
+    if (reuseIdentifier.length > 0) {
+        [self.tableView registerClass:cellClass forCellReuseIdentifier:reuseIdentifier];
+        [self.reuseIdentifierMatcher registerReuseIdentifier:reuseIdentifier forItemClass:itemClass];
+    }
 }
 
-- (UINib *)registerNibForClass:(Class)cellClass
-           forReuseIdentifier:(NSString*)reuseIdentifier
+- (void)registerNibForCellClass:(Class)cellClass
+                           item:(Class)itemClass
+                reuseIdentifier:(NSString*)reuseIdentifier
 {
     UINib* nib = [UINib nibWithNibName:NSStringFromClass(cellClass) bundle:nil];
     if (nib && reuseIdentifier.length > 0) {
         [self.tableView registerNib:nib forCellReuseIdentifier:reuseIdentifier];
-        [self.reuseIdentifierMatcher registerReuseIdentifier:reuseIdentifier forItemClass:cellClass];
+        [self.reuseIdentifierMatcher registerReuseIdentifier:reuseIdentifier forItemClass:itemClass];
     }
-    return nib;
 }
 
 - (void)configureCell:(UITableViewCell<ViewItemProtocol>*)cell
@@ -217,5 +222,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
 }
 
+#pragma mark - UIViewController methods
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 @end

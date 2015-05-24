@@ -8,8 +8,7 @@
 
 #import "SectionsPresenter.h"
 
-#import "SectionItemProtocol.h"
-#import "MutableCollectionProtocol.h"
+#import "MutableSectionItem.h"
 
 @interface MutableSectionsPresenter : SectionsPresenter
 

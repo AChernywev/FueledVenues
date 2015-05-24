@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  FueledVenues
+
+  Created by Alexandr Chernyshev on 24/05/15.
+  Copyright (c) 2015 Alexandr Chernyshev. All rights reserved.
+*/
+
+//TabBar title
+"tabbar.venuestitle"                            = "Venues";
+"tabbar.favoritestitle"                         = "Favorites";
+"tabbar.blacklisttitle"                         = "Blacklisted";
+
+//Venue
+"venue.opentitle"                               = "Open";
+"venue.closetitle"                              = "Close";
+"venue.cheaptier"                               = "Cheap";
+"venue.economytier"                             = "Economy";
+"venue.expensivetier"                           = "Expensive";
+"venue.veryexpensivetier"                       = "Very expensive";

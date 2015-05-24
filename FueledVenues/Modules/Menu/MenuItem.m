@@ -8,6 +8,8 @@
 
 #import "MenuItem.h"
 
+#import "Macroses.h"
+
 @implementation MenuItem
 
 #pragma mark - initialization
@@ -18,21 +20,22 @@
         switch (type) {
             case MenuItemTypeVenues: {
                 _imageName = nil;
-                _title = @"Venues";
-                _storyboardIdentifier = @"Auth";
+                _title = LOC(@"tabbar.venuestitle");
+                _storyboardIdentifier = @"Venues";
+                _presenterClass = @"VenuesPresenter";
             }
                 break;
             case MenuItemTypeFavorites: {
                 _imageName = nil;
-                _title = @"Favorites";
-                _storyboardIdentifier = @"Profile";
+                _title = LOC(@"tabbar.favoritestitle");
+                _storyboardIdentifier = @"Venues";
                 
             }
                 break;
             case MenuItemTypeBlacklist: {
                 _imageName = nil;
-                _title = @"Blacklist";
-                _storyboardIdentifier = @"Auth";
+                _title = LOC(@"tabbar.blacklisttitle");
+                _storyboardIdentifier = @"Venues";
             }
                 break;
                 

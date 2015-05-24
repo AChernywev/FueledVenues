@@ -21,6 +21,13 @@
 
 - (instancetype)initWithPresenter:(id<CollectionPresenterProtocol>)presenter;
 
+- (void)registerCellClass:(Class)cellClass
+                  fotItem:(Class)itemClass
+          reuseIdentifier:(NSString*)reuseIdentifier;
+- (void)registerNibForCellClass:(Class)cellClass
+                           item:(Class)itemClass
+                reuseIdentifier:(NSString*)reuseIdentifier;
+
 //needs to call super
 - (void)configureHeaderFooter:(UITableViewHeaderFooterView <ViewItemProtocol>*)view
                       forItem:(id<HeaderFooterItemProtocol>)item;

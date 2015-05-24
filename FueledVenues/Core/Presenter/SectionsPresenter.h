@@ -7,7 +7,8 @@
 //
 
 #import "CollectionPresenterProtocol.h"
-#import "CollectionProtocol.h"
+
+#import "SectionItem.h"
 
 @interface SectionsPresenter : NSObject <CollectionPresenterProtocol>
 

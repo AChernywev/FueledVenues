@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Alexandr Chernyshev. All rights reserved.
 //
 
-#import "IDCollectionProtocol.h"
+#import "CollectionProtocol.h"
 
-@interface NSArray (Collection) <IDCollectionProtocol>
+@interface NSArray (Collection) <CollectionProtocol>
 
 @end

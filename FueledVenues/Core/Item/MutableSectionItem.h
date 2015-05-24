@@ -8,7 +8,7 @@
 
 
 #import "SectionItem.h"
-#import "MutableCollectionProtocol.h"
+#import "NSMutableArray+MutableCollection.h"
 
 @interface MutableSectionItem : SectionItem <MutableCollectionProtocol>
 

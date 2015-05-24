@@ -10,24 +10,44 @@
 
 #import "MenuItem.h"
 #import "Macroses.h"
+#import "VenuesListViewController.h"
+#import "FVNavigationBar.h"
+#import "VenuesPresenter.h"
+#import "UIStoryboard+Links.h"
 
 @implementation MenuViewController
 
-#pragma mark - lifecycle
-- (void)viewDidLoad
+- (instancetype)initWithPresenter:(MenuViewPresenter *)presenter
 {
-    [super viewDidLoad];
-    NSInteger count = 3;
-    NSMutableArray *viewControllers = [NSMutableArray array];
-    
+    self = [super init];
+    if(self) {
+        _presenter = presenter;
+        [self setupViewControllers];
+    }
+    return self;
+}
+
+#pragma mark - working methods
+- (void)setupViewControllers
+{
+    NSInteger count = [self.presenter numberOfItems];
+    NSMutableArray *viewControllers = [NSMutableArray arrayWithCapacity:count];
     for(NSUInteger i = 0; i < count; i++) {
-        MenuItem *item = [[MenuItem alloc]initWithType:i];
-        UIViewController *controller = NavigationController([UIViewController new]);
-        if(controller) {
-            controller.tabBarItem.title = item.title;
-            controller.tabBarItem.image = [UIImage imageNamed:item.imageName];
-            controller.tabBarItem.selectedImage = [UIImage imageNamed:item.imageName];
-            [viewControllers addObject:controller];
+        MenuItem *item = [self.presenter itemAtIndex:i];
+        UIViewController *viewController = [UIStoryboard sceneNamed:item.storyboardIdentifier];
+        if([viewController isKindOfClass:[UINavigationController class]]) {
+            UINavigationController *navControlller = (UINavigationController *)viewController;
+            UIViewController *root = [navControlller.viewControllers firstObject];
+            if([root respondsToSelector:@selector(setPresenter:)]) {
+                id presenter = [[NSClassFromString(item.presenterClass) alloc]init];
+                [root performSelector:@selector(setPresenter:) withObject:presenter];
+            }
+        }
+        if(viewController) {
+            viewController.tabBarItem.title = item.title;
+            //viewController.tabBarItem.image = [UIImage imageNamed:item.imageName];
+            //viewController.tabBarItem.selectedImage = [UIImage imageNamed:item.imageName];
+            [viewControllers addObject:viewController];
         }
     }
     self.viewControllers = viewControllers;

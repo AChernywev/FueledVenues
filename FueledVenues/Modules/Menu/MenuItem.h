@@ -19,6 +19,7 @@ typedef NS_ENUM(NSInteger, MenuItemType)
 @property (nonatomic, readonly) NSString *imageName;
 @property (nonatomic, readonly) NSString *title;
 @property (nonatomic, readonly) NSString *storyboardIdentifier;
+@property (nonatomic, readonly) NSString *presenterClass;
 
 - (instancetype)initWithType:(MenuItemType)type;
 @end

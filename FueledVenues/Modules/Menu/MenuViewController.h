@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 #import "MenuViewProtocol.h"
+#import "MenuViewPresenter.h"
 
 @interface MenuViewController : UITabBarController <MenuViewProtocol>
+@property (nonatomic, strong) MenuViewPresenter *presenter;
 
+- (instancetype)initWithPresenter:(MenuViewPresenter *)presenter;
 @end

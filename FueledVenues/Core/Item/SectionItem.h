@@ -8,6 +8,8 @@
 
 #import "SectionItemProtocol.h"
 
+#import "NSArray+Collection.h"
+
 @interface SectionItem : NSObject <SectionItemProtocol>
 
 - (instancetype)initWithRows:(id <CollectionProtocol>)rows;
