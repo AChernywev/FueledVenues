@@ -9,6 +9,7 @@
 #import "Venue+Parser.h"
 
 #import "Macroses.h"
+#import "NSArray+Map.h"
 
 @interface Venue ()
 @property (nonatomic, readwrite) NSString *name;
@@ -30,13 +31,20 @@
 + (NSArray *)venuesArrayFromResponse:(id)responseObject
 {
     NSArray *responseAray = JSON_TO_ARRAY(JSON_TO_DICTIONARY(JSON_TO_ARRAY(JSON_TO_DICTIONARY(JSON_TO_DICTIONARY(responseObject)[@"response"])[@"groups"])[0])[@"items"]);
+    responseAray = [responseAray map:^NSDictionary *(NSDictionary *dict) {
+        return JSON_TO_DICTIONARY(dict[@"venue"]);
+    }];
     //NSArray *responseAray = JSON_TO_ARRAY(JSON_TO_DICTIONARY(JSON_TO_DICTIONARY(responseObject)[@"response"])[@"venues"]);
     return [Venue objectsArrayWithResponse:responseAray];
 }
 
+- (void)updateWithResponse:(id)responseObject
+{
+    [self updateWithDictionary:JSON_TO_DICTIONARY(JSON_TO_DICTIONARY(JSON_TO_DICTIONARY(responseObject)[@"response"])[@"venue"])];
+}
+
 - (void)updateWithDictionary:(NSDictionary *)values
 {
-    values = JSON_TO_DICTIONARY(values[@"venue"]);
     self.name = JSON_TO_STRING(values[@"name"]);
     NSDictionary *locationDict = JSON_TO_DICTIONARY(values[@"location"]);
     self.address = JSON_TO_STRING(locationDict[@"address"]);
@@ -54,7 +62,7 @@
     NSDictionary *itemsDict = JSON_TO_DICTIONARY([JSON_TO_ARRAY(JSON_TO_DICTIONARY(values[@"featuredPhotos"])[@"items"]) firstObject]);
     NSString *prefix = JSON_TO_STRING(itemsDict[@"prefix"]);
     NSString *suffix = JSON_TO_STRING(itemsDict[@"suffix"]);
-    static NSString *const kThumbnailFormatSpec = @"640x326";
+    static NSString *const kThumbnailFormatSpec = @"640x300";
     NSString *photoUrlString = [NSString stringWithFormat:@"%@%@%@", prefix, kThumbnailFormatSpec, suffix];
     self.imageURL = [NSURL URLWithString:photoUrlString];
 }

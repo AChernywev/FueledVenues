@@ -55,6 +55,13 @@
 		FADF41371B11E4500083AE96 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41361B11E4500083AE96 /* BaseTableViewCell.m */; };
 		FADF413A1B11E6C20083AE96 /* TextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41391B11E6C20083AE96 /* TextLabel.m */; };
 		FADF413E1B11F6010083AE96 /* RatingStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF413D1B11F6010083AE96 /* RatingStarView.m */; };
+		FADF41461B11FF510083AE96 /* VenueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41451B11FF510083AE96 /* VenueDetailsViewController.m */; };
+		FADF41491B11FFB80083AE96 /* VenueDetailsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41481B11FFB80083AE96 /* VenueDetailsPresenter.m */; };
+		FADF414D1B12519E0083AE96 /* VenueButtonsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF414B1B12519E0083AE96 /* VenueButtonsCell.m */; };
+		FADF414E1B12519E0083AE96 /* VenueButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADF414C1B12519E0083AE96 /* VenueButtonsCell.xib */; };
+		FADF41521B1253A30083AE96 /* VenueAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41501B1253A30083AE96 /* VenueAddressCell.m */; };
+		FADF41531B1253A30083AE96 /* VenueAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADF41511B1253A30083AE96 /* VenueAddressCell.xib */; };
+		FADF41571B125BC00083AE96 /* NSArray+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41561B125BC00083AE96 /* NSArray+Map.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +181,18 @@
 		FADF41391B11E6C20083AE96 /* TextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLabel.m; sourceTree = "<group>"; };
 		FADF413C1B11F6010083AE96 /* RatingStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingStarView.h; sourceTree = "<group>"; };
 		FADF413D1B11F6010083AE96 /* RatingStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingStarView.m; sourceTree = "<group>"; };
+		FADF41441B11FF510083AE96 /* VenueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueDetailsViewController.h; sourceTree = "<group>"; };
+		FADF41451B11FF510083AE96 /* VenueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetailsViewController.m; sourceTree = "<group>"; };
+		FADF41471B11FFB80083AE96 /* VenueDetailsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueDetailsPresenter.h; sourceTree = "<group>"; };
+		FADF41481B11FFB80083AE96 /* VenueDetailsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetailsPresenter.m; sourceTree = "<group>"; };
+		FADF414A1B12519E0083AE96 /* VenueButtonsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueButtonsCell.h; sourceTree = "<group>"; };
+		FADF414B1B12519E0083AE96 /* VenueButtonsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueButtonsCell.m; sourceTree = "<group>"; };
+		FADF414C1B12519E0083AE96 /* VenueButtonsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueButtonsCell.xib; sourceTree = "<group>"; };
+		FADF414F1B1253A30083AE96 /* VenueAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueAddressCell.h; sourceTree = "<group>"; };
+		FADF41501B1253A30083AE96 /* VenueAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAddressCell.m; sourceTree = "<group>"; };
+		FADF41511B1253A30083AE96 /* VenueAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueAddressCell.xib; sourceTree = "<group>"; };
+		FADF41551B125BC00083AE96 /* NSArray+Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Map.h"; sourceTree = "<group>"; };
+		FADF41561B125BC00083AE96 /* NSArray+Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Map.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +370,7 @@
 			children = (
 				FAC950DA1B10676900A89F9C /* Menu */,
 				FADA92DA1B1089240094BAA2 /* VenuesList */,
+				FADF41431B11FF510083AE96 /* VenueDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -561,6 +581,7 @@
 		FADF411E1B11D06D0083AE96 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				FADF41541B125BB10083AE96 /* NSArray */,
 				FADF41221B11D0980083AE96 /* UIStoryboard */,
 			);
 			path = Categories;
@@ -609,6 +630,32 @@
 				FADF413D1B11F6010083AE96 /* RatingStarView.m */,
 			);
 			name = RatingStarView;
+			sourceTree = "<group>";
+		};
+		FADF41431B11FF510083AE96 /* VenueDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FADF41441B11FF510083AE96 /* VenueDetailsViewController.h */,
+				FADF41451B11FF510083AE96 /* VenueDetailsViewController.m */,
+				FADF41471B11FFB80083AE96 /* VenueDetailsPresenter.h */,
+				FADF41481B11FFB80083AE96 /* VenueDetailsPresenter.m */,
+				FADF414A1B12519E0083AE96 /* VenueButtonsCell.h */,
+				FADF414B1B12519E0083AE96 /* VenueButtonsCell.m */,
+				FADF414C1B12519E0083AE96 /* VenueButtonsCell.xib */,
+				FADF414F1B1253A30083AE96 /* VenueAddressCell.h */,
+				FADF41501B1253A30083AE96 /* VenueAddressCell.m */,
+				FADF41511B1253A30083AE96 /* VenueAddressCell.xib */,
+			);
+			path = VenueDetails;
+			sourceTree = "<group>";
+		};
+		FADF41541B125BB10083AE96 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				FADF41551B125BC00083AE96 /* NSArray+Map.h */,
+				FADF41561B125BC00083AE96 /* NSArray+Map.m */,
+			);
+			name = NSArray;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -695,8 +742,10 @@
 				FADF41301B11E0BC0083AE96 /* Localizable.strings in Resources */,
 				FADA92811B10701A0094BAA2 /* Venues.storyboard in Resources */,
 				FADA92E51B10928E0094BAA2 /* VenueCell.xib in Resources */,
+				FADF41531B1253A30083AE96 /* VenueAddressCell.xib in Resources */,
 				FADA92801B10701A0094BAA2 /* LaunchScreen.xib in Resources */,
 				FADA927F1B10701A0094BAA2 /* Images.xcassets in Resources */,
+				FADF414E1B12519E0083AE96 /* VenueButtonsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,13 +802,17 @@
 				FADF411C1B11C1290083AE96 /* FoursquareAPI.m in Sources */,
 				FADA929C1B1075AB0094BAA2 /* SectionItem+Protected.m in Sources */,
 				FADA92CD1B107FBD0094BAA2 /* TableViewController.m in Sources */,
+				FADF41491B11FFB80083AE96 /* VenueDetailsPresenter.m in Sources */,
+				FADF414D1B12519E0083AE96 /* VenueButtonsCell.m in Sources */,
 				FADA928E1B10727F0094BAA2 /* SectionItem.m in Sources */,
 				FADA92D01B107FFF0094BAA2 /* ReuseIdentifierMatcher.m in Sources */,
 				FADA929F1B1078080094BAA2 /* SectionsPresenter.m in Sources */,
 				FADF412E1B11D77C0083AE96 /* PlaceholderTableView.m in Sources */,
 				FADA92C01B107A170094BAA2 /* PresenterChangeSection.m in Sources */,
+				FADF41521B1253A30083AE96 /* VenueAddressCell.m in Sources */,
 				FADF413A1B11E6C20083AE96 /* TextLabel.m in Sources */,
 				FADF41211B11D07F0083AE96 /* UIStoryboard+Links.m in Sources */,
+				FADF41461B11FF510083AE96 /* VenueDetailsViewController.m in Sources */,
 				FADA92C11B107A170094BAA2 /* PresenterChangeSectionDelete.m in Sources */,
 				FADA92861B1070300094BAA2 /* main.m in Sources */,
 				FADA92C21B107A170094BAA2 /* PresenterChangeSectionInsert.m in Sources */,
@@ -776,6 +829,7 @@
 				FADA92E41B10928E0094BAA2 /* VenueCell.m in Sources */,
 				FADA92BC1B107A170094BAA2 /* PresenterChangeItem.m in Sources */,
 				FAC950DE1B1068B700A89F9C /* MenuViewController.m in Sources */,
+				FADF41571B125BC00083AE96 /* NSArray+Map.m in Sources */,
 				FADA92D61B1085480094BAA2 /* BaseEntity.m in Sources */,
 				FADA92E01B1092070094BAA2 /* VenuesPresenter.m in Sources */,
 				FADA92BF1B107A170094BAA2 /* PresenterChangeItemReload.m in Sources */,

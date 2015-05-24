@@ -12,6 +12,6 @@
 
 + (NSString *)idDictionaryKey;
 + (instancetype)objectWithDictionary:(NSDictionary *)values;
-+ (id)objectsArrayWithResponse:(id)serviceResponse;
++ (NSArray *)objectsArrayWithResponse:(id)serviceResponse;
 - (void)updateWithDictionary:(NSDictionary *)values;
 @end

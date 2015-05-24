@@ -11,8 +11,6 @@
 #import <UIKit/UIKit.h>
 #import <AFNetworking/AFNetworking.h>
 
-#import "Venue.h"
-
 static NSString * const kClientID               = @"CEUCXQN4ZTCXM51C2MCTPSPK4JK4IOQMGGTDLSDA0DOMHFST";
 static NSString * const kClientSecret           = @"ZEYHAQIABXIRDUJKVNPYXDZRDB0BMVYOZKILQWYA41FKBB1I";
 static CGFloat    const kFueledOfficeLatitude   = 40.7242727;
@@ -49,6 +47,26 @@ static NSInteger  const kNumberOfVenuesLimit    = 50;
                                     if(completion) {
                                         completion(nil, error);
                                     }
+                                }
+     ];
+}
+
+- (void)loadFullInfoForVenue:(Venue *)venue
+{
+    NSDictionary *params = @{
+                             @"client_id"       : kClientID,
+                             @"client_secret"   : kClientSecret,
+                             @"v"               : @"20150524",
+                             };
+    
+    [[AFHTTPSessionManager manager] GET:[NSString stringWithFormat:@"https://api.foursquare.com/v2/venues/%@", venue.identifier]
+                             parameters:params
+                                success:^(NSURLSessionDataTask *task, id responseObject) {
+                                    NSLog(@"%@", responseObject);
+                                    [venue updateWithResponse:responseObject];
+                                }
+                                failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                    NSLog(@"%@", error);
                                 }
      ];
 }

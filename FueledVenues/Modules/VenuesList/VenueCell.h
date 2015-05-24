@@ -6,10 +6,14 @@
 //  Copyright (c) 2015 Alexandr Chernyshev. All rights reserved.
 //
 
-#import "BaseTableViewCell.h"
+#import <UIKit/UIKit.h>
+
+#import <SWTableViewCell/SWTableViewCell.h>
+
+#import "ViewItemProtocol.h"
 
 extern NSString * const kVenueCellReuseIdentifier;
 
-@interface VenueCell : BaseTableViewCell
+@interface VenueCell : SWTableViewCell <ViewItemProtocol>
 
 @end

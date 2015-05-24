@@ -11,4 +11,5 @@
 @interface Venue (Parser)
 
 + (NSArray *)venuesArrayFromResponse:(id)responseObject;
+- (void)updateWithResponse:(id)responseObject;
 @end

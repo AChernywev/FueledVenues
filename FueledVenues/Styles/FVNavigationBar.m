@@ -17,16 +17,12 @@
 {
     [super setupAppearence];
     [self setTranslucent:NO];
-    self.tintColor = [UIColor whiteColor];
+    self.tintColor = [UIColor whiteTextColor];
     self.barTintColor = [UIColor redBackgroundColor];
-    self.titleTextAttributes = @{
-                                 NSFontAttributeName               : [UIFont mediumFontWithSize:18],
-                                 NSForegroundColorAttributeName    : [UIColor whiteTextColor],
-                                 };
-//    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
-//                                                           NSFontAttributeName               : [UIFont pg_fontA1],
-//                                                           NSForegroundColorAttributeName    : [UIColor pg_redColor],
-//                                                           } forState:UIControlStateNormal];
+    self.titleTextAttributes = @{NSFontAttributeName : [UIFont mediumFontWithSize:18],
+                                 NSForegroundColorAttributeName : [UIColor whiteTextColor]};
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont mediumFontWithSize:14]}
+                                                forState:UIControlStateNormal];
 }
 
 @end

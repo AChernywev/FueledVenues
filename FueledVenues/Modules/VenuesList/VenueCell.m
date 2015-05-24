@@ -29,11 +29,17 @@ NSString  * const kVenueCellReuseIdentifier = @"VenueCellReuseIdentifier";
 @end
 
 @implementation VenueCell
+@synthesize item = _item;
 
 #pragma mark - lifecycle
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    
+    self.contentView.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor clearColor];
+    self.backgroundView = [UIView new];
+    
     self.shadowView.layer.shadowColor = [UIColor blackColor].CGColor;
     self.shadowView.layer.shadowOpacity = 0.4f;
     self.shadowView.layer.shadowOffset = CGSizeZero;
@@ -44,7 +50,7 @@ NSString  * const kVenueCellReuseIdentifier = @"VenueCellReuseIdentifier";
 #pragma mark - <ViewItemProtocol>
 - (void)setItem:(Venue *)item
 {
-    [super setItem:item];
+    _item = item;
     
     [self.venueImageView sd_setImageWithURL:item.imageURL];
     RAC(self.nameLabel, text) = [RACObserve(item, name) takeUntil:self.rac_prepareForReuseSignal];

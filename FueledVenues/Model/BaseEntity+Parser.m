@@ -23,7 +23,7 @@
     return result;
 }
 
-+ (id)objectsArrayWithResponse:(id)serviceResponse
++ (NSArray *)objectsArrayWithResponse:(id)serviceResponse
 {
     if ([serviceResponse isKindOfClass:[NSArray class]]) {
         NSArray *dictionaryArray = (NSArray *)serviceResponse;

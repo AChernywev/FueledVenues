@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="95" id="Z5Y-IV-acJ" userLabel="Table View Cell - Buttons" customClass="VenueButtonsCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z5Y-IV-acJ" id="p76-n6-wDC">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7V-oA-zcW">
+                        <rect key="frame" x="10" y="17" width="68" height="60"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-Kr-baf">
+                                <rect key="frame" x="4" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mH1-Kr-baf" secondAttribute="height" multiplier="1:1" id="MZ0-9A-sFU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="-44" minY="44" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Call" image="IconVenueCall">
+                                    <color key="titleColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="0.55686274509803924" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dealsAction:" destination="Z5Y-IV-acJ" eventType="touchUpInside" id="gTB-g7-SYL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="mH1-Kr-baf" secondAttribute="centerX" id="0UU-ef-2VC"/>
+                            <constraint firstAttribute="bottom" secondItem="mH1-Kr-baf" secondAttribute="bottom" id="Z7o-QV-HhR"/>
+                            <constraint firstAttribute="height" constant="60" id="bdQ-b9-Xow"/>
+                            <constraint firstItem="mH1-Kr-baf" firstAttribute="top" secondItem="L7V-oA-zcW" secondAttribute="top" id="u66-mx-UI0"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjC-f3-vMt">
+                        <rect key="frame" x="88" y="17" width="67" height="60"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fp3-7C-iWd">
+                                <rect key="frame" x="3" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fp3-7C-iWd" secondAttribute="height" multiplier="1:1" id="Wod-NO-nQx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="-44" minY="44" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Website" image="IconVenueWeb">
+                                    <color key="titleColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="0.5568627451" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dealsAction:" destination="Z5Y-IV-acJ" eventType="touchUpInside" id="ABx-MT-8sP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fp3-7C-iWd" firstAttribute="top" secondItem="LjC-f3-vMt" secondAttribute="top" id="O3T-it-RAy"/>
+                            <constraint firstAttribute="bottom" secondItem="fp3-7C-iWd" secondAttribute="bottom" id="byL-8E-DJM"/>
+                            <constraint firstAttribute="centerX" secondItem="fp3-7C-iWd" secondAttribute="centerX" id="hGv-pn-gVt"/>
+                            <constraint firstAttribute="height" constant="60" id="sPy-uH-uTk"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UbV-xm-zdQ">
+                        <rect key="frame" x="165" y="17" width="68" height="60"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbe-uo-m86">
+                                <rect key="frame" x="4" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zbe-uo-m86" secondAttribute="height" multiplier="1:1" id="qvb-Gj-g53"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="-41" minY="44" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Menu" image="IconVenueMenu">
+                                    <color key="titleColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="0.5568627451" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuAction:" destination="Z5Y-IV-acJ" eventType="touchUpInside" id="cLm-JN-RYu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="1II-i7-rge"/>
+                            <constraint firstItem="Zbe-uo-m86" firstAttribute="top" secondItem="UbV-xm-zdQ" secondAttribute="top" id="FaB-Lm-iLm"/>
+                            <constraint firstAttribute="bottom" secondItem="Zbe-uo-m86" secondAttribute="bottom" id="mJt-Cq-zV5"/>
+                            <constraint firstAttribute="centerX" secondItem="Zbe-uo-m86" secondAttribute="centerX" id="wm9-n7-Ram"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWF-uI-hrS">
+                        <rect key="frame" x="243" y="17" width="67" height="60"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q66-ep-L80">
+                                <rect key="frame" x="3" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="q66-ep-L80" secondAttribute="height" multiplier="1:1" id="8J3-kA-UxT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="-45" minY="44" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Reviews" image="IconComments">
+                                    <color key="titleColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="0.5568627451" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="0.5568627451" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reviewsAction:" destination="Z5Y-IV-acJ" eventType="touchUpInside" id="IC3-wU-MA1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuF-Qe-DHd" userLabel="Label - Reviews Count">
+                                <rect key="frame" x="24" y="8" width="18" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="q66-ep-L80" secondAttribute="bottom" id="DfF-pB-Rww"/>
+                            <constraint firstAttribute="height" constant="60" id="RW6-Ef-mqs"/>
+                            <constraint firstItem="iuF-Qe-DHd" firstAttribute="top" secondItem="SWF-uI-hrS" secondAttribute="top" constant="8" id="syX-bK-iXc"/>
+                            <constraint firstAttribute="centerX" secondItem="q66-ep-L80" secondAttribute="centerX" id="t2g-tx-hJz"/>
+                            <constraint firstAttribute="centerX" secondItem="iuF-Qe-DHd" secondAttribute="centerX" id="tw2-1L-MVi"/>
+                            <constraint firstItem="q66-ep-L80" firstAttribute="top" secondItem="SWF-uI-hrS" secondAttribute="top" id="y0V-Oe-N3R"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SWF-uI-hrS" firstAttribute="width" secondItem="UbV-xm-zdQ" secondAttribute="width" id="1Oh-VS-Ba8"/>
+                    <constraint firstItem="SWF-uI-hrS" firstAttribute="width" secondItem="L7V-oA-zcW" secondAttribute="width" id="5Qz-yd-eoH"/>
+                    <constraint firstItem="L7V-oA-zcW" firstAttribute="leading" secondItem="p76-n6-wDC" secondAttribute="leading" constant="10" id="FIg-9n-B8G"/>
+                    <constraint firstItem="SWF-uI-hrS" firstAttribute="width" secondItem="LjC-f3-vMt" secondAttribute="width" id="HGR-Oq-xY4"/>
+                    <constraint firstAttribute="centerY" secondItem="SWF-uI-hrS" secondAttribute="centerY" id="KSD-Wx-Hsh"/>
+                    <constraint firstItem="SWF-uI-hrS" firstAttribute="centerY" secondItem="L7V-oA-zcW" secondAttribute="centerY" id="QAh-ad-5Ec"/>
+                    <constraint firstItem="UbV-xm-zdQ" firstAttribute="leading" secondItem="LjC-f3-vMt" secondAttribute="trailing" constant="10" id="Wdh-QO-kKw"/>
+                    <constraint firstItem="SWF-uI-hrS" firstAttribute="leading" secondItem="UbV-xm-zdQ" secondAttribute="trailing" constant="10" id="ZCP-MK-zFN"/>
+                    <constraint firstItem="LjC-f3-vMt" firstAttribute="leading" secondItem="L7V-oA-zcW" secondAttribute="trailing" constant="10" id="ain-Du-XF3"/>
+                    <constraint firstItem="SWF-uI-hrS" firstAttribute="centerY" secondItem="UbV-xm-zdQ" secondAttribute="centerY" id="dEm-Ql-apB"/>
+                    <constraint firstItem="SWF-uI-hrS" firstAttribute="centerY" secondItem="LjC-f3-vMt" secondAttribute="centerY" id="dcW-d8-be5"/>
+                    <constraint firstAttribute="trailing" secondItem="SWF-uI-hrS" secondAttribute="trailing" constant="10" id="ukB-JG-J9K"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="dealsButton" destination="mH1-Kr-baf" id="gW8-9E-X2E"/>
+                <outlet property="menuButton" destination="Zbe-uo-m86" id="dHp-6Z-zYT"/>
+                <outlet property="reviewsButton" destination="q66-ep-L80" id="PKU-HK-xZW"/>
+                <outlet property="reviewsCountLabel" destination="iuF-Qe-DHd" id="m29-AB-Fk9"/>
+            </connections>
+            <point key="canvasLocation" x="211" y="-97.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="IconComments" width="45" height="40"/>
+        <image name="IconVenueCall" width="41" height="41"/>
+        <image name="IconVenueMenu" width="41" height="41"/>
+        <image name="IconVenueWeb" width="41" height="41"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

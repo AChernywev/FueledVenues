@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNovaCond-Reg.otf">
+            <string>ProximaNovaCond-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="35" id="xc1-Jf-Vl5" userLabel="Table View Cell - Address" customClass="VenueAddressCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xc1-Jf-Vl5" id="lIR-ba-jza">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconMapPinGrey" translatesAutoresizingMaskIntoConstraints="NO" id="qaq-Kb-NLj">
+                        <rect key="frame" x="20" y="9" width="13" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="Dla-8h-AAU"/>
+                            <constraint firstAttribute="height" constant="16" id="Q28-Kt-aeX"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25-29 Coventry St, London W1D 7AG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhh-lj-pL5">
+                        <rect key="frame" x="38" y="8" width="247" height="19"/>
+                        <fontDescription key="fontDescription" name="ProximaNovaCond-Regular" family="Proxima Nova Condensed" pointSize="16"/>
+                        <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowRightGrey" translatesAutoresizingMaskIntoConstraints="NO" id="ev9-Et-bJ0">
+                        <rect key="frame" x="295" y="13" width="5" height="8"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="8s2-i6-6lX"/>
+                            <constraint firstAttribute="height" constant="8" id="E7i-5L-MXj"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="qaq-Kb-NLj" secondAttribute="centerY" id="1bw-at-pay"/>
+                    <constraint firstItem="ev9-Et-bJ0" firstAttribute="centerY" secondItem="dhh-lj-pL5" secondAttribute="centerY" id="5yX-y4-3yf"/>
+                    <constraint firstAttribute="trailing" secondItem="ev9-Et-bJ0" secondAttribute="trailing" constant="20" id="EYB-ad-EgY"/>
+                    <constraint firstItem="dhh-lj-pL5" firstAttribute="leading" secondItem="qaq-Kb-NLj" secondAttribute="trailing" constant="5" id="HM8-dQ-qge"/>
+                    <constraint firstItem="ev9-Et-bJ0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dhh-lj-pL5" secondAttribute="trailing" constant="10" id="L6Y-bR-ZWn"/>
+                    <constraint firstItem="ev9-Et-bJ0" firstAttribute="centerY" secondItem="qaq-Kb-NLj" secondAttribute="centerY" id="v8v-7i-RQq"/>
+                    <constraint firstItem="qaq-Kb-NLj" firstAttribute="leading" secondItem="lIR-ba-jza" secondAttribute="leading" constant="20" id="xAr-si-3LF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="addressLabel" destination="dhh-lj-pL5" id="slq-5b-iI1"/>
+            </connections>
+            <point key="canvasLocation" x="271" y="130.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ArrowRightGrey" width="5" height="8"/>
+        <image name="IconMapPinGrey" width="13" height="16"/>
+    </resources>
+</document>
