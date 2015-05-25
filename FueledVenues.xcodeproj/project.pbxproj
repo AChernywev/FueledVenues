@@ -13,6 +13,8 @@
 		CE2CE0A41B13976B00119639 /* NSMutableArray+Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0A31B13976B00119639 /* NSMutableArray+Secure.m */; };
 		CE2CE0A81B139A2900119639 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0A71B139A2900119639 /* Photo.m */; };
 		CE2CE0AB1B139AC700119639 /* Photo+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0AA1B139AC700119639 /* Photo+Parsing.m */; };
+		CE2CE0B21B139D3500119639 /* VenueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0B11B139D3500119639 /* VenueItem.m */; };
+		CE2CE0BA1B139EFC00119639 /* VenueContactItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0B91B139EFC00119639 /* VenueContactItem.m */; };
 		FA826F361B10D3500082B943 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F351B10D3500082B943 /* RatingView.m */; };
 		FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3C1B10F74E0082B943 /* UIColor+FVColors.m */; };
 		FA826F401B10F8420082B943 /* UIFont+FVFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3F1B10F8420082B943 /* UIFont+FVFonts.m */; };
@@ -92,6 +94,10 @@
 		CE2CE0A71B139A2900119639 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		CE2CE0A91B139AC700119639 /* Photo+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+Parsing.h"; sourceTree = "<group>"; };
 		CE2CE0AA1B139AC700119639 /* Photo+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+Parsing.m"; sourceTree = "<group>"; };
+		CE2CE0B01B139D3500119639 /* VenueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueItem.h; sourceTree = "<group>"; };
+		CE2CE0B11B139D3500119639 /* VenueItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueItem.m; sourceTree = "<group>"; };
+		CE2CE0B81B139EFC00119639 /* VenueContactItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueContactItem.h; sourceTree = "<group>"; };
+		CE2CE0B91B139EFC00119639 /* VenueContactItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueContactItem.m; sourceTree = "<group>"; };
 		DCFDEC1D33375EB9363000B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA826F341B10D3500082B943 /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
 		FA826F351B10D3500082B943 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
@@ -297,6 +303,92 @@
 				CE2CE0A31B13976B00119639 /* NSMutableArray+Secure.m */,
 			);
 			name = NSMutableArray;
+			sourceTree = "<group>";
+		};
+		CE2CE0AC1B139CFC00119639 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FADA92DB1B1089380094BAA2 /* VenuesListViewController.h */,
+				FADA92DC1B1089380094BAA2 /* VenuesListViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CE2CE0AD1B139D0300119639 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FADF411D1B11C9900083AE96 /* VenuesPresenterInput.h */,
+				FADA92DE1B1092070094BAA2 /* VenuesPresenter.h */,
+				FADA92DF1B1092070094BAA2 /* VenuesPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CE2CE0AE1B139D0800119639 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FADA92E11B10928E0094BAA2 /* VenueCell.h */,
+				FADA92E21B10928E0094BAA2 /* VenueCell.m */,
+				FADA92E31B10928E0094BAA2 /* VenueCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		CE2CE0AF1B139D0D00119639 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				CE2CE0B01B139D3500119639 /* VenueItem.h */,
+				CE2CE0B11B139D3500119639 /* VenueItem.m */,
+			);
+			name = Item;
+			sourceTree = "<group>";
+		};
+		CE2CE0B31B139E1300119639 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FADF41441B11FF510083AE96 /* VenueDetailsViewController.h */,
+				FADF41451B11FF510083AE96 /* VenueDetailsViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CE2CE0B41B139E1C00119639 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FADF41471B11FFB80083AE96 /* VenueDetailsPresenter.h */,
+				FADF41481B11FFB80083AE96 /* VenueDetailsPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CE2CE0B51B139E2300119639 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				CE2CE0B71B139EE800119639 /* VenueContactItem */,
+			);
+			name = Item;
+			sourceTree = "<group>";
+		};
+		CE2CE0B61B139E2800119639 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FADF414A1B12519E0083AE96 /* VenueButtonsCell.h */,
+				FADF414B1B12519E0083AE96 /* VenueButtonsCell.m */,
+				FADF414C1B12519E0083AE96 /* VenueButtonsCell.xib */,
+				FADF414F1B1253A30083AE96 /* VenueAddressCell.h */,
+				FADF41501B1253A30083AE96 /* VenueAddressCell.m */,
+				FADF41511B1253A30083AE96 /* VenueAddressCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		CE2CE0B71B139EE800119639 /* VenueContactItem */ = {
+			isa = PBXGroup;
+			children = (
+				CE2CE0B81B139EFC00119639 /* VenueContactItem.h */,
+				CE2CE0B91B139EFC00119639 /* VenueContactItem.m */,
+			);
+			name = VenueContactItem;
 			sourceTree = "<group>";
 		};
 		FA826F331B10D3350082B943 /* Controls */ = {
@@ -611,14 +703,10 @@
 		FADA92DA1B1089240094BAA2 /* VenuesList */ = {
 			isa = PBXGroup;
 			children = (
-				FADA92DB1B1089380094BAA2 /* VenuesListViewController.h */,
-				FADA92DC1B1089380094BAA2 /* VenuesListViewController.m */,
-				FADF411D1B11C9900083AE96 /* VenuesPresenterInput.h */,
-				FADA92DE1B1092070094BAA2 /* VenuesPresenter.h */,
-				FADA92DF1B1092070094BAA2 /* VenuesPresenter.m */,
-				FADA92E11B10928E0094BAA2 /* VenueCell.h */,
-				FADA92E21B10928E0094BAA2 /* VenueCell.m */,
-				FADA92E31B10928E0094BAA2 /* VenueCell.xib */,
+				CE2CE0AC1B139CFC00119639 /* Controller */,
+				CE2CE0AD1B139D0300119639 /* Presenter */,
+				CE2CE0AF1B139D0D00119639 /* Item */,
+				CE2CE0AE1B139D0800119639 /* Cell */,
 			);
 			path = VenuesList;
 			sourceTree = "<group>";
@@ -700,16 +788,10 @@
 		FADF41431B11FF510083AE96 /* VenueDetails */ = {
 			isa = PBXGroup;
 			children = (
-				FADF41441B11FF510083AE96 /* VenueDetailsViewController.h */,
-				FADF41451B11FF510083AE96 /* VenueDetailsViewController.m */,
-				FADF41471B11FFB80083AE96 /* VenueDetailsPresenter.h */,
-				FADF41481B11FFB80083AE96 /* VenueDetailsPresenter.m */,
-				FADF414A1B12519E0083AE96 /* VenueButtonsCell.h */,
-				FADF414B1B12519E0083AE96 /* VenueButtonsCell.m */,
-				FADF414C1B12519E0083AE96 /* VenueButtonsCell.xib */,
-				FADF414F1B1253A30083AE96 /* VenueAddressCell.h */,
-				FADF41501B1253A30083AE96 /* VenueAddressCell.m */,
-				FADF41511B1253A30083AE96 /* VenueAddressCell.xib */,
+				CE2CE0B31B139E1300119639 /* Controller */,
+				CE2CE0B41B139E1C00119639 /* Presenter */,
+				CE2CE0B51B139E2300119639 /* Item */,
+				CE2CE0B61B139E2800119639 /* Cell */,
 			);
 			path = VenueDetails;
 			sourceTree = "<group>";
@@ -875,6 +957,7 @@
 				FADA92D01B107FFF0094BAA2 /* ReuseIdentifierMatcher.m in Sources */,
 				FADA929F1B1078080094BAA2 /* SectionsPresenter.m in Sources */,
 				FADF412E1B11D77C0083AE96 /* PlaceholderTableView.m in Sources */,
+				CE2CE0BA1B139EFC00119639 /* VenueContactItem.m in Sources */,
 				FADA92C01B107A170094BAA2 /* PresenterChangeSection.m in Sources */,
 				FADF41521B1253A30083AE96 /* VenueAddressCell.m in Sources */,
 				CE2CE0A41B13976B00119639 /* NSMutableArray+Secure.m in Sources */,
@@ -893,6 +976,7 @@
 				FADF41371B11E4500083AE96 /* BaseTableViewCell.m in Sources */,
 				CE2CE09C1B138F9800119639 /* NSDictionary+SafeParsing.m in Sources */,
 				FADA92911B1072880094BAA2 /* MutableSectionItem.m in Sources */,
+				CE2CE0B21B139D3500119639 /* VenueItem.m in Sources */,
 				FAC950B71B10666A00A89F9C /* AppDelegate.m in Sources */,
 				FADA92EB1B10969E0094BAA2 /* Venue+Parsing.m in Sources */,
 				FADA92E41B10928E0094BAA2 /* VenueCell.m in Sources */,

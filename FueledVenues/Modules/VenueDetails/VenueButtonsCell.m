@@ -13,8 +13,8 @@ NSString * kVenueButtonsCellReuseIdentifier = @"VenueButtonsCellReuseIdentifier"
 @interface VenueButtonsCell ()
 @property (nonatomic, weak) IBOutlet UIButton *menuButton;
 @property (nonatomic, weak) IBOutlet UIButton *reviewsButton;
-@property (nonatomic, weak) IBOutlet UILabel *reviewsCountLabel;
 @property (nonatomic, weak) IBOutlet UIButton *dealsButton;
+@property (nonatomic, weak) IBOutlet UILabel *reviewsCountLabel;
 
 @end
 
@@ -57,8 +57,6 @@ NSString * kVenueButtonsCellReuseIdentifier = @"VenueButtonsCellReuseIdentifier"
 - (void)prepareForReuse
 {
     [super prepareForReuse];
-    self.reviewsButton.enabled = YES;
     self.reviewsCountLabel.text = nil;
-    self.dealsButton.enabled = NO;
 }
 @end

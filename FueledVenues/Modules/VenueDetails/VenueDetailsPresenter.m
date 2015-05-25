@@ -9,6 +9,7 @@
 #import "VenueDetailsPresenter.h"
 
 #import "FoursquareAPI.h"
+#import "VenueContactItem.h"
 
 @interface VenueDetailsPresenter()
 @property (nonatomic, strong) Venue *venue;
@@ -20,7 +21,7 @@
 #pragma mark - initialization
 - (instancetype)initWithVenue:(Venue *)venue
 {
-    SectionItem *section = [[SectionItem alloc]initWithRows:@[venue, @123, venue.address]];
+    SectionItem *section = [[SectionItem alloc]initWithRows:@[venue, [[VenueContactItem alloc]initWithVenue:venue], venue.address]];
     self = [super initWithSections:[@[section] mutableCopy]];
     if(self) {
         _venue = venue;
@@ -37,6 +38,6 @@
 #pragma mark - pubic methods
 - (void)updateInfo
 {
-    [[FoursquareAPI new] loadFullInfoForVenue:self.venue];
+//    [[FoursquareAPI new] loadFullInfoForVenue:self.venue];
 }
 @end

@@ -12,6 +12,7 @@
 #import "VenueCell.h"
 #import "VenueButtonsCell.h"
 #import "VenueAddressCell.h"
+#import "VenueContactItem.h"
 
 @implementation VenueDetailsViewController
 @dynamic presenter;
@@ -28,7 +29,7 @@
     self.title = self.presenter.title;
     self.view.backgroundColor = RGBColor(249, 244, 227);
     [self registerNibForCellClass:[VenueCell class] item:[Venue class] reuseIdentifier:kVenueCellReuseIdentifier];
-    [self registerNibForCellClass:[VenueButtonsCell class] item:[NSNumber class] reuseIdentifier:kVenueButtonsCellReuseIdentifier];
+    [self registerNibForCellClass:[VenueButtonsCell class] item:[VenueContactItem class] reuseIdentifier:kVenueButtonsCellReuseIdentifier];
     [self registerNibForCellClass:[VenueAddressCell class] item:[NSString class] reuseIdentifier:kVenueAddressCellReuseIdentifier];
     [self.presenter updateInfo];
 }
@@ -38,7 +39,7 @@
     if([item isKindOfClass:[Venue class]]) {
         return 222;
     }
-    else if([item isKindOfClass:[NSNumber class]]) {
+    else if([item isKindOfClass:[VenueContactItem class]]) {
         return 80;
     }
     else if([item isKindOfClass:[NSString class]]) {
