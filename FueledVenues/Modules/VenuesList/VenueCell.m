@@ -52,7 +52,7 @@ NSString  * const kVenueCellReuseIdentifier = @"VenueCellReuseIdentifier";
 {
     _item = item;
     
-    [self.venueImageView sd_setImageWithURL:item.imageURL];
+    [self.venueImageView sd_setImageWithURL:[item.mainImage urlWithSize:self.venueImageView.bounds.size]];
     RAC(self.nameLabel, text) = [RACObserve(item, name) takeUntil:self.rac_prepareForReuseSignal];
     RAC(self.ratingView, rating) = [RACObserve(item, rating) takeUntil:self.rac_prepareForReuseSignal];
     RAC(self.openLabel, text) = [RACObserve(item, openMessage) takeUntil:self.rac_prepareForReuseSignal];

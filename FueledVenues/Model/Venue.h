@@ -8,6 +8,8 @@
 
 #import "BaseEntity.h"
 
+#import "Photo.h"
+
 typedef NS_ENUM(NSInteger, PriceTier)
 {
     PriceTierMinimum,
@@ -17,19 +19,19 @@ typedef NS_ENUM(NSInteger, PriceTier)
 };
 
 @interface Venue : BaseEntity
-@property (nonatomic, readonly) NSString *name;
-@property (nonatomic, readonly) NSString *address;
-@property (nonatomic, readonly) BOOL isOpen;
-@property (nonatomic, readonly) NSString *openMessage;
-@property (nonatomic, readonly) PriceTier tier;
-@property (nonatomic, readonly) NSString *tierMessage;
-@property (nonatomic, readonly) NSString *currency;
-@property (nonatomic, readonly) float rating;
-@property (nonatomic, readonly) float distance;
-@property (nonatomic, readonly) float latitude;
-@property (nonatomic, readonly) float longitude;
-@property (nonatomic, readonly) NSURL *imageURL;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *address;
+@property (nonatomic, assign) BOOL isOpen;
+@property (nonatomic, strong) NSString *openMessage;
+@property (nonatomic, assign) PriceTier tier;
+@property (nonatomic, strong) NSString *tierMessage;
+@property (nonatomic, strong) NSString *currency;
+@property (nonatomic, assign) float rating;
+@property (nonatomic, assign) float distance;
+@property (nonatomic, assign) float latitude;
+@property (nonatomic, assign) float longitude;
+@property (nonatomic, strong) Photo *mainImage;
 
 @end
 
-#import "Venue+Parser.h"
+#import "Venue+Parsing.h"

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CB114FA02124C90E2E1EC1DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC345F8B1DDD5F1CC155D26 /* libPods.a */; };
+		CE2CE09C1B138F9800119639 /* NSDictionary+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE09B1B138F9800119639 /* NSDictionary+SafeParsing.m */; };
+		CE2CE0A01B1394E700119639 /* NSObject+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE09F1B1394E700119639 /* NSObject+SafeParsing.m */; };
+		CE2CE0A41B13976B00119639 /* NSMutableArray+Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0A31B13976B00119639 /* NSMutableArray+Secure.m */; };
+		CE2CE0A81B139A2900119639 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0A71B139A2900119639 /* Photo.m */; };
+		CE2CE0AB1B139AC700119639 /* Photo+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0AA1B139AC700119639 /* Photo+Parsing.m */; };
 		FA826F361B10D3500082B943 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F351B10D3500082B943 /* RatingView.m */; };
 		FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3C1B10F74E0082B943 /* UIColor+FVColors.m */; };
 		FA826F401B10F8420082B943 /* UIFont+FVFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3F1B10F8420082B943 /* UIFont+FVFonts.m */; };
@@ -44,8 +49,8 @@
 		FADA92E01B1092070094BAA2 /* VenuesPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92DF1B1092070094BAA2 /* VenuesPresenter.m */; };
 		FADA92E41B10928E0094BAA2 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92E21B10928E0094BAA2 /* VenueCell.m */; };
 		FADA92E51B10928E0094BAA2 /* VenueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADA92E31B10928E0094BAA2 /* VenueCell.xib */; };
-		FADA92E81B10953C0094BAA2 /* BaseEntity+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92E71B10953C0094BAA2 /* BaseEntity+Parser.m */; };
-		FADA92EB1B10969E0094BAA2 /* Venue+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92EA1B10969E0094BAA2 /* Venue+Parser.m */; };
+		FADA92E81B10953C0094BAA2 /* BaseEntity+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92E71B10953C0094BAA2 /* BaseEntity+Parsing.m */; };
+		FADA92EB1B10969E0094BAA2 /* Venue+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92EA1B10969E0094BAA2 /* Venue+Parsing.m */; };
 		FADF411C1B11C1290083AE96 /* FoursquareAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF411B1B11C1290083AE96 /* FoursquareAPI.m */; };
 		FADF41211B11D07F0083AE96 /* UIStoryboard+Links.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41201B11D07F0083AE96 /* UIStoryboard+Links.m */; };
 		FADF412B1B11D42F0083AE96 /* MenuViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF412A1B11D42F0083AE96 /* MenuViewPresenter.m */; };
@@ -77,6 +82,16 @@
 /* Begin PBXFileReference section */
 		4DC345F8B1DDD5F1CC155D26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC432F46997FABFFF9157CA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CE2CE09A1B138F9800119639 /* NSDictionary+SafeParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeParsing.h"; sourceTree = "<group>"; };
+		CE2CE09B1B138F9800119639 /* NSDictionary+SafeParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeParsing.m"; sourceTree = "<group>"; };
+		CE2CE09E1B1394E700119639 /* NSObject+SafeParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeParsing.h"; sourceTree = "<group>"; };
+		CE2CE09F1B1394E700119639 /* NSObject+SafeParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeParsing.m"; sourceTree = "<group>"; };
+		CE2CE0A21B13976B00119639 /* NSMutableArray+Secure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Secure.h"; sourceTree = "<group>"; };
+		CE2CE0A31B13976B00119639 /* NSMutableArray+Secure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Secure.m"; sourceTree = "<group>"; };
+		CE2CE0A61B139A2900119639 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		CE2CE0A71B139A2900119639 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		CE2CE0A91B139AC700119639 /* Photo+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+Parsing.h"; sourceTree = "<group>"; };
+		CE2CE0AA1B139AC700119639 /* Photo+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+Parsing.m"; sourceTree = "<group>"; };
 		DCFDEC1D33375EB9363000B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA826F341B10D3500082B943 /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
 		FA826F351B10D3500082B943 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
@@ -159,10 +174,10 @@
 		FADA92E11B10928E0094BAA2 /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		FADA92E21B10928E0094BAA2 /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
 		FADA92E31B10928E0094BAA2 /* VenueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueCell.xib; sourceTree = "<group>"; };
-		FADA92E61B10953C0094BAA2 /* BaseEntity+Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseEntity+Parser.h"; sourceTree = "<group>"; };
-		FADA92E71B10953C0094BAA2 /* BaseEntity+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseEntity+Parser.m"; sourceTree = "<group>"; };
-		FADA92E91B10969E0094BAA2 /* Venue+Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venue+Parser.h"; sourceTree = "<group>"; };
-		FADA92EA1B10969E0094BAA2 /* Venue+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Venue+Parser.m"; sourceTree = "<group>"; };
+		FADA92E61B10953C0094BAA2 /* BaseEntity+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseEntity+Parsing.h"; sourceTree = "<group>"; };
+		FADA92E71B10953C0094BAA2 /* BaseEntity+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseEntity+Parsing.m"; sourceTree = "<group>"; };
+		FADA92E91B10969E0094BAA2 /* Venue+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venue+Parsing.h"; sourceTree = "<group>"; };
+		FADA92EA1B10969E0094BAA2 /* Venue+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Venue+Parsing.m"; sourceTree = "<group>"; };
 		FADF411A1B11C1290083AE96 /* FoursquareAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareAPI.h; sourceTree = "<group>"; };
 		FADF411B1B11C1290083AE96 /* FoursquareAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareAPI.m; sourceTree = "<group>"; };
 		FADF411D1B11C9900083AE96 /* VenuesPresenterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesPresenterInput.h; sourceTree = "<group>"; };
@@ -229,6 +244,59 @@
 				4DC345F8B1DDD5F1CC155D26 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE2CE0971B1356D700119639 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FADA92D41B1085480094BAA2 /* BaseEntity.h */,
+				FADA92D51B1085480094BAA2 /* BaseEntity.m */,
+				FADA92D71B1085530094BAA2 /* Venue.h */,
+				FADA92D81B1085530094BAA2 /* Venue.m */,
+				CE2CE0A61B139A2900119639 /* Photo.h */,
+				CE2CE0A71B139A2900119639 /* Photo.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		CE2CE0981B1356DE00119639 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				FADA92E61B10953C0094BAA2 /* BaseEntity+Parsing.h */,
+				FADA92E71B10953C0094BAA2 /* BaseEntity+Parsing.m */,
+				FADA92E91B10969E0094BAA2 /* Venue+Parsing.h */,
+				FADA92EA1B10969E0094BAA2 /* Venue+Parsing.m */,
+				CE2CE0A91B139AC700119639 /* Photo+Parsing.h */,
+				CE2CE0AA1B139AC700119639 /* Photo+Parsing.m */,
+			);
+			name = Parsing;
+			sourceTree = "<group>";
+		};
+		CE2CE0991B138F7800119639 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				CE2CE09A1B138F9800119639 /* NSDictionary+SafeParsing.h */,
+				CE2CE09B1B138F9800119639 /* NSDictionary+SafeParsing.m */,
+			);
+			name = NSDictionary;
+			sourceTree = "<group>";
+		};
+		CE2CE09D1B1394CF00119639 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				CE2CE09E1B1394E700119639 /* NSObject+SafeParsing.h */,
+				CE2CE09F1B1394E700119639 /* NSObject+SafeParsing.m */,
+			);
+			name = NSObject;
+			sourceTree = "<group>";
+		};
+		CE2CE0A51B1397AA00119639 /* NSMutableArray */ = {
+			isa = PBXGroup;
+			children = (
+				CE2CE0A21B13976B00119639 /* NSMutableArray+Secure.h */,
+				CE2CE0A31B13976B00119639 /* NSMutableArray+Secure.m */,
+			);
+			name = NSMutableArray;
 			sourceTree = "<group>";
 		};
 		FA826F331B10D3350082B943 /* Controls */ = {
@@ -534,14 +602,8 @@
 		FADA92D31B1083790094BAA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FADA92D41B1085480094BAA2 /* BaseEntity.h */,
-				FADA92D51B1085480094BAA2 /* BaseEntity.m */,
-				FADA92E61B10953C0094BAA2 /* BaseEntity+Parser.h */,
-				FADA92E71B10953C0094BAA2 /* BaseEntity+Parser.m */,
-				FADA92D71B1085530094BAA2 /* Venue.h */,
-				FADA92D81B1085530094BAA2 /* Venue.m */,
-				FADA92E91B10969E0094BAA2 /* Venue+Parser.h */,
-				FADA92EA1B10969E0094BAA2 /* Venue+Parser.m */,
+				CE2CE0971B1356D700119639 /* Entity */,
+				CE2CE0981B1356DE00119639 /* Parsing */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -581,7 +643,10 @@
 		FADF411E1B11D06D0083AE96 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CE2CE09D1B1394CF00119639 /* NSObject */,
+				CE2CE0991B138F7800119639 /* NSDictionary */,
 				FADF41541B125BB10083AE96 /* NSArray */,
+				CE2CE0A51B1397AA00119639 /* NSMutableArray */,
 				FADF41221B11D0980083AE96 /* UIStoryboard */,
 			);
 			path = Categories;
@@ -797,12 +862,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADA92A21B1078E50094BAA2 /* SectionsPresenter+Protected.m in Sources */,
+				CE2CE0AB1B139AC700119639 /* Photo+Parsing.m in Sources */,
 				FA826F481B10F9B90082B943 /* UIView+FVStyles.m in Sources */,
 				FADA92C31B107A170094BAA2 /* PresenterChangeSectionReload.m in Sources */,
 				FADF411C1B11C1290083AE96 /* FoursquareAPI.m in Sources */,
 				FADA929C1B1075AB0094BAA2 /* SectionItem+Protected.m in Sources */,
 				FADA92CD1B107FBD0094BAA2 /* TableViewController.m in Sources */,
 				FADF41491B11FFB80083AE96 /* VenueDetailsPresenter.m in Sources */,
+				CE2CE0A01B1394E700119639 /* NSObject+SafeParsing.m in Sources */,
 				FADF414D1B12519E0083AE96 /* VenueButtonsCell.m in Sources */,
 				FADA928E1B10727F0094BAA2 /* SectionItem.m in Sources */,
 				FADA92D01B107FFF0094BAA2 /* ReuseIdentifierMatcher.m in Sources */,
@@ -810,6 +877,7 @@
 				FADF412E1B11D77C0083AE96 /* PlaceholderTableView.m in Sources */,
 				FADA92C01B107A170094BAA2 /* PresenterChangeSection.m in Sources */,
 				FADF41521B1253A30083AE96 /* VenueAddressCell.m in Sources */,
+				CE2CE0A41B13976B00119639 /* NSMutableArray+Secure.m in Sources */,
 				FADF413A1B11E6C20083AE96 /* TextLabel.m in Sources */,
 				FADF41211B11D07F0083AE96 /* UIStoryboard+Links.m in Sources */,
 				FADF41461B11FF510083AE96 /* VenueDetailsViewController.m in Sources */,
@@ -818,19 +886,21 @@
 				FADA92C21B107A170094BAA2 /* PresenterChangeSectionInsert.m in Sources */,
 				FADF41331B11E28A0083AE96 /* TitleLabel.m in Sources */,
 				FA826F401B10F8420082B943 /* UIFont+FVFonts.m in Sources */,
-				FADA92E81B10953C0094BAA2 /* BaseEntity+Parser.m in Sources */,
+				FADA92E81B10953C0094BAA2 /* BaseEntity+Parsing.m in Sources */,
 				FADA92CA1B107CDA0094BAA2 /* MutableSectionsPresenter.m in Sources */,
 				FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */,
 				FADA92BD1B107A170094BAA2 /* PresenterChangeItemDelete.m in Sources */,
 				FADF41371B11E4500083AE96 /* BaseTableViewCell.m in Sources */,
+				CE2CE09C1B138F9800119639 /* NSDictionary+SafeParsing.m in Sources */,
 				FADA92911B1072880094BAA2 /* MutableSectionItem.m in Sources */,
 				FAC950B71B10666A00A89F9C /* AppDelegate.m in Sources */,
-				FADA92EB1B10969E0094BAA2 /* Venue+Parser.m in Sources */,
+				FADA92EB1B10969E0094BAA2 /* Venue+Parsing.m in Sources */,
 				FADA92E41B10928E0094BAA2 /* VenueCell.m in Sources */,
 				FADA92BC1B107A170094BAA2 /* PresenterChangeItem.m in Sources */,
 				FAC950DE1B1068B700A89F9C /* MenuViewController.m in Sources */,
 				FADF41571B125BC00083AE96 /* NSArray+Map.m in Sources */,
 				FADA92D61B1085480094BAA2 /* BaseEntity.m in Sources */,
+				CE2CE0A81B139A2900119639 /* Photo.m in Sources */,
 				FADA92E01B1092070094BAA2 /* VenuesPresenter.m in Sources */,
 				FADA92BF1B107A170094BAA2 /* PresenterChangeItemReload.m in Sources */,
 				FADA92C71B107BE80094BAA2 /* PresenterChangeReload.m in Sources */,

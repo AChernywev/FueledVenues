@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BaseEntity : NSObject
-@property (nonatomic, readonly) NSString *identifier;
+typedef NSString * EntityIDType;
 
-- (instancetype)initWithIdentifier:(NSString *)identifier;
+@interface BaseEntity : NSObject
+@property (nonatomic, readonly) EntityIDType identifier;
+
+- (instancetype)initWithIdentifier:(EntityIDType)identifier;
 @end
 
-#import "BaseEntity+Parser.h"
+#import "BaseEntity+Parsing.h"

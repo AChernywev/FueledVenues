@@ -8,10 +8,10 @@
 
 #import "BaseEntity.h"
 
-@interface BaseEntity (Parser)
+@interface BaseEntity (Parsing)
 
-+ (NSString *)idDictionaryKey;
++ (NSString *)idKey;
 + (instancetype)objectWithDictionary:(NSDictionary *)values;
-+ (NSArray *)objectsArrayWithResponse:(id)serviceResponse;
++ (NSArray *)objectsArrayWithResponse:(NSArray *)response;
 - (void)updateWithDictionary:(NSDictionary *)values;
 @end

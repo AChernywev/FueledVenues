@@ -10,21 +10,6 @@
 
 #import "Macroses.h"
 
-@interface Venue ()
-@property (nonatomic, readwrite) NSString *name;
-@property (nonatomic, readwrite) NSString *address;
-@property (nonatomic, readwrite) BOOL isOpen;
-@property (nonatomic, readwrite) PriceTier tier;
-@property (nonatomic, readwrite) NSString *tierMessage;
-@property (nonatomic, readwrite) NSString *currency;
-@property (nonatomic, readwrite) float rating;
-@property (nonatomic, readwrite) float distance;
-@property (nonatomic, readwrite) float latitude;
-@property (nonatomic, readwrite) float longitude;
-@property (nonatomic, readwrite) NSURL *imageURL;
-
-@end
-
 @implementation Venue
 
 - (NSString *)openMessage

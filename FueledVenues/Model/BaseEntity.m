@@ -10,10 +10,11 @@
 
 @implementation BaseEntity
 
-- (instancetype)initWithIdentifier:(NSString *)identifier
+#pragma mark - initialization
+- (instancetype)initWithIdentifier:(EntityIDType)identifier
 {
     self = [super init];
-    if(self) {
+    if (self) {
         _identifier = identifier;
     }
     return self;
