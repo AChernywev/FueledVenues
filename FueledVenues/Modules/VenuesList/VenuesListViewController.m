@@ -24,6 +24,23 @@
     return self;
 }
 
+#pragma mark - Actions
+- (IBAction)updateAction:(UIRefreshControl *)refreshControl
+{
+    [refreshControl beginRefreshing];
+    [self.presenter loadVenuesWithCompletion:^(NSError *error) {
+        if(!error) {
+            //            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            //            VenueCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+            //            [cell showRightUtilityButtonsAnimated:NO];
+            //            [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+            //            [cell hideUtilityButtonsAnimated:YES];
+            //            });
+        }
+        [refreshControl endRefreshing];
+    }];
+}
+
 #pragma mark - lifecycle
 - (void)viewDidLoad
 {
@@ -31,18 +48,13 @@
     self.title = LOC(@"venueslistcontroller.title");
     self.view.backgroundColor = RGBColor(249, 244, 227);
     [self registerNibForCellClass:[VenueCell class] item:[Venue class] reuseIdentifier:kVenueCellReuseIdentifier];
-    [self.presenter loadVenuesWithCompletion:^(NSError *error) {
-        if(!error) {
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            VenueCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-//            [cell showRightUtilityButtonsAnimated:NO];
-//            [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
-//            [cell hideUtilityButtonsAnimated:YES];
-//            });
-        }
-    }];
+    
+    self.refreshControl = [[UIRefreshControl alloc]init];
+    [self.refreshControl addTarget:self action:@selector(updateAction:) forControlEvents:UIControlEventValueChanged];
+    [self updateAction:self.refreshControl];
 }
 
+#pragma mark - superclass methods
 - (CGFloat)rowHeightForItem:(id)item
 {
     return kDynamicRowHeight;
@@ -58,6 +70,7 @@
     cell.delegate = (id<SWTableViewCellDelegate>)self;
 }
 
+#pragma mark - Segues transitions
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.destinationViewController isKindOfClass:[VenueDetailsViewController class]]) {
@@ -70,14 +83,13 @@
     }
 }
 
+#pragma mark - <UITableViewDelegate> methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"ShowVenueDetails" sender:self];
 }
 
-
-
-#pragma mark - Delegate methods
+#pragma mark - <SWTableViewCellDelegate> methods
 - (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell
 {
     return YES;
@@ -85,7 +97,6 @@
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
 {
-    [cell hideUtilityButtonsAnimated:YES];
     [self.presenter handleRightUtiltyEventWithInex:index atIndexPath:[self.tableView indexPathForCell:cell]];
 }
 
