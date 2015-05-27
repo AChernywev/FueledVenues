@@ -10,7 +10,7 @@
 
 #import "Photo.h"
 
-typedef NS_ENUM(NSInteger, PriceTier)
+typedef NS_ENUM(int32_t, PriceTier)
 {
     PriceTierMinimum,
     PriceTierLow,
@@ -20,22 +20,22 @@ typedef NS_ENUM(NSInteger, PriceTier)
 
 @interface Venue : BaseEntity
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, assign) BOOL isOpen;
-@property (nonatomic, assign) PriceTier tier;
-@property (nonatomic, strong) NSString *currency;
+@property (nonatomic, strong) Photo *mainImage;
 @property (nonatomic, assign) float rating;
 
-@property (nonatomic, strong) NSString *address;
+@property (nonatomic, assign) bool isOpen;
+@property (nonatomic, assign) PriceTier tier;
 @property (nonatomic, assign) float distance;
+
+@property (nonatomic, strong) NSString *address;
 @property (nonatomic, assign) float latitude;
 @property (nonatomic, assign) float longitude;
 
-@property (nonatomic, readonly) NSString *phone;
-@property (nonatomic, readonly) NSURL *websiteURL;
-@property (nonatomic, readonly) NSURL *menuURL;
-@property (nonatomic, assign) NSInteger reviewsCount;
+@property (nonatomic, strong) NSString *phone;
+@property (nonatomic, strong) NSURL *websiteURL;
+@property (nonatomic, strong) NSURL *menuURL;
+@property (nonatomic, assign) int32_t reviewsCount;
 
-@property (nonatomic, strong) Photo *mainImage;
 
 
 

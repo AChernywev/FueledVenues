@@ -47,7 +47,7 @@
 
 - (CGFloat)rowHeightForItem:(id)item
 {
-    return 222;
+    return kDynamicRowHeight;
 }
 
 - (void)configureCell:(UITableViewCell<ViewItemProtocol> *)customizeCell forItem:(id)item

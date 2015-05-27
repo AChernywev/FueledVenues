@@ -12,6 +12,8 @@
 #import "ReuseIdentifierMatcher.h"
 #import "ViewItemProtocol.h"
 
+extern const CGFloat kDynamicRowHeight;
+
 @interface TableViewController : UITableViewController
 
 @property (nonatomic, strong) id<CollectionPresenterProtocol> presenter;

@@ -31,8 +31,11 @@
         return (NSNumber *)maybeNilSelf;
     }
     else if([maybeNilSelf isKindOfClass:[NSString class]]) {
-        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc]init];
-        return [numberFormatter numberFromString:(NSString *)maybeNilSelf];
+        static NSNumberFormatter *formatter = nil;
+        if(!formatter) {
+            formatter = [[NSNumberFormatter alloc]init];
+        }
+        return [formatter numberFromString:(NSString *)maybeNilSelf];
     }
     else {
         return nil;

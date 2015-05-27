@@ -12,7 +12,7 @@
 @property (nonatomic, readonly) NSString *phone;
 @property (nonatomic, readonly) NSURL *websiteURL;
 @property (nonatomic, readonly) NSURL *menuURL;
-@property (nonatomic, assign) NSInteger reviewsCount;
+@property (nonatomic, readonly) NSInteger reviewsCount;
 
 - (instancetype)initWithVenue:(Venue *)venue;
 @end

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BaseCacheEntity" representedClassName="BaseCacheEntity" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PhotoCache" representedClassName="PhotoCache" parentEntity="BaseCacheEntity" syncable="YES">
+        <attribute name="prefix" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="suffix" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VenueCache" inverseName="mainImage" inverseEntity="VenueCache" syncable="YES"/>
+    </entity>
+    <entity name="VenueCache" representedClassName="VenueCache" parentEntity="BaseCacheEntity" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distance" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="isOpen" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="menuURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="reviewsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="tier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="webURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mainImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoCache" inverseName="venue" inverseEntity="PhotoCache" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BaseCacheEntity" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="VenueCache" positionX="-54" positionY="-9" width="128" height="240"/>
+        <element name="PhotoCache" positionX="-36" positionY="99" width="128" height="90"/>
+    </elements>
+</model>

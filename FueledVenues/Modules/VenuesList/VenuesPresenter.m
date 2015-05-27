@@ -8,16 +8,13 @@
 
 #import "VenuesPresenter.h"
 
-#import <AFNetworking/AFNetworking.h>
-
-#import "Venue.h"
-#import "FoursquareAPI.h"
+#import "ServiceLayer.h"
 
 @implementation VenuesPresenter
 
 - (void)loadVenuesWithCompletion:(void(^)(NSError *error))completion
 {
-    [[FoursquareAPI new] loadClosestVenuesWithCompletion:^(NSArray *venues, NSError *error) {
+    [[ServiceLayer sharedDataProvider].venueService loadVenuesWithCompletion:^(NSArray *venues, NSError *error) {
         if(venues.count) {
             MutableSectionItem *section = [[MutableSectionItem alloc]initWithRows:[venues mutableCopy]];
             [self updateSections: @[section]];

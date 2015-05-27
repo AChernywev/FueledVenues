@@ -13,6 +13,13 @@
 #import "PresenterChange.h"
 #import "ViewItemProtocol.h"
 
+const CGFloat kDynamicRowHeight = -1;
+
+@interface TableViewController()
+@property (nonatomic, strong) NSMutableDictionary* prototypes;
+
+@end
+
 @implementation TableViewController
 @synthesize reuseIdentifierMatcher = _reuseIdentifierMatcher;
 
@@ -35,6 +42,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.prototypes = [@{} mutableCopy];
+
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+//    self.tableView.estimatedRowHeight = 70;
     RACSignal* changes = [RACObserve(self, presenter.changes) switchToLatest];
     [self rac_liftSelector:@selector(handleChange:) withSignals:changes, nil];
 }
@@ -63,6 +74,7 @@
     UINib* nib = [UINib nibWithNibName:NSStringFromClass(cellClass) bundle:nil];
     if (nib && reuseIdentifier.length > 0) {
         [self.tableView registerNib:nib forCellReuseIdentifier:reuseIdentifier];
+        [self.prototypes setObject:[nib instantiateWithOwner:nil options:nil].firstObject forKey:reuseIdentifier];
         [self.reuseIdentifierMatcher registerReuseIdentifier:reuseIdentifier forItemClass:itemClass];
     }
 }
@@ -209,7 +221,20 @@
 heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id item = [self.presenter itemAtIndexPath:indexPath];
-    return [self rowHeightForItem:item];
+    CGFloat height = [self rowHeightForItem:item];
+    if (height == kDynamicRowHeight) {
+        NSString *reuseIdentifier = [self.reuseIdentifierMatcher reuseIdentifierForItem:item];
+        UITableViewCell<ViewItemProtocol>* cell = self.prototypes[reuseIdentifier];
+        if (!cell) {
+            cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier
+                                                   forIndexPath:indexPath];
+        }
+        [cell prepareForReuse];
+        [self configureCell:cell forItem:item];
+        [cell layoutIfNeeded];
+        height = ceil([cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height) + 1;
+    }
+    return height;
 }
 
 -       (void)tableView:(UITableView *)tableView

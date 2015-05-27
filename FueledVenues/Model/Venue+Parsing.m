@@ -11,6 +11,7 @@
 #import "NSArray+Map.h"
 #import "NSObject+SafeParsing.h"
 #import "NSDictionary+SafeParsing.h"
+#import "NSMutableArray+Secure.h"
 
 @implementation Venue (Parser)
 
@@ -33,7 +34,11 @@
 {
     self.name = [values stringAtKey:@"name"];
     NSDictionary *locationDict = [values dictionaryAtKey:@"location"];
-    self.address = [locationDict stringAtKey:@"address"];
+    NSMutableArray *locationArray = [NSMutableArray array];
+    [locationArray addObjectSecure:[locationDict stringAtKey:@"address"]];
+    [locationArray addObjectSecure:[locationDict stringAtKey:@"city"]];
+    [locationArray addObjectSecure:[locationDict stringAtKey:@"postalCode"]];
+    self.address = [locationArray componentsJoinedByString:@", "];
     self.distance = [locationDict floatAtKey:@"distance"];
     self.latitude = [locationDict floatAtKey:@"lat"];
     self.longitude = [locationDict floatAtKey:@"lng"];
@@ -41,9 +46,17 @@
     self.isOpen = [[values dictionaryAtKey:@"hours"] boolAtKey:@"isOpen"];
     
     NSDictionary *priceDict = [values dictionaryAtKey:@"price"];
-    self.tier = [priceDict integerAtKey:@"tier"];
-    self.currency = [priceDict stringAtKey:@"currency"];
+    self.tier = [priceDict intAtKey:@"tier"];
     self.rating = [values floatAtKey:@"rating"];
+    
+    self.phone = [[values dictionaryAtKey:@"contact"] stringAtKey:@"phone"];
+    self.websiteURL = [NSURL URLWithString: [values stringAtKey:@"url"]];
+    NSDictionary *menuDict = [values dictionaryAtKey:@"menu"];
+    self.menuURL = [NSURL URLWithString: [menuDict stringAtKey:@"mobileUrl"]];
+    if(!self.menuURL) {
+        self.menuURL = [NSURL URLWithString: [menuDict stringAtKey:@"url"]];
+    }
+    self.reviewsCount = [[values dictionaryAtKey:@"stats"] intAtKey:@"tipCount"];
     
     NSDictionary *itemsDict = [[[[values dictionaryAtKey:@"featuredPhotos"] arrayAtKey:@"items"] firstObject] safeDictionaryValue];
     self.mainImage = [Photo objectWithDictionary:itemsDict];

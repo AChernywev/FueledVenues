@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -77,7 +77,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="TRn-Qv-33z" firstAttribute="top" secondItem="X0d-Ym-S1J" secondAttribute="top" id="8TO-JC-7iv"/>
                                             <constraint firstAttribute="trailing" secondItem="TRn-Qv-33z" secondAttribute="trailing" id="QLh-gq-mEQ"/>
@@ -91,7 +91,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="X0d-Ym-S1J" secondAttribute="centerX" id="JyH-ec-QrL"/>
-                                    <constraint firstAttribute="centerY" secondItem="X0d-Ym-S1J" secondAttribute="centerY" id="RvG-58-x0q"/>
+                                    <constraint firstAttribute="bottom" secondItem="X0d-Ym-S1J" secondAttribute="bottom" id="MAw-bJ-No6"/>
+                                    <constraint firstItem="X0d-Ym-S1J" firstAttribute="top" secondItem="CwQ-Z1-AhO" secondAttribute="top" id="TeF-dt-mam"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bK6-Wz-kR0">
@@ -116,7 +117,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Zm6-AZ-WY0" secondAttribute="bottom" id="3Oh-JA-srm"/>
                                             <constraint firstItem="Zm6-AZ-WY0" firstAttribute="top" secondItem="IDw-92-ZQx" secondAttribute="top" id="8cB-DB-W77"/>
@@ -129,7 +130,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="IDw-92-ZQx" secondAttribute="centerY" id="nOS-QD-thP"/>
+                                    <constraint firstAttribute="bottom" secondItem="IDw-92-ZQx" secondAttribute="bottom" id="4hk-HD-oJ6"/>
+                                    <constraint firstItem="IDw-92-ZQx" firstAttribute="top" secondItem="bK6-Wz-kR0" secondAttribute="top" id="bBM-7g-YfJ"/>
                                     <constraint firstAttribute="centerX" secondItem="IDw-92-ZQx" secondAttribute="centerX" id="taf-3W-fho"/>
                                 </constraints>
                             </view>
@@ -155,7 +157,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="r0m-L4-ikC" secondAttribute="trailing" id="Bl8-5M-ymp"/>
                                             <constraint firstItem="5hN-jT-SCR" firstAttribute="leading" secondItem="vo1-s4-bHa" secondAttribute="leading" id="JlC-RV-D63"/>
@@ -168,7 +170,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="vo1-s4-bHa" secondAttribute="centerY" id="C1s-0i-enm"/>
+                                    <constraint firstAttribute="bottom" secondItem="vo1-s4-bHa" secondAttribute="bottom" id="5Qw-Oh-Vrb"/>
+                                    <constraint firstItem="vo1-s4-bHa" firstAttribute="top" secondItem="8IO-Ko-nAe" secondAttribute="top" id="GAm-h2-MhN"/>
                                     <constraint firstAttribute="centerX" secondItem="vo1-s4-bHa" secondAttribute="centerX" id="IOp-jL-AmW"/>
                                 </constraints>
                             </view>

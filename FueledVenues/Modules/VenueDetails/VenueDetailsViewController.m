@@ -36,18 +36,7 @@
 
 - (CGFloat)rowHeightForItem:(id)item
 {
-    if([item isKindOfClass:[Venue class]]) {
-        return 222;
-    }
-    else if([item isKindOfClass:[VenueContactItem class]]) {
-        return 80;
-    }
-    else if([item isKindOfClass:[NSString class]]) {
-        return 35;
-    }
-    else {
-        return [super rowHeightForItem:item];
-    }
+    return kDynamicRowHeight;
 }
 
 @end

@@ -12,7 +12,6 @@
 
 @interface VenueContactItem ()
 @property (nonatomic, strong) Venue *venue;
-
 @end
 
 @implementation VenueContactItem

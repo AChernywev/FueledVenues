@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB114FA02124C90E2E1EC1DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC345F8B1DDD5F1CC155D26 /* libPods.a */; };
+		CE130B621B14CB7500601160 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = CE130B5F1B14CB7500601160 /* APIService.m */; };
 		CE2CE09C1B138F9800119639 /* NSDictionary+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE09B1B138F9800119639 /* NSDictionary+SafeParsing.m */; };
 		CE2CE0A01B1394E700119639 /* NSObject+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE09F1B1394E700119639 /* NSObject+SafeParsing.m */; };
 		CE2CE0A41B13976B00119639 /* NSMutableArray+Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0A31B13976B00119639 /* NSMutableArray+Secure.m */; };
@@ -15,6 +16,19 @@
 		CE2CE0AB1B139AC700119639 /* Photo+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0AA1B139AC700119639 /* Photo+Parsing.m */; };
 		CE2CE0B21B139D3500119639 /* VenueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0B11B139D3500119639 /* VenueItem.m */; };
 		CE2CE0BA1B139EFC00119639 /* VenueContactItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0B91B139EFC00119639 /* VenueContactItem.m */; };
+		CE3053A51B15E9350063ED98 /* VenuesDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3053A41B15E9350063ED98 /* VenuesDataClient.m */; };
+		CE3053A91B15EBFD0063ED98 /* VenuesCacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3053A81B15EBFD0063ED98 /* VenuesCacheClient.m */; };
+		CE3053B51B15EE070063ED98 /* VenuesService.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3053B41B15EE070063ED98 /* VenuesService.m */; };
+		CE3053B81B15EE980063ED98 /* ServiceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3053B71B15EE980063ED98 /* ServiceLayer.m */; };
+		CE3099651B14A24C00678C6F /* NSDateFormatter+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3099641B14A24C00678C6F /* NSDateFormatter+Singleton.m */; };
+		CE4407071B15F445000464D3 /* CacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4407011B15F445000464D3 /* CacheClient.m */; };
+		CE4407081B15F445000464D3 /* FueledVenues.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE4407021B15F445000464D3 /* FueledVenues.xcdatamodeld */; };
+		CE44070D1B15F48E000464D3 /* BaseCacheEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44070C1B15F48E000464D3 /* BaseCacheEntity.m */; };
+		CE4407141B15F62E000464D3 /* Venue+CacheParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4407131B15F62E000464D3 /* Venue+CacheParsing.m */; };
+		CE4407171B15F6EB000464D3 /* BaseEntity+CacheParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4407161B15F6EB000464D3 /* BaseEntity+CacheParsing.m */; };
+		CE4407201B160360000464D3 /* Photo+CacheParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44071F1B160360000464D3 /* Photo+CacheParsing.m */; };
+		CE4407291B1604AE000464D3 /* VenueCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4407281B1604AE000464D3 /* VenueCache.m */; };
+		CE44072C1B1604AF000464D3 /* PhotoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44072B1B1604AF000464D3 /* PhotoCache.m */; };
 		FA826F361B10D3500082B943 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F351B10D3500082B943 /* RatingView.m */; };
 		FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3C1B10F74E0082B943 /* UIColor+FVColors.m */; };
 		FA826F401B10F8420082B943 /* UIFont+FVFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3F1B10F8420082B943 /* UIFont+FVFonts.m */; };
@@ -53,7 +67,6 @@
 		FADA92E51B10928E0094BAA2 /* VenueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADA92E31B10928E0094BAA2 /* VenueCell.xib */; };
 		FADA92E81B10953C0094BAA2 /* BaseEntity+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92E71B10953C0094BAA2 /* BaseEntity+Parsing.m */; };
 		FADA92EB1B10969E0094BAA2 /* Venue+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92EA1B10969E0094BAA2 /* Venue+Parsing.m */; };
-		FADF411C1B11C1290083AE96 /* FoursquareAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF411B1B11C1290083AE96 /* FoursquareAPI.m */; };
 		FADF41211B11D07F0083AE96 /* UIStoryboard+Links.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41201B11D07F0083AE96 /* UIStoryboard+Links.m */; };
 		FADF412B1B11D42F0083AE96 /* MenuViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF412A1B11D42F0083AE96 /* MenuViewPresenter.m */; };
 		FADF412E1B11D77C0083AE96 /* PlaceholderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF412D1B11D77C0083AE96 /* PlaceholderTableView.m */; };
@@ -84,6 +97,8 @@
 /* Begin PBXFileReference section */
 		4DC345F8B1DDD5F1CC155D26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC432F46997FABFFF9157CA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CE130B5E1B14CB7500601160 /* APIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIService.h; sourceTree = "<group>"; };
+		CE130B5F1B14CB7500601160 /* APIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
 		CE2CE09A1B138F9800119639 /* NSDictionary+SafeParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeParsing.h"; sourceTree = "<group>"; };
 		CE2CE09B1B138F9800119639 /* NSDictionary+SafeParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeParsing.m"; sourceTree = "<group>"; };
 		CE2CE09E1B1394E700119639 /* NSObject+SafeParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeParsing.h"; sourceTree = "<group>"; };
@@ -98,6 +113,32 @@
 		CE2CE0B11B139D3500119639 /* VenueItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueItem.m; sourceTree = "<group>"; };
 		CE2CE0B81B139EFC00119639 /* VenueContactItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueContactItem.h; sourceTree = "<group>"; };
 		CE2CE0B91B139EFC00119639 /* VenueContactItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueContactItem.m; sourceTree = "<group>"; };
+		CE3053A31B15E9350063ED98 /* VenuesDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesDataClient.h; sourceTree = "<group>"; };
+		CE3053A41B15E9350063ED98 /* VenuesDataClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenuesDataClient.m; sourceTree = "<group>"; };
+		CE3053A71B15EBFD0063ED98 /* VenuesCacheClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesCacheClient.h; sourceTree = "<group>"; };
+		CE3053A81B15EBFD0063ED98 /* VenuesCacheClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenuesCacheClient.m; sourceTree = "<group>"; };
+		CE3053B31B15EE070063ED98 /* VenuesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesService.h; sourceTree = "<group>"; };
+		CE3053B41B15EE070063ED98 /* VenuesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenuesService.m; sourceTree = "<group>"; };
+		CE3053B61B15EE980063ED98 /* ServiceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceLayer.h; sourceTree = "<group>"; };
+		CE3053B71B15EE980063ED98 /* ServiceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceLayer.m; sourceTree = "<group>"; };
+		CE3099631B14A24C00678C6F /* NSDateFormatter+Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Singleton.h"; sourceTree = "<group>"; };
+		CE3099641B14A24C00678C6F /* NSDateFormatter+Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Singleton.m"; sourceTree = "<group>"; };
+		CE4406F61B15F12A000464D3 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		CE4407001B15F445000464D3 /* CacheClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheClient.h; sourceTree = "<group>"; };
+		CE4407011B15F445000464D3 /* CacheClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheClient.m; sourceTree = "<group>"; };
+		CE4407031B15F445000464D3 /* FueledVenues.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FueledVenues.xcdatamodel; sourceTree = "<group>"; };
+		CE44070B1B15F48E000464D3 /* BaseCacheEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCacheEntity.h; sourceTree = "<group>"; };
+		CE44070C1B15F48E000464D3 /* BaseCacheEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCacheEntity.m; sourceTree = "<group>"; };
+		CE4407121B15F62E000464D3 /* Venue+CacheParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venue+CacheParsing.h"; sourceTree = "<group>"; };
+		CE4407131B15F62E000464D3 /* Venue+CacheParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Venue+CacheParsing.m"; sourceTree = "<group>"; };
+		CE4407151B15F6EB000464D3 /* BaseEntity+CacheParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseEntity+CacheParsing.h"; sourceTree = "<group>"; };
+		CE4407161B15F6EB000464D3 /* BaseEntity+CacheParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseEntity+CacheParsing.m"; sourceTree = "<group>"; };
+		CE44071E1B160360000464D3 /* Photo+CacheParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CacheParsing.h"; sourceTree = "<group>"; };
+		CE44071F1B160360000464D3 /* Photo+CacheParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CacheParsing.m"; sourceTree = "<group>"; };
+		CE4407271B1604AE000464D3 /* VenueCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCache.h; sourceTree = "<group>"; };
+		CE4407281B1604AE000464D3 /* VenueCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCache.m; sourceTree = "<group>"; };
+		CE44072A1B1604AF000464D3 /* PhotoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCache.h; sourceTree = "<group>"; };
+		CE44072B1B1604AF000464D3 /* PhotoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCache.m; sourceTree = "<group>"; };
 		DCFDEC1D33375EB9363000B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA826F341B10D3500082B943 /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
 		FA826F351B10D3500082B943 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
@@ -184,8 +225,6 @@
 		FADA92E71B10953C0094BAA2 /* BaseEntity+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseEntity+Parsing.m"; sourceTree = "<group>"; };
 		FADA92E91B10969E0094BAA2 /* Venue+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venue+Parsing.h"; sourceTree = "<group>"; };
 		FADA92EA1B10969E0094BAA2 /* Venue+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Venue+Parsing.m"; sourceTree = "<group>"; };
-		FADF411A1B11C1290083AE96 /* FoursquareAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareAPI.h; sourceTree = "<group>"; };
-		FADF411B1B11C1290083AE96 /* FoursquareAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareAPI.m; sourceTree = "<group>"; };
 		FADF411D1B11C9900083AE96 /* VenuesPresenterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesPresenterInput.h; sourceTree = "<group>"; };
 		FADF411F1B11D07F0083AE96 /* UIStoryboard+Links.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Links.h"; sourceTree = "<group>"; };
 		FADF41201B11D07F0083AE96 /* UIStoryboard+Links.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Links.m"; sourceTree = "<group>"; };
@@ -250,6 +289,14 @@
 				4DC345F8B1DDD5F1CC155D26 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE130B701B14D48200601160 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE3053B91B15EEB20063ED98 /* VenuesService */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		CE2CE0971B1356D700119639 /* Entity */ = {
@@ -391,6 +438,100 @@
 			name = VenueContactItem;
 			sourceTree = "<group>";
 		};
+		CE3053A21B15E9100063ED98 /* VenuesDataClient */ = {
+			isa = PBXGroup;
+			children = (
+				CE3053A31B15E9350063ED98 /* VenuesDataClient.h */,
+				CE3053A41B15E9350063ED98 /* VenuesDataClient.m */,
+			);
+			name = VenuesDataClient;
+			sourceTree = "<group>";
+		};
+		CE3053A61B15EBEC0063ED98 /* VenuesCacheClient */ = {
+			isa = PBXGroup;
+			children = (
+				CE3053A71B15EBFD0063ED98 /* VenuesCacheClient.h */,
+				CE3053A81B15EBFD0063ED98 /* VenuesCacheClient.m */,
+			);
+			name = VenuesCacheClient;
+			sourceTree = "<group>";
+		};
+		CE3053B11B15ECCF0063ED98 /* InternetTransport */ = {
+			isa = PBXGroup;
+			children = (
+				CE130B5E1B14CB7500601160 /* APIService.h */,
+				CE130B5F1B14CB7500601160 /* APIService.m */,
+			);
+			name = InternetTransport;
+			sourceTree = "<group>";
+		};
+		CE3053B91B15EEB20063ED98 /* VenuesService */ = {
+			isa = PBXGroup;
+			children = (
+				CE3053B31B15EE070063ED98 /* VenuesService.h */,
+				CE3053B41B15EE070063ED98 /* VenuesService.m */,
+				CE3053A61B15EBEC0063ED98 /* VenuesCacheClient */,
+				CE3053A21B15E9100063ED98 /* VenuesDataClient */,
+			);
+			name = VenuesService;
+			sourceTree = "<group>";
+		};
+		CE3053BA1B15EEC40063ED98 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				CE3053B11B15ECCF0063ED98 /* InternetTransport */,
+				CE4406FD1B15F445000464D3 /* CacheTransport */,
+			);
+			name = Transport;
+			sourceTree = "<group>";
+		};
+		CE3099621B14A22F00678C6F /* NSDateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				CE3099631B14A24C00678C6F /* NSDateFormatter+Singleton.h */,
+				CE3099641B14A24C00678C6F /* NSDateFormatter+Singleton.m */,
+			);
+			name = NSDateFormatter;
+			sourceTree = "<group>";
+		};
+		CE4406FD1B15F445000464D3 /* CacheTransport */ = {
+			isa = PBXGroup;
+			children = (
+				CE4407001B15F445000464D3 /* CacheClient.h */,
+				CE4407011B15F445000464D3 /* CacheClient.m */,
+				CE4407021B15F445000464D3 /* FueledVenues.xcdatamodeld */,
+				CE44070A1B15F457000464D3 /* CacheEntities */,
+			);
+			name = CacheTransport;
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		CE44070A1B15F457000464D3 /* CacheEntities */ = {
+			isa = PBXGroup;
+			children = (
+				CE44070B1B15F48E000464D3 /* BaseCacheEntity.h */,
+				CE44070C1B15F48E000464D3 /* BaseCacheEntity.m */,
+				CE4407271B1604AE000464D3 /* VenueCache.h */,
+				CE4407281B1604AE000464D3 /* VenueCache.m */,
+				CE44072A1B1604AF000464D3 /* PhotoCache.h */,
+				CE44072B1B1604AF000464D3 /* PhotoCache.m */,
+			);
+			name = CacheEntities;
+			sourceTree = "<group>";
+		};
+		CE4407111B15F5EE000464D3 /* CacheParsing */ = {
+			isa = PBXGroup;
+			children = (
+				CE4407151B15F6EB000464D3 /* BaseEntity+CacheParsing.h */,
+				CE4407161B15F6EB000464D3 /* BaseEntity+CacheParsing.m */,
+				CE4407121B15F62E000464D3 /* Venue+CacheParsing.h */,
+				CE4407131B15F62E000464D3 /* Venue+CacheParsing.m */,
+				CE44071E1B160360000464D3 /* Photo+CacheParsing.h */,
+				CE44071F1B160360000464D3 /* Photo+CacheParsing.m */,
+			);
+			name = CacheParsing;
+			sourceTree = "<group>";
+		};
 		FA826F331B10D3350082B943 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,7 +636,7 @@
 				FAC950B51B10666A00A89F9C /* AppDelegate.h */,
 				FAC950B61B10666A00A89F9C /* AppDelegate.m */,
 				FADA92D31B1083790094BAA2 /* Model */,
-				FADF41181B11C1050083AE96 /* Services */,
+				FADF41181B11C1050083AE96 /* DataProvider */,
 				FA826F331B10D3350082B943 /* Controls */,
 				FAC950D91B10676900A89F9C /* Modules */,
 				FAC950E41B106ED200A89F9C /* Core */,
@@ -553,6 +694,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC950E31B106BD700A89F9C /* Macroses.h */,
+				CE4406F61B15F12A000464D3 /* Constants.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -696,6 +838,7 @@
 			children = (
 				CE2CE0971B1356D700119639 /* Entity */,
 				CE2CE0981B1356DE00119639 /* Parsing */,
+				CE4407111B15F5EE000464D3 /* CacheParsing */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -711,26 +854,22 @@
 			path = VenuesList;
 			sourceTree = "<group>";
 		};
-		FADF41181B11C1050083AE96 /* Services */ = {
+		FADF41181B11C1050083AE96 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
-				FADF41191B11C10C0083AE96 /* API */,
+				CE3053B61B15EE980063ED98 /* ServiceLayer.h */,
+				CE3053B71B15EE980063ED98 /* ServiceLayer.m */,
+				CE130B701B14D48200601160 /* Services */,
+				CE3053BA1B15EEC40063ED98 /* Transport */,
 			);
+			name = DataProvider;
 			path = Services;
-			sourceTree = "<group>";
-		};
-		FADF41191B11C10C0083AE96 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				FADF411A1B11C1290083AE96 /* FoursquareAPI.h */,
-				FADF411B1B11C1290083AE96 /* FoursquareAPI.m */,
-			);
-			name = API;
 			sourceTree = "<group>";
 		};
 		FADF411E1B11D06D0083AE96 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CE3099621B14A22F00678C6F /* NSDateFormatter */,
 				CE2CE09D1B1394CF00119639 /* NSObject */,
 				CE2CE0991B138F7800119639 /* NSDictionary */,
 				FADF41541B125BB10083AE96 /* NSArray */,
@@ -944,13 +1083,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADA92A21B1078E50094BAA2 /* SectionsPresenter+Protected.m in Sources */,
+				CE130B621B14CB7500601160 /* APIService.m in Sources */,
 				CE2CE0AB1B139AC700119639 /* Photo+Parsing.m in Sources */,
 				FA826F481B10F9B90082B943 /* UIView+FVStyles.m in Sources */,
 				FADA92C31B107A170094BAA2 /* PresenterChangeSectionReload.m in Sources */,
-				FADF411C1B11C1290083AE96 /* FoursquareAPI.m in Sources */,
 				FADA929C1B1075AB0094BAA2 /* SectionItem+Protected.m in Sources */,
 				FADA92CD1B107FBD0094BAA2 /* TableViewController.m in Sources */,
 				FADF41491B11FFB80083AE96 /* VenueDetailsPresenter.m in Sources */,
+				CE4407141B15F62E000464D3 /* Venue+CacheParsing.m in Sources */,
 				CE2CE0A01B1394E700119639 /* NSObject+SafeParsing.m in Sources */,
 				FADF414D1B12519E0083AE96 /* VenueButtonsCell.m in Sources */,
 				FADA928E1B10727F0094BAA2 /* SectionItem.m in Sources */,
@@ -960,6 +1100,7 @@
 				CE2CE0BA1B139EFC00119639 /* VenueContactItem.m in Sources */,
 				FADA92C01B107A170094BAA2 /* PresenterChangeSection.m in Sources */,
 				FADF41521B1253A30083AE96 /* VenueAddressCell.m in Sources */,
+				CE4407291B1604AE000464D3 /* VenueCache.m in Sources */,
 				CE2CE0A41B13976B00119639 /* NSMutableArray+Secure.m in Sources */,
 				FADF413A1B11E6C20083AE96 /* TextLabel.m in Sources */,
 				FADF41211B11D07F0083AE96 /* UIStoryboard+Links.m in Sources */,
@@ -971,6 +1112,8 @@
 				FA826F401B10F8420082B943 /* UIFont+FVFonts.m in Sources */,
 				FADA92E81B10953C0094BAA2 /* BaseEntity+Parsing.m in Sources */,
 				FADA92CA1B107CDA0094BAA2 /* MutableSectionsPresenter.m in Sources */,
+				CE44070D1B15F48E000464D3 /* BaseCacheEntity.m in Sources */,
+				CE4407201B160360000464D3 /* Photo+CacheParsing.m in Sources */,
 				FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */,
 				FADA92BD1B107A170094BAA2 /* PresenterChangeItemDelete.m in Sources */,
 				FADF41371B11E4500083AE96 /* BaseTableViewCell.m in Sources */,
@@ -978,6 +1121,7 @@
 				FADA92911B1072880094BAA2 /* MutableSectionItem.m in Sources */,
 				CE2CE0B21B139D3500119639 /* VenueItem.m in Sources */,
 				FAC950B71B10666A00A89F9C /* AppDelegate.m in Sources */,
+				CE4407071B15F445000464D3 /* CacheClient.m in Sources */,
 				FADA92EB1B10969E0094BAA2 /* Venue+Parsing.m in Sources */,
 				FADA92E41B10928E0094BAA2 /* VenueCell.m in Sources */,
 				FADA92BC1B107A170094BAA2 /* PresenterChangeItem.m in Sources */,
@@ -988,14 +1132,22 @@
 				FADA92E01B1092070094BAA2 /* VenuesPresenter.m in Sources */,
 				FADA92BF1B107A170094BAA2 /* PresenterChangeItemReload.m in Sources */,
 				FADA92C71B107BE80094BAA2 /* PresenterChangeReload.m in Sources */,
+				CE3053A51B15E9350063ED98 /* VenuesDataClient.m in Sources */,
+				CE44072C1B1604AF000464D3 /* PhotoCache.m in Sources */,
 				FA826F4C1B10FAF40082B943 /* FVNavigationBar.m in Sources */,
+				CE3099651B14A24C00678C6F /* NSDateFormatter+Singleton.m in Sources */,
 				FADA92BE1B107A170094BAA2 /* PresenterChangeItemInsert.m in Sources */,
 				FAC950E11B10695700A89F9C /* MenuItem.m in Sources */,
+				CE4407081B15F445000464D3 /* FueledVenues.xcdatamodeld in Sources */,
 				FADF413E1B11F6010083AE96 /* RatingStarView.m in Sources */,
+				CE3053B81B15EE980063ED98 /* ServiceLayer.m in Sources */,
+				CE3053A91B15EBFD0063ED98 /* VenuesCacheClient.m in Sources */,
 				FADA92DD1B1089380094BAA2 /* VenuesListViewController.m in Sources */,
+				CE3053B51B15EE070063ED98 /* VenuesService.m in Sources */,
 				FADA92D91B1085530094BAA2 /* Venue.m in Sources */,
 				FADF412B1B11D42F0083AE96 /* MenuViewPresenter.m in Sources */,
 				FA826F361B10D3500082B943 /* RatingView.m in Sources */,
+				CE4407171B15F6EB000464D3 /* BaseEntity+CacheParsing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1191,6 +1343,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE4407021B15F445000464D3 /* FueledVenues.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE4407031B15F445000464D3 /* FueledVenues.xcdatamodel */,
+			);
+			currentVersion = CE4407031B15F445000464D3 /* FueledVenues.xcdatamodel */;
+			path = FueledVenues.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FAC950A61B10666A00A89F9C /* Project object */;
 }

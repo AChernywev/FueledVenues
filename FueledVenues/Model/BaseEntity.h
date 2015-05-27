@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NSString * EntityIDType;
+#import "Constants.h"
 
 @interface BaseEntity : NSObject
 @property (nonatomic, readonly) EntityIDType identifier;

@@ -62,8 +62,9 @@ NSString  * const kVenueCellReuseIdentifier = @"VenueCellReuseIdentifier";
     }] takeUntil:self.rac_prepareForReuseSignal];
 }
 
-- (void)drawRect:(CGRect)rect
+- (void)layoutSubviews
 {
+    [super layoutSubviews];
     CGSize size = self.shadowView.bounds.size;
     UIBezierPath* path = [UIBezierPath bezierPath];
     

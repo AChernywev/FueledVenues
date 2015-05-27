@@ -8,7 +8,6 @@
 
 #import "VenueDetailsPresenter.h"
 
-#import "FoursquareAPI.h"
 #import "VenueContactItem.h"
 
 @interface VenueDetailsPresenter()
@@ -38,6 +37,6 @@
 #pragma mark - pubic methods
 - (void)updateInfo
 {
-//    [[FoursquareAPI new] loadFullInfoForVenue:self.venue];
+//    [[DataProviderService sharedDataProvider] loadFullInfoForVenue:self.venue];
 }
 @end
