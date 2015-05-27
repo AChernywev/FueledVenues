@@ -12,6 +12,7 @@
 
 @dynamic name;
 @dynamic rating;
+@dynamic blacklisted;
 @dynamic isOpen;
 @dynamic tier;
 @dynamic distance;

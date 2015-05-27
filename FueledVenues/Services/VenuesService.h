@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Venue.h"
+
 @interface VenuesService : NSObject
 
+- (void)addToBlackList:(Venue *)venue;
 - (void)loadVenuesWithCompletion:(void(^)(NSArray *venues, NSError *error))completion;
 @end

@@ -44,8 +44,7 @@ const CGFloat kDynamicRowHeight = -1;
     [super viewDidLoad];
     self.prototypes = [@{} mutableCopy];
 
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
-//    self.tableView.estimatedRowHeight = 70;
+    self.tableView.estimatedRowHeight = 50;
     RACSignal* changes = [RACObserve(self, presenter.changes) switchToLatest];
     [self rac_liftSelector:@selector(handleChange:) withSignals:changes, nil];
 }

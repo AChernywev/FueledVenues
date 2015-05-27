@@ -11,6 +11,8 @@
 #import "VenuesCacheClient.h"
 #import "VenuesDataClient.h"
 
+static NSInteger  const kDefaultNumberOfVenues = 50;
+
 @interface VenuesService()
 @property (nonatomic, readonly) VenuesCacheClient * cacheClient;
 @property (nonatomic, readonly) VenuesDataClient *  dataClient;
@@ -33,22 +35,41 @@
 #pragma mark - public methods
 - (void)loadVenuesWithCompletion:(void(^)(NSArray *venues, NSError *error))completion
 {
-    void(^venuesCompletion)(NSArray *, NSError *) = ^(NSArray *venues, NSError *error) {
-        if(completion) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(venues, error);
-            });
-        }
-    };
+    NSArray *blackListed = [self.cacheClient loadBlacklistedVenues];
     
-    [self.cacheClient loadVenuesWithCompletion:^(NSArray *venues) {
-        venuesCompletion(venues, nil);
-    }];
-//    [self.dataClient loadVenuesWithCompletion:^(NSArray *venues, NSError *error) {
-//        if(venues.count) {
-//            [self.cacheClient storeVenues:venues];
-//        }
-//        venuesCompletion(venues, error);
-//    }];
+    NSArray *venues = [self.cacheClient loadVenues];
+    [self finishWithVenues:venues error:nil
+          blackListedArray:blackListed completion:completion];
+    
+    __weak typeof(self)weakSelf = self;
+    [self.dataClient loadVenuesWithCount:kDefaultNumberOfVenues + blackListed.count
+                              completion:^(NSArray *venues, NSError *error) {
+                                  if(venues.count) {
+                                      [weakSelf.cacheClient storeVenues:venues];
+                                  }
+                                  [weakSelf finishWithVenues:venues error:error
+                                        blackListedArray:blackListed completion:completion];
+                              }
+     ];
+}
+
+- (void)addToBlackList:(Venue *)venue
+{
+    [self.cacheClient addToBlackList:venue];
+}
+
+#pragma mark - working methods
+- (void)finishWithVenues:(NSArray *)venues
+                   error:(NSError *)error
+        blackListedArray:(NSArray *)blackListedArray
+              completion:(void(^)(NSArray *venues, NSError *error))completion
+{
+    venues = [venues filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"NOT SELF IN %@", blackListedArray]];
+    venues = [venues sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES]]];
+    if(completion) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(venues, error);
+        });
+    }
 }
 @end

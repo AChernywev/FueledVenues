@@ -14,8 +14,6 @@
 
 - (void)registerReuseIdentifier:(NSString*)reuseIdentifier
                    forItemClass:(Class)itemClass;
-- (void)registerReuseIdentifier:(NSString*)reuseIdentifier
-                forItemMatching:(BOOL(^)(id item))matchingBlock;
 
 - (NSString*)reuseIdentifierForItem:(id)item;
 @end

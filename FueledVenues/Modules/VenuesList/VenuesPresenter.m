@@ -14,14 +14,23 @@
 
 - (void)loadVenuesWithCompletion:(void(^)(NSError *error))completion
 {
+    __weak typeof(self)weakSelf = self;
     [[ServiceLayer sharedDataProvider].venueService loadVenuesWithCompletion:^(NSArray *venues, NSError *error) {
         if(venues.count) {
-            MutableSectionItem *section = [[MutableSectionItem alloc]initWithRows:[venues mutableCopy]];
-            [self updateSections: @[section]];
+            MutableSectionItem *section = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: venues]];
+            [weakSelf updateSections: @[section]];
         }
         if(completion) {
             completion(error);
         }
     }];
 }
+
+- (void)handleRightUtiltyEventWithInex:(NSInteger)index atIndexPath:(NSIndexPath *)indexPath
+{
+    Venue *venue = [self itemAtIndexPath:indexPath];
+    [[ServiceLayer sharedDataProvider].venueService addToBlackList:venue];
+    [self removeItemAtIndexPath:indexPath];
+}
+
 @end

@@ -8,8 +8,8 @@
 
 #import "MutableSectionsPresenter.h"
 
-#import "VenuesPresenterInput.h"
+@interface VenuesPresenter : MutableSectionsPresenter
 
-@interface VenuesPresenter : MutableSectionsPresenter <VenuesPresenterInput>
-
+- (void)loadVenuesWithCompletion:(void(^)(NSError *error))completion;
+- (void)handleRightUtiltyEventWithInex:(NSInteger)index atIndexPath:(NSIndexPath *)indexPath;
 @end

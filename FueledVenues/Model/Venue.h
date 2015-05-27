@@ -36,9 +36,6 @@ typedef NS_ENUM(int32_t, PriceTier)
 @property (nonatomic, strong) NSURL *menuURL;
 @property (nonatomic, assign) int32_t reviewsCount;
 
-
-
-
 @property (nonatomic, readonly) NSString *openMessage;
 @property (nonatomic, readonly) NSString *tierMessage;
 @end

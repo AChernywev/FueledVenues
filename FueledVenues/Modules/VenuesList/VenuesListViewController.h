@@ -8,10 +8,10 @@
 
 #import "TableViewController.h"
 
-#import "VenuesPresenterInput.h"
+#import "VenuesPresenter.h"
 
 @interface VenuesListViewController : TableViewController
-@property (nonatomic, strong) id<VenuesPresenterInput> presenter;
+@property (nonatomic, strong) VenuesPresenter *presenter;
 
-- (instancetype)initWithPresenter:(id<VenuesPresenterInput>)presenter;
+- (instancetype)initWithPresenter:(VenuesPresenter *)presenter;
 @end

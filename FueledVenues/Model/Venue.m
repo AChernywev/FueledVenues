@@ -50,4 +50,23 @@
     }
 }
 
+- (NSUInteger)hash
+{
+    return [self.identifier hash];
+}
+
+- (BOOL)isEqual:(Venue *)object
+{
+    return [object.identifier isEqualToString:self.identifier];
+}
+
++ (NSSet *)keyPathsForValuesAffectingTierMessage
+{
+    return [NSSet setWithObject:@"tier"];
+}
+
++ (NSSet *)keyPathsForValuesAffectingOpenMessage
+{
+    return [NSSet setWithObject:@"isOpen"];
+}
 @end

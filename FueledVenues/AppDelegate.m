@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "MenuViewController.h"
+#import "VenuesListViewController.h"
 
 @implementation AppDelegate
 
@@ -16,11 +16,8 @@
 - (BOOL)          application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    self.window.rootViewController = [[MenuViewController alloc]initWithPresenter:[MenuViewPresenter new]];
-    
+    VenuesListViewController *listController = (VenuesListViewController *)[(UINavigationController *)self.window.rootViewController topViewController];
+    listController.presenter = [VenuesPresenter new];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -31,9 +28,4 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     return (AppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
-#pragma mark - properties
-- (id<MenuViewProtocol>)rootMenu
-{
-    return (id<MenuViewProtocol>)self.window.rootViewController;
-}
 @end

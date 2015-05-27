@@ -23,10 +23,10 @@ NSString * kVenueAddressCellReuseIdentifier = @"VenueAddressCellReuseIdentifier"
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.selectionStyle = UITableViewCellSelectionStyleDefault;
-    UIView *view = [[UIView alloc] initWithFrame:self.frame];
-    view.backgroundColor = RGBAColor(234, 228, 208, 1.0);
-    self.selectedBackgroundView = view;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    //UIView *view = [[UIView alloc] initWithFrame:self.frame];
+    //view.backgroundColor = RGBAColor(234, 228, 208, 1.0);
+    //self.selectedBackgroundView = view;
 }
 
 #pragma mark - public methods

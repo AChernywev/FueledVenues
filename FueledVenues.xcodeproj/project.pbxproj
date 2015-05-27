@@ -14,7 +14,6 @@
 		CE2CE0A41B13976B00119639 /* NSMutableArray+Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0A31B13976B00119639 /* NSMutableArray+Secure.m */; };
 		CE2CE0A81B139A2900119639 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0A71B139A2900119639 /* Photo.m */; };
 		CE2CE0AB1B139AC700119639 /* Photo+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0AA1B139AC700119639 /* Photo+Parsing.m */; };
-		CE2CE0B21B139D3500119639 /* VenueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0B11B139D3500119639 /* VenueItem.m */; };
 		CE2CE0BA1B139EFC00119639 /* VenueContactItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE0B91B139EFC00119639 /* VenueContactItem.m */; };
 		CE3053A51B15E9350063ED98 /* VenuesDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3053A41B15E9350063ED98 /* VenuesDataClient.m */; };
 		CE3053A91B15EBFD0063ED98 /* VenuesCacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3053A81B15EBFD0063ED98 /* VenuesCacheClient.m */; };
@@ -29,6 +28,8 @@
 		CE4407201B160360000464D3 /* Photo+CacheParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44071F1B160360000464D3 /* Photo+CacheParsing.m */; };
 		CE4407291B1604AE000464D3 /* VenueCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4407281B1604AE000464D3 /* VenueCache.m */; };
 		CE44072C1B1604AF000464D3 /* PhotoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44072B1B1604AF000464D3 /* PhotoCache.m */; };
+		CE44072F1B160B81000464D3 /* BaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44072E1B160B81000464D3 /* BaseItem.m */; };
+		CE44073A1B162638000464D3 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4407391B162638000464D3 /* NavigationController.m */; };
 		FA826F361B10D3500082B943 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F351B10D3500082B943 /* RatingView.m */; };
 		FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3C1B10F74E0082B943 /* UIColor+FVColors.m */; };
 		FA826F401B10F8420082B943 /* UIFont+FVFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3F1B10F8420082B943 /* UIFont+FVFonts.m */; };
@@ -36,11 +37,9 @@
 		FA826F4C1B10FAF40082B943 /* FVNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F4B1B10FAF40082B943 /* FVNavigationBar.m */; };
 		FAC950B71B10666A00A89F9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC950B61B10666A00A89F9C /* AppDelegate.m */; };
 		FAC950CE1B10666A00A89F9C /* FueledVenuesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC950CD1B10666A00A89F9C /* FueledVenuesTests.m */; };
-		FAC950DE1B1068B700A89F9C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC950DD1B1068B700A89F9C /* MenuViewController.m */; };
-		FAC950E11B10695700A89F9C /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC950E01B10695700A89F9C /* MenuItem.m */; };
 		FADA927F1B10701A0094BAA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADA927C1B10701A0094BAA2 /* Images.xcassets */; };
 		FADA92801B10701A0094BAA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADA927D1B10701A0094BAA2 /* LaunchScreen.xib */; };
-		FADA92811B10701A0094BAA2 /* Venues.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADA927E1B10701A0094BAA2 /* Venues.storyboard */; };
+		FADA92811B10701A0094BAA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADA927E1B10701A0094BAA2 /* Main.storyboard */; };
 		FADA92861B1070300094BAA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92841B1070300094BAA2 /* main.m */; };
 		FADA928E1B10727F0094BAA2 /* SectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA928D1B10727F0094BAA2 /* SectionItem.m */; };
 		FADA92911B1072880094BAA2 /* MutableSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92901B1072880094BAA2 /* MutableSectionItem.m */; };
@@ -68,7 +67,6 @@
 		FADA92E81B10953C0094BAA2 /* BaseEntity+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92E71B10953C0094BAA2 /* BaseEntity+Parsing.m */; };
 		FADA92EB1B10969E0094BAA2 /* Venue+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92EA1B10969E0094BAA2 /* Venue+Parsing.m */; };
 		FADF41211B11D07F0083AE96 /* UIStoryboard+Links.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41201B11D07F0083AE96 /* UIStoryboard+Links.m */; };
-		FADF412B1B11D42F0083AE96 /* MenuViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF412A1B11D42F0083AE96 /* MenuViewPresenter.m */; };
 		FADF412E1B11D77C0083AE96 /* PlaceholderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF412D1B11D77C0083AE96 /* PlaceholderTableView.m */; };
 		FADF41301B11E0BC0083AE96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FADF412F1B11E0BC0083AE96 /* Localizable.strings */; };
 		FADF41331B11E28A0083AE96 /* TitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41321B11E28A0083AE96 /* TitleLabel.m */; };
@@ -109,8 +107,6 @@
 		CE2CE0A71B139A2900119639 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		CE2CE0A91B139AC700119639 /* Photo+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+Parsing.h"; sourceTree = "<group>"; };
 		CE2CE0AA1B139AC700119639 /* Photo+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+Parsing.m"; sourceTree = "<group>"; };
-		CE2CE0B01B139D3500119639 /* VenueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueItem.h; sourceTree = "<group>"; };
-		CE2CE0B11B139D3500119639 /* VenueItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueItem.m; sourceTree = "<group>"; };
 		CE2CE0B81B139EFC00119639 /* VenueContactItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueContactItem.h; sourceTree = "<group>"; };
 		CE2CE0B91B139EFC00119639 /* VenueContactItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueContactItem.m; sourceTree = "<group>"; };
 		CE3053A31B15E9350063ED98 /* VenuesDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesDataClient.h; sourceTree = "<group>"; };
@@ -139,6 +135,11 @@
 		CE4407281B1604AE000464D3 /* VenueCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCache.m; sourceTree = "<group>"; };
 		CE44072A1B1604AF000464D3 /* PhotoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCache.h; sourceTree = "<group>"; };
 		CE44072B1B1604AF000464D3 /* PhotoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCache.m; sourceTree = "<group>"; };
+		CE44072D1B160B81000464D3 /* BaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseItem.h; sourceTree = "<group>"; };
+		CE44072E1B160B81000464D3 /* BaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseItem.m; sourceTree = "<group>"; };
+		CE4407311B1611F5000464D3 /* BaseItem_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseItem_Protected.h; sourceTree = "<group>"; };
+		CE4407381B162638000464D3 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		CE4407391B162638000464D3 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		DCFDEC1D33375EB9363000B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA826F341B10D3500082B943 /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
 		FA826F351B10D3500082B943 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
@@ -156,15 +157,10 @@
 		FAC950C71B10666A00A89F9C /* FueledVenuesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FueledVenuesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC950CC1B10666A00A89F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC950CD1B10666A00A89F9C /* FueledVenuesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FueledVenuesTests.m; sourceTree = "<group>"; };
-		FAC950DB1B10677B00A89F9C /* MenuViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewProtocol.h; sourceTree = "<group>"; };
-		FAC950DC1B1068B700A89F9C /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		FAC950DD1B1068B700A89F9C /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		FAC950DF1B10695700A89F9C /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
-		FAC950E01B10695700A89F9C /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
 		FAC950E31B106BD700A89F9C /* Macroses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macroses.h; sourceTree = "<group>"; };
 		FADA927C1B10701A0094BAA2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FADA927D1B10701A0094BAA2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		FADA927E1B10701A0094BAA2 /* Venues.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Venues.storyboard; sourceTree = "<group>"; };
+		FADA927E1B10701A0094BAA2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FADA92831B1070300094BAA2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FADA92841B1070300094BAA2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FADA92871B1070DA0094BAA2 /* CollectionPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionPresenterProtocol.h; sourceTree = "<group>"; };
@@ -225,11 +221,8 @@
 		FADA92E71B10953C0094BAA2 /* BaseEntity+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseEntity+Parsing.m"; sourceTree = "<group>"; };
 		FADA92E91B10969E0094BAA2 /* Venue+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venue+Parsing.h"; sourceTree = "<group>"; };
 		FADA92EA1B10969E0094BAA2 /* Venue+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Venue+Parsing.m"; sourceTree = "<group>"; };
-		FADF411D1B11C9900083AE96 /* VenuesPresenterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesPresenterInput.h; sourceTree = "<group>"; };
 		FADF411F1B11D07F0083AE96 /* UIStoryboard+Links.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Links.h"; sourceTree = "<group>"; };
 		FADF41201B11D07F0083AE96 /* UIStoryboard+Links.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Links.m"; sourceTree = "<group>"; };
-		FADF41291B11D42F0083AE96 /* MenuViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewPresenter.h; sourceTree = "<group>"; };
-		FADF412A1B11D42F0083AE96 /* MenuViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewPresenter.m; sourceTree = "<group>"; };
 		FADF412C1B11D77C0083AE96 /* PlaceholderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTableView.h; sourceTree = "<group>"; };
 		FADF412D1B11D77C0083AE96 /* PlaceholderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTableView.m; sourceTree = "<group>"; };
 		FADF412F1B11E0BC0083AE96 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -364,7 +357,6 @@
 		CE2CE0AD1B139D0300119639 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				FADF411D1B11C9900083AE96 /* VenuesPresenterInput.h */,
 				FADA92DE1B1092070094BAA2 /* VenuesPresenter.h */,
 				FADA92DF1B1092070094BAA2 /* VenuesPresenter.m */,
 			);
@@ -379,15 +371,6 @@
 				FADA92E31B10928E0094BAA2 /* VenueCell.xib */,
 			);
 			name = Cell;
-			sourceTree = "<group>";
-		};
-		CE2CE0AF1B139D0D00119639 /* Item */ = {
-			isa = PBXGroup;
-			children = (
-				CE2CE0B01B139D3500119639 /* VenueItem.h */,
-				CE2CE0B11B139D3500119639 /* VenueItem.m */,
-			);
-			name = Item;
 			sourceTree = "<group>";
 		};
 		CE2CE0B31B139E1300119639 /* Controller */ = {
@@ -532,6 +515,15 @@
 			name = CacheParsing;
 			sourceTree = "<group>";
 		};
+		CE4407371B162621000464D3 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				CE4407381B162638000464D3 /* NavigationController.h */,
+				CE4407391B162638000464D3 /* NavigationController.m */,
+			);
+			name = NavigationController;
+			sourceTree = "<group>";
+		};
 		FA826F331B10D3350082B943 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,25 +661,10 @@
 		FAC950D91B10676900A89F9C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FAC950DA1B10676900A89F9C /* Menu */,
 				FADA92DA1B1089240094BAA2 /* VenuesList */,
 				FADF41431B11FF510083AE96 /* VenueDetails */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		FAC950DA1B10676900A89F9C /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				FAC950DB1B10677B00A89F9C /* MenuViewProtocol.h */,
-				FAC950DC1B1068B700A89F9C /* MenuViewController.h */,
-				FAC950DD1B1068B700A89F9C /* MenuViewController.m */,
-				FADF41291B11D42F0083AE96 /* MenuViewPresenter.h */,
-				FADF412A1B11D42F0083AE96 /* MenuViewPresenter.m */,
-				FAC950DF1B10695700A89F9C /* MenuItem.h */,
-				FAC950E01B10695700A89F9C /* MenuItem.m */,
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		FAC950E21B106BC600A89F9C /* Common */ = {
@@ -738,6 +715,7 @@
 		FAC950E71B106ED200A89F9C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE4407371B162621000464D3 /* NavigationController */,
 				FADF41341B11E4400083AE96 /* TableViewCell */,
 				FADF41241B11D1B30083AE96 /* TableViewController */,
 				FADA92D11B1081110094BAA2 /* ViewItemProtocol.h */,
@@ -751,7 +729,7 @@
 				FADF412F1B11E0BC0083AE96 /* Localizable.strings */,
 				FADA927C1B10701A0094BAA2 /* Images.xcassets */,
 				FADA927D1B10701A0094BAA2 /* LaunchScreen.xib */,
-				FADA927E1B10701A0094BAA2 /* Venues.storyboard */,
+				FADA927E1B10701A0094BAA2 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -768,6 +746,9 @@
 		FADA928B1B1072760094BAA2 /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				CE4407311B1611F5000464D3 /* BaseItem_Protected.h */,
+				CE44072D1B160B81000464D3 /* BaseItem.h */,
+				CE44072E1B160B81000464D3 /* BaseItem.m */,
 				FADA92991B1074B50094BAA2 /* HeaderFooterItemProtocol.h */,
 				FADA92981B10740E0094BAA2 /* SectionItemProtocol.h */,
 				FADA928C1B10727F0094BAA2 /* SectionItem.h */,
@@ -848,7 +829,6 @@
 			children = (
 				CE2CE0AC1B139CFC00119639 /* Controller */,
 				CE2CE0AD1B139D0300119639 /* Presenter */,
-				CE2CE0AF1B139D0D00119639 /* Item */,
 				CE2CE0AE1B139D0800119639 /* Cell */,
 			);
 			path = VenuesList;
@@ -1026,7 +1006,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADF41301B11E0BC0083AE96 /* Localizable.strings in Resources */,
-				FADA92811B10701A0094BAA2 /* Venues.storyboard in Resources */,
+				FADA92811B10701A0094BAA2 /* Main.storyboard in Resources */,
 				FADA92E51B10928E0094BAA2 /* VenueCell.xib in Resources */,
 				FADF41531B1253A30083AE96 /* VenueAddressCell.xib in Resources */,
 				FADA92801B10701A0094BAA2 /* LaunchScreen.xib in Resources */,
@@ -1119,13 +1099,12 @@
 				FADF41371B11E4500083AE96 /* BaseTableViewCell.m in Sources */,
 				CE2CE09C1B138F9800119639 /* NSDictionary+SafeParsing.m in Sources */,
 				FADA92911B1072880094BAA2 /* MutableSectionItem.m in Sources */,
-				CE2CE0B21B139D3500119639 /* VenueItem.m in Sources */,
+				CE44073A1B162638000464D3 /* NavigationController.m in Sources */,
 				FAC950B71B10666A00A89F9C /* AppDelegate.m in Sources */,
 				CE4407071B15F445000464D3 /* CacheClient.m in Sources */,
 				FADA92EB1B10969E0094BAA2 /* Venue+Parsing.m in Sources */,
 				FADA92E41B10928E0094BAA2 /* VenueCell.m in Sources */,
 				FADA92BC1B107A170094BAA2 /* PresenterChangeItem.m in Sources */,
-				FAC950DE1B1068B700A89F9C /* MenuViewController.m in Sources */,
 				FADF41571B125BC00083AE96 /* NSArray+Map.m in Sources */,
 				FADA92D61B1085480094BAA2 /* BaseEntity.m in Sources */,
 				CE2CE0A81B139A2900119639 /* Photo.m in Sources */,
@@ -1137,7 +1116,6 @@
 				FA826F4C1B10FAF40082B943 /* FVNavigationBar.m in Sources */,
 				CE3099651B14A24C00678C6F /* NSDateFormatter+Singleton.m in Sources */,
 				FADA92BE1B107A170094BAA2 /* PresenterChangeItemInsert.m in Sources */,
-				FAC950E11B10695700A89F9C /* MenuItem.m in Sources */,
 				CE4407081B15F445000464D3 /* FueledVenues.xcdatamodeld in Sources */,
 				FADF413E1B11F6010083AE96 /* RatingStarView.m in Sources */,
 				CE3053B81B15EE980063ED98 /* ServiceLayer.m in Sources */,
@@ -1145,7 +1123,7 @@
 				FADA92DD1B1089380094BAA2 /* VenuesListViewController.m in Sources */,
 				CE3053B51B15EE070063ED98 /* VenuesService.m in Sources */,
 				FADA92D91B1085530094BAA2 /* Venue.m in Sources */,
-				FADF412B1B11D42F0083AE96 /* MenuViewPresenter.m in Sources */,
+				CE44072F1B160B81000464D3 /* BaseItem.m in Sources */,
 				FA826F361B10D3500082B943 /* RatingView.m in Sources */,
 				CE4407171B15F6EB000464D3 /* BaseEntity+CacheParsing.m in Sources */,
 			);

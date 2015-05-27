@@ -38,7 +38,7 @@
 {
     VenueCache *resultCache = (VenueCache *)[super fulfilledCacheWithClass:aClass client:cacheClient];
     resultCache.name = self.name;
-    resultCache.mainImage = [self.mainImage fulfilledCacheWithClass:[PhotoCache class] client:cacheClient];
+    resultCache.mainImage = (PhotoCache *)[self.mainImage fulfilledCacheWithClass:[PhotoCache class] client:cacheClient];
     resultCache.rating = self.rating;
     resultCache.isOpen = self.isOpen;
     resultCache.tier = self.tier;

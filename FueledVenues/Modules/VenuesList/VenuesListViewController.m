@@ -8,8 +8,6 @@
 
 #import "VenuesListViewController.h"
 
-#import <SWTableViewCell/SWUtilityButtonView.h>
-
 #import "Venue.h"
 #import "VenueCell.h"
 #import "Macroses.h"
@@ -20,7 +18,7 @@
 @dynamic presenter;
 
 #pragma mark - initialization
-- (instancetype)initWithPresenter:(id<VenuesPresenterInput>)presenter
+- (instancetype)initWithPresenter:(VenuesPresenter *)presenter
 {
     self = [super initWithPresenter:presenter];
     return self;
@@ -30,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"FUELED";
+    self.title = LOC(@"venueslistcontroller.title");
     self.view.backgroundColor = RGBColor(249, 244, 227);
     [self registerNibForCellClass:[VenueCell class] item:[Venue class] reuseIdentifier:kVenueCellReuseIdentifier];
     [self.presenter loadVenuesWithCompletion:^(NSError *error) {
@@ -54,9 +52,10 @@
 {
     [super configureCell:customizeCell forItem:item];
     VenueCell *cell = (VenueCell *)customizeCell;
-    
-    cell.rightUtilityButtons = [self rightButtons];
-    cell.delegate = self;
+    NSMutableArray *buttons = [NSMutableArray array];
+    [buttons sw_addUtilityButtonWithColor:[UIColor redBackgroundColor] title:LOC(@"venueslistcontroller.deletebutton")];
+    cell.rightUtilityButtons = buttons;
+    cell.delegate = (id<SWTableViewCellDelegate>)self;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -77,22 +76,17 @@
 }
 
 
-- (NSArray *)rightButtons
-{
-    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
-    [rightUtilityButtons sw_addUtilityButtonWithColor:
-     [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
-                                                title:@"More"];
-    [rightUtilityButtons sw_addUtilityButtonWithColor:
-     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
-                                                title:@"Delete"];
-    
-    return rightUtilityButtons;
-}
 
+#pragma mark - Delegate methods
 - (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell
 {
     return YES;
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
+{
+    [cell hideUtilityButtonsAnimated:YES];
+    [self.presenter handleRightUtiltyEventWithInex:index atIndexPath:[self.tableView indexPathForCell:cell]];
 }
 
 @end

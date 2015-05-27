@@ -12,5 +12,6 @@
 
 @interface VenuesDataClient : NSObject
 
-- (void)loadVenuesWithCompletion:(void(^)(NSArray *venues, NSError *error))completion;
+- (void)loadVenuesWithCount:(NSInteger)count
+                 completion:(void(^)(NSArray *venues, NSError *error))completion;
 @end

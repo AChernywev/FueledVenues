@@ -15,7 +15,6 @@ static NSString * const kClientID               = @"CEUCXQN4ZTCXM51C2MCTPSPK4JK4
 static NSString * const kClientSecret           = @"ZEYHAQIABXIRDUJKVNPYXDZRDB0BMVYOZKILQWYA41FKBB1I";
 static CGFloat    const kFueledOfficeLatitude   = 40.7242727;
 static CGFloat    const kFueledOfficeLongitude  = -73.9975018;
-static NSInteger  const kNumberOfVenuesLimit    = 50;
 
 @interface VenuesDataClient()
 @property (nonatomic, readonly) APIService *apiService;
@@ -35,14 +34,16 @@ static NSInteger  const kNumberOfVenuesLimit    = 50;
 }
 
 #pragma mark - public methods
-- (void)loadVenuesWithCompletion:(void(^)(NSArray *venues, NSError *error))completion
+- (void)loadVenuesWithCount:(NSInteger)count
+                 completion:(void(^)(NSArray *venues, NSError *error))completion
 {
     NSDictionary *params = @{@"ll"              : [NSString stringWithFormat:@"%f, %f", kFueledOfficeLatitude, kFueledOfficeLongitude],
                              @"offset"          : @(0),
-                             @"limit"           : @(kNumberOfVenuesLimit),
+                             @"limit"           : @(count),
                              @"section"         : @"food",
                              @"time"            : @"any",
                              @"day"             : @"any",
+                             @"price"           : @"1,2,3,4",
                              @"venuePhotos"     : @1,
                              @"openNow"         : @1,
                              @"sortByDistance"  : @1

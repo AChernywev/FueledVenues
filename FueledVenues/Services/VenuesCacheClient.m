@@ -31,15 +31,24 @@
 }
 
 #pragma mark - public methods
-- (void)loadVenuesWithCompletion:(void(^)(NSArray *venues))completion
+- (NSArray *)loadVenues
 {
     NSArray *cachedVenues = [self.cacheClient objectsWithType:[VenueCache class]];
     NSArray *modelVenues = [cachedVenues map:^Venue *(VenueCache * object) {
         return [[Venue alloc]initWithCache:object];
     }];
-    if(completion) {
-        completion(modelVenues);
-    }
+    return modelVenues;
+}
+
+- (NSArray *)loadBlacklistedVenues
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:NSStringFromClass([VenueCache class])];
+    request.predicate = [NSPredicate predicateWithFormat:@"blacklisted==YES"];
+    NSArray *cachedVenues = [self.cacheClient getEntitiesWithRequest:request];
+    NSArray *modelVenues = [cachedVenues map:^Venue *(VenueCache * object) {
+        return [[Venue alloc]initWithCache:object];
+    }];
+    return modelVenues;
 }
 
 - (void)storeVenues:(NSArray *)venues
@@ -47,6 +56,13 @@
     for(Venue *venue in venues) {
         [venue fulfilledCacheWithClass:[VenueCache class] client:self.cacheClient];
     }
+    [self.cacheClient saveDatabase];
+}
+
+- (void)addToBlackList:(Venue *)venue;
+{
+    VenueCache *venueCache = (VenueCache *)[venue fulfilledCacheWithClass:[VenueCache class] client:self.cacheClient];
+    venueCache.blacklisted = YES;
     [self.cacheClient saveDatabase];
 }
 @end

@@ -12,6 +12,8 @@
 
 @interface VenuesCacheClient : NSObject
 
-- (void)loadVenuesWithCompletion:(void(^)(NSArray *venues))completion;
+- (NSArray *)loadBlacklistedVenues;
+- (NSArray *)loadVenues;
 - (void)storeVenues:(NSArray *)venues;
+- (void)addToBlackList:(Venue *)venue;
 @end

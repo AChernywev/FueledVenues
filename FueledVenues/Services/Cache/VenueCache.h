@@ -11,7 +11,7 @@
 #import "PhotoCache.h"
 
 @interface VenueCache : BaseCacheEntity
-
+@property (nonatomic) BOOL blacklisted;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic) float rating;
 @property (nonatomic) BOOL isOpen;
