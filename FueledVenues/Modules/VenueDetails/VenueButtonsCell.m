@@ -35,13 +35,19 @@ NSString * kVenueButtonsCellReuseIdentifier = @"VenueButtonsCellReuseIdentifier"
     }
 }
 
-- (IBAction)dealsAction:(id)sender
+- (IBAction)callAction:(id)sender
 {
-    if([self.delegate respondsToSelector:@selector(venueButtonsCellDidSelectDeals:)]) {
-        [self.delegate venueButtonsCellDidSelectDeals:self];
+    if([self.delegate respondsToSelector:@selector(venueButtonsCellDidSelectCall:)]) {
+        [self.delegate venueButtonsCellDidSelectCall:self];
     }
 }
 
+- (IBAction)webAction:(id)sender
+{
+    if([self.delegate respondsToSelector:@selector(venueButtonsCellDidSelectWeb:)]) {
+        [self.delegate venueButtonsCellDidSelectWeb:self];
+    }
+}
 #pragma mark - public methods
 - (void)setItem:(id)item
 {

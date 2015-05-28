@@ -20,6 +20,15 @@
 		CE3053B51B15EE070063ED98 /* VenuesService.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3053B41B15EE070063ED98 /* VenuesService.m */; };
 		CE3053B81B15EE980063ED98 /* ServiceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3053B71B15EE980063ED98 /* ServiceLayer.m */; };
 		CE3099651B14A24C00678C6F /* NSDateFormatter+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3099641B14A24C00678C6F /* NSDateFormatter+Singleton.m */; };
+		CE3844A31B17607C00261D08 /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844A11B17607C00261D08 /* ReviewTableViewCell.m */; };
+		CE3844A41B17607C00261D08 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3844A21B17607C00261D08 /* ReviewTableViewCell.xib */; };
+		CE3844A71B1761CA00261D08 /* ReviewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844A61B1761CA00261D08 /* ReviewsTableViewController.m */; };
+		CE3844AA1B1761E200261D08 /* ReviewsViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844A91B1761E200261D08 /* ReviewsViewPresenter.m */; };
+		CE3844B11B17646C00261D08 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844B01B17646C00261D08 /* BackgroundView.m */; };
+		CE3844B41B17656400261D08 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844B31B17656400261D08 /* Review.m */; };
+		CE3844B71B17669500261D08 /* Review+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844B61B17669500261D08 /* Review+Parsing.m */; };
+		CE3844BB1B1768BD00261D08 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844BA1B1768BD00261D08 /* User.m */; };
+		CE3844BE1B1769A100261D08 /* User+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844BD1B1769A100261D08 /* User+Parsing.m */; };
 		CE4407071B15F445000464D3 /* CacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4407011B15F445000464D3 /* CacheClient.m */; };
 		CE4407081B15F445000464D3 /* FueledVenues.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE4407021B15F445000464D3 /* FueledVenues.xcdatamodeld */; };
 		CE44070D1B15F48E000464D3 /* BaseCacheEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44070C1B15F48E000464D3 /* BaseCacheEntity.m */; };
@@ -119,6 +128,23 @@
 		CE3053B71B15EE980063ED98 /* ServiceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceLayer.m; sourceTree = "<group>"; };
 		CE3099631B14A24C00678C6F /* NSDateFormatter+Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Singleton.h"; sourceTree = "<group>"; };
 		CE3099641B14A24C00678C6F /* NSDateFormatter+Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Singleton.m"; sourceTree = "<group>"; };
+		CE3844A01B17607C00261D08 /* ReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTableViewCell.h; sourceTree = "<group>"; };
+		CE3844A11B17607C00261D08 /* ReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTableViewCell.m; sourceTree = "<group>"; };
+		CE3844A21B17607C00261D08 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		CE3844A51B1761CA00261D08 /* ReviewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsTableViewController.h; sourceTree = "<group>"; };
+		CE3844A61B1761CA00261D08 /* ReviewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsTableViewController.m; sourceTree = "<group>"; };
+		CE3844A81B1761E200261D08 /* ReviewsViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsViewPresenter.h; sourceTree = "<group>"; };
+		CE3844A91B1761E200261D08 /* ReviewsViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewPresenter.m; sourceTree = "<group>"; };
+		CE3844AF1B17646C00261D08 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
+		CE3844B01B17646C00261D08 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		CE3844B21B17656400261D08 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		CE3844B31B17656400261D08 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
+		CE3844B51B17669500261D08 /* Review+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Review+Parsing.h"; sourceTree = "<group>"; };
+		CE3844B61B17669500261D08 /* Review+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Review+Parsing.m"; sourceTree = "<group>"; };
+		CE3844B91B1768BD00261D08 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		CE3844BA1B1768BD00261D08 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		CE3844BC1B1769A100261D08 /* User+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Parsing.h"; sourceTree = "<group>"; };
+		CE3844BD1B1769A100261D08 /* User+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Parsing.m"; sourceTree = "<group>"; };
 		CE4406F61B15F12A000464D3 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		CE4407001B15F445000464D3 /* CacheClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheClient.h; sourceTree = "<group>"; };
 		CE4407011B15F445000464D3 /* CacheClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheClient.m; sourceTree = "<group>"; };
@@ -301,6 +327,10 @@
 				FADA92D81B1085530094BAA2 /* Venue.m */,
 				CE2CE0A61B139A2900119639 /* Photo.h */,
 				CE2CE0A71B139A2900119639 /* Photo.m */,
+				CE3844B21B17656400261D08 /* Review.h */,
+				CE3844B31B17656400261D08 /* Review.m */,
+				CE3844B91B1768BD00261D08 /* User.h */,
+				CE3844BA1B1768BD00261D08 /* User.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -314,6 +344,10 @@
 				FADA92EA1B10969E0094BAA2 /* Venue+Parsing.m */,
 				CE2CE0A91B139AC700119639 /* Photo+Parsing.h */,
 				CE2CE0AA1B139AC700119639 /* Photo+Parsing.m */,
+				CE3844B51B17669500261D08 /* Review+Parsing.h */,
+				CE3844B61B17669500261D08 /* Review+Parsing.m */,
+				CE3844BC1B1769A100261D08 /* User+Parsing.h */,
+				CE3844BD1B1769A100261D08 /* User+Parsing.m */,
 			);
 			name = Parsing;
 			sourceTree = "<group>";
@@ -477,6 +511,53 @@
 			name = NSDateFormatter;
 			sourceTree = "<group>";
 		};
+		CE38449F1B17607C00261D08 /* VenueReviews */ = {
+			isa = PBXGroup;
+			children = (
+				CE3844AB1B1761E700261D08 /* Controller */,
+				CE3844AC1B1761EC00261D08 /* Presenter */,
+				CE3844AD1B1761F900261D08 /* Cell */,
+			);
+			path = VenueReviews;
+			sourceTree = "<group>";
+		};
+		CE3844AB1B1761E700261D08 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE3844A51B1761CA00261D08 /* ReviewsTableViewController.h */,
+				CE3844A61B1761CA00261D08 /* ReviewsTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CE3844AC1B1761EC00261D08 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CE3844A81B1761E200261D08 /* ReviewsViewPresenter.h */,
+				CE3844A91B1761E200261D08 /* ReviewsViewPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CE3844AD1B1761F900261D08 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE3844A01B17607C00261D08 /* ReviewTableViewCell.h */,
+				CE3844A11B17607C00261D08 /* ReviewTableViewCell.m */,
+				CE3844A21B17607C00261D08 /* ReviewTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		CE3844AE1B17644200261D08 /* BackgroundVIew */ = {
+			isa = PBXGroup;
+			children = (
+				CE3844AF1B17646C00261D08 /* BackgroundView.h */,
+				CE3844B01B17646C00261D08 /* BackgroundView.m */,
+			);
+			name = BackgroundVIew;
+			sourceTree = "<group>";
+		};
 		CE4406FD1B15F445000464D3 /* CacheTransport */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +668,7 @@
 			children = (
 				FA826F461B10F9B90082B943 /* UIView+FVStyles.h */,
 				FA826F471B10F9B90082B943 /* UIView+FVStyles.m */,
+				CE3844AE1B17644200261D08 /* BackgroundVIew */,
 				FA826F491B10FAD70082B943 /* NavigationBar */,
 				FA826F441B10F9300082B943 /* Labels */,
 			);
@@ -663,6 +745,7 @@
 			children = (
 				FADA92DA1B1089240094BAA2 /* VenuesList */,
 				FADF41431B11FF510083AE96 /* VenueDetails */,
+				CE38449F1B17607C00261D08 /* VenueReviews */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1010,6 +1093,7 @@
 				FADA92E51B10928E0094BAA2 /* VenueCell.xib in Resources */,
 				FADF41531B1253A30083AE96 /* VenueAddressCell.xib in Resources */,
 				FADA92801B10701A0094BAA2 /* LaunchScreen.xib in Resources */,
+				CE3844A41B17607C00261D08 /* ReviewTableViewCell.xib in Resources */,
 				FADA927F1B10701A0094BAA2 /* Images.xcassets in Resources */,
 				FADF414E1B12519E0083AE96 /* VenueButtonsCell.xib in Resources */,
 			);
@@ -1068,12 +1152,14 @@
 				FA826F481B10F9B90082B943 /* UIView+FVStyles.m in Sources */,
 				FADA92C31B107A170094BAA2 /* PresenterChangeSectionReload.m in Sources */,
 				FADA929C1B1075AB0094BAA2 /* SectionItem+Protected.m in Sources */,
+				CE3844B71B17669500261D08 /* Review+Parsing.m in Sources */,
 				FADA92CD1B107FBD0094BAA2 /* TableViewController.m in Sources */,
 				FADF41491B11FFB80083AE96 /* VenueDetailsPresenter.m in Sources */,
 				CE4407141B15F62E000464D3 /* Venue+CacheParsing.m in Sources */,
 				CE2CE0A01B1394E700119639 /* NSObject+SafeParsing.m in Sources */,
 				FADF414D1B12519E0083AE96 /* VenueButtonsCell.m in Sources */,
 				FADA928E1B10727F0094BAA2 /* SectionItem.m in Sources */,
+				CE3844A31B17607C00261D08 /* ReviewTableViewCell.m in Sources */,
 				FADA92D01B107FFF0094BAA2 /* ReuseIdentifierMatcher.m in Sources */,
 				FADA929F1B1078080094BAA2 /* SectionsPresenter.m in Sources */,
 				FADF412E1B11D77C0083AE96 /* PlaceholderTableView.m in Sources */,
@@ -1083,6 +1169,7 @@
 				CE4407291B1604AE000464D3 /* VenueCache.m in Sources */,
 				CE2CE0A41B13976B00119639 /* NSMutableArray+Secure.m in Sources */,
 				FADF413A1B11E6C20083AE96 /* TextLabel.m in Sources */,
+				CE3844BE1B1769A100261D08 /* User+Parsing.m in Sources */,
 				FADF41211B11D07F0083AE96 /* UIStoryboard+Links.m in Sources */,
 				FADF41461B11FF510083AE96 /* VenueDetailsViewController.m in Sources */,
 				FADA92C11B107A170094BAA2 /* PresenterChangeSectionDelete.m in Sources */,
@@ -1096,6 +1183,8 @@
 				CE4407201B160360000464D3 /* Photo+CacheParsing.m in Sources */,
 				FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */,
 				FADA92BD1B107A170094BAA2 /* PresenterChangeItemDelete.m in Sources */,
+				CE3844A71B1761CA00261D08 /* ReviewsTableViewController.m in Sources */,
+				CE3844BB1B1768BD00261D08 /* User.m in Sources */,
 				FADF41371B11E4500083AE96 /* BaseTableViewCell.m in Sources */,
 				CE2CE09C1B138F9800119639 /* NSDictionary+SafeParsing.m in Sources */,
 				FADA92911B1072880094BAA2 /* MutableSectionItem.m in Sources */,
@@ -1104,6 +1193,7 @@
 				CE4407071B15F445000464D3 /* CacheClient.m in Sources */,
 				FADA92EB1B10969E0094BAA2 /* Venue+Parsing.m in Sources */,
 				FADA92E41B10928E0094BAA2 /* VenueCell.m in Sources */,
+				CE3844B41B17656400261D08 /* Review.m in Sources */,
 				FADA92BC1B107A170094BAA2 /* PresenterChangeItem.m in Sources */,
 				FADF41571B125BC00083AE96 /* NSArray+Map.m in Sources */,
 				FADA92D61B1085480094BAA2 /* BaseEntity.m in Sources */,
@@ -1112,11 +1202,13 @@
 				FADA92BF1B107A170094BAA2 /* PresenterChangeItemReload.m in Sources */,
 				FADA92C71B107BE80094BAA2 /* PresenterChangeReload.m in Sources */,
 				CE3053A51B15E9350063ED98 /* VenuesDataClient.m in Sources */,
+				CE3844AA1B1761E200261D08 /* ReviewsViewPresenter.m in Sources */,
 				CE44072C1B1604AF000464D3 /* PhotoCache.m in Sources */,
 				FA826F4C1B10FAF40082B943 /* FVNavigationBar.m in Sources */,
 				CE3099651B14A24C00678C6F /* NSDateFormatter+Singleton.m in Sources */,
 				FADA92BE1B107A170094BAA2 /* PresenterChangeItemInsert.m in Sources */,
 				CE4407081B15F445000464D3 /* FueledVenues.xcdatamodeld in Sources */,
+				CE3844B11B17646C00261D08 /* BackgroundView.m in Sources */,
 				FADF413E1B11F6010083AE96 /* RatingStarView.m in Sources */,
 				CE3053B81B15EE980063ED98 /* ServiceLayer.m in Sources */,
 				CE3053A91B15EBFD0063ED98 /* VenuesCacheClient.m in Sources */,

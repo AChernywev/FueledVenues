@@ -8,8 +8,6 @@
 
 #import "Venue.h"
 
-#import "BaseEntity+CacheParsing.h"
-
 @interface Venue (CacheParsing)
 
 @end

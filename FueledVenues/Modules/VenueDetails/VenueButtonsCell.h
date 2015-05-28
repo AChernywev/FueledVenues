@@ -14,8 +14,9 @@ FOUNDATION_EXPORT NSString * kVenueButtonsCellReuseIdentifier;
 @protocol VenueButtonsCellDelegate <NSObject>
 
 - (void)venueButtonsCellDidSelectMenu:(VenueButtonsCell *)cell;
-- (void)venueButtonsCellDidSelectDeals:(VenueButtonsCell *)cell;
 - (void)venueButtonsCellDidSelectReviews:(VenueButtonsCell *)cell;
+- (void)venueButtonsCellDidSelectCall:(VenueButtonsCell *)cell;
+- (void)venueButtonsCellDidSelectWeb:(VenueButtonsCell *)cell;
 @end
 
 @interface VenueButtonsCell : BaseTableViewCell

@@ -20,4 +20,5 @@
 - (int64_t)int64AtKey:(NSString*)key;
 - (float)floatAtKey:(NSString*)key;
 - (double)doubleAtKey:(NSString*)key;
+- (NSDate *)timeIntervalDateAtKey:(NSString*)key;
 @end

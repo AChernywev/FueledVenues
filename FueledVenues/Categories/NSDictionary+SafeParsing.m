@@ -61,4 +61,9 @@
 {
     return [self[key] safeDoubleValue];
 }
+
+- (NSDate *)timeIntervalDateAtKey:(NSString*)key
+{
+    return [NSDate dateWithTimeIntervalSince1970:[self doubleAtKey:key]];
+}
 @end

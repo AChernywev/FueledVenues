@@ -10,59 +10,59 @@
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+#import "BaseItem_Protected.h"
+#import "Venue.h"
+
 @interface VenueContactItem ()
-@property (nonatomic, strong) Venue *venue;
+@property (nonatomic, strong) Venue *object;
 @end
 
 @implementation VenueContactItem
-
-- (instancetype)initWithVenue:(Venue *)venue
-{
-    self = [super init];
-    if(self) {
-        _venue = venue;
-    }
-    return self;
-}
+@dynamic object;
 
 #pragma mark - propertis
+- (EntityIDType)venueIdentifier
+{
+    return self.object.identifier;
+}
+
 - (NSString *)phone
 {
-    return self.venue.phone;
+    return self.object.phone;
 }
 
 - (NSURL *)menuURL
 {
-    return self.venue.menuURL;
+    return self.object.menuURL;
 }
 
 - (NSURL *)websiteURL
 {
-    return self.venue.websiteURL;
+    return self.object.websiteURL;
 }
 
 - (NSInteger)reviewsCount
 {
-    return self.venue.reviewsCount;
+    return self.object.reviewsCount;
 }
 
 + (NSSet *)keyPathsForValuesAffectingPhone
 {
-    return [NSSet setWithObject:@"venue.phone"];
+    return [NSSet setWithObject:@"object.phone"];
 }
 
 + (NSSet *)keyPathsForValuesAffectingMenuURL
 {
-    return [NSSet setWithObject:@"venue.menuURL"];
+    return [NSSet setWithObject:@"object.menuURL"];
 }
 
 + (NSSet *)keyPathsForValuesAffectingWebsiteURL
 {
-    return [NSSet setWithObject:@"venue.websiteURL"];
+    return [NSSet setWithObject:@"object.websiteURL"];
 }
 
 + (NSSet *)keyPathsForValuesAffectingReviewsCount
 {
-    return [NSSet setWithObject:@"venue.reviewsCount"];
+    return [NSSet setWithObject:@"object.reviewsCount"];
 }
 @end

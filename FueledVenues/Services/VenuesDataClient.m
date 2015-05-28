@@ -10,6 +10,8 @@
 
 #import "APIService.h"
 #import "NSDateFormatter+Singleton.h"
+#import "Venue+Parsing.h"
+#import "Review+Parsing.h"
 
 static NSString * const kClientID               = @"CEUCXQN4ZTCXM51C2MCTPSPK4JK4IOQMGGTDLSDA0DOMHFST";
 static NSString * const kClientSecret           = @"ZEYHAQIABXIRDUJKVNPYXDZRDB0BMVYOZKILQWYA41FKBB1I";
@@ -56,6 +58,30 @@ static CGFloat    const kFueledOfficeLongitude  = -73.9975018;
                             NSArray *result = nil;
                             if(!error) {
                                 result = [Venue venuesArrayFromResponse: response];
+                            }
+                            if(completion) {
+                                completion(result, error);
+                            }
+                        }
+     ];
+}
+
+- (void)loadReviewsForVenueWithIdentifier:(EntityIDType)venueID
+                               completion:(void(^)(NSArray *reviews, NSError *error))completion
+{
+    NSDictionary *params = @{
+                             @"offset"          : @(0),
+                             @"limit"           : @(15),
+                             @"sort"            : @"recent"
+                             };
+    NSMutableDictionary *combinedParams = [[NSMutableDictionary alloc]initWithDictionary:params];
+    [combinedParams addEntriesFromDictionary:[self defaultParameters]];
+    [self.apiService getDataAtPath:[NSString stringWithFormat:@"%@/tips", venueID]
+                        parameters:combinedParams
+                        completion:^(id response, NSError *error) {
+                            NSArray *result = nil;
+                            if(!error) {
+                                result = [Review reviewsArrayFromResponse: response];
                             }
                             if(completion) {
                                 completion(result, error);

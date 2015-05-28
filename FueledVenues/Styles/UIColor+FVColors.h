@@ -15,4 +15,5 @@
 + (UIColor *)whiteTextColor;
 + (UIColor *)redBackgroundColor;
 + (UIColor *)darkBackgroundColor;
++ (UIColor *)viewBackgroundColor;
 @end

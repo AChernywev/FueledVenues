@@ -34,7 +34,7 @@
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="dealsAction:" destination="Z5Y-IV-acJ" eventType="touchUpInside" id="gTB-g7-SYL"/>
+                                    <action selector="callAction:" destination="Z5Y-IV-acJ" eventType="touchUpInside" id="17B-Gl-25r"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,7 +66,7 @@
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="dealsAction:" destination="Z5Y-IV-acJ" eventType="touchUpInside" id="ABx-MT-8sP"/>
+                                    <action selector="webAction:" destination="Z5Y-IV-acJ" eventType="touchUpInside" id="maY-Y5-ngN"/>
                                 </connections>
                             </button>
                         </subviews>

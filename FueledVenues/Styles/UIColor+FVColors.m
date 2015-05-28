@@ -14,7 +14,7 @@
 
 + (UIColor *)grayTextColor
 {
-    return RGBAColor(0, 0, 0, 0.5);
+    return RGBAColor(0, 0, 0, 0.4);
 }
 
 + (UIColor *)orangeTextColor
@@ -27,6 +27,10 @@
     return RGBColor(255, 255, 255);
 }
 
++ (UIColor *)viewBackgroundColor
+{
+    return RGBColor(249, 244, 227);
+}
 
 + (UIColor *)redBackgroundColor
 {

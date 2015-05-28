@@ -13,6 +13,7 @@
 
 #import "Venue.h"
 #import "RatingView.h"
+#import "UIColor+FVColors.h"
 
 NSString  * const kVenueCellReuseIdentifier = @"VenueCellReuseIdentifier";
 
@@ -35,10 +36,11 @@ NSString  * const kVenueCellReuseIdentifier = @"VenueCellReuseIdentifier";
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
     self.contentView.backgroundColor = [UIColor clearColor];
     self.backgroundColor = [UIColor clearColor];
     self.backgroundView = [UIView new];
+    
+    self.nameLabel.textColor = [UIColor whiteTextColor];
     
     self.shadowView.layer.shadowColor = [UIColor blackColor].CGColor;
     self.shadowView.layer.shadowOpacity = 0.4f;

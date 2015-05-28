@@ -10,6 +10,8 @@
 
 #import "VenueContactItem.h"
 
+#import "ServiceLayer.h"
+
 @interface VenueDetailsPresenter()
 @property (nonatomic, strong) Venue *venue;
 
@@ -20,7 +22,7 @@
 #pragma mark - initialization
 - (instancetype)initWithVenue:(Venue *)venue
 {
-    SectionItem *section = [[SectionItem alloc]initWithRows:@[venue, [[VenueContactItem alloc]initWithVenue:venue], venue.address]];
+    SectionItem *section = [[SectionItem alloc]initWithRows:@[venue, [[VenueContactItem alloc]initWithObject:venue], venue.address]];
     self = [super initWithSections:[@[section] mutableCopy]];
     if(self) {
         _venue = venue;
@@ -39,4 +41,5 @@
 {
 //    [[DataProviderService sharedDataProvider] loadFullInfoForVenue:self.venue];
 }
+
 @end

@@ -13,16 +13,19 @@
 #import "VenueButtonsCell.h"
 #import "VenueAddressCell.h"
 #import "VenueContactItem.h"
+#import "ReviewsTableViewController.h"
 
 @implementation VenueDetailsViewController
 @dynamic presenter;
 
+#pragma mark - initialization
 - (instancetype)initWithPresenter:(VenueDetailsPresenter *)presenter
 {
     self = [super initWithPresenter:presenter];
     return self;
 }
 
+#pragma mark - lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,9 +37,51 @@
     [self.presenter updateInfo];
 }
 
+#pragma mark - superclass methods
 - (CGFloat)rowHeightForItem:(id)item
 {
     return kDynamicRowHeight;
+}
+
+- (void)configureCell:(UITableViewCell<ViewItemProtocol> *)cell forItem:(id)item
+{
+    [super configureCell:cell forItem:item];
+    if([item isKindOfClass:[VenueContactItem class]]) {
+        VenueButtonsCell *buttonsCell = (VenueButtonsCell *)cell;
+        buttonsCell.delegate = (id<VenueButtonsCellDelegate>)self;
+    }
+}
+
+#pragma mark - <> methods
+- (void)venueButtonsCellDidSelectMenu:(VenueButtonsCell *)cell
+{
+    
+}
+
+- (void)venueButtonsCellDidSelectReviews:(VenueButtonsCell *)cell
+{
+    [self performSegueWithIdentifier:@"ShowReviews" sender:cell];
+}
+
+- (void)venueButtonsCellDidSelectCall:(VenueButtonsCell *)cell
+{
+    
+}
+
+- (void)venueButtonsCellDidSelectWeb:(VenueButtonsCell *)cell
+{
+    
+}
+
+#pragma mark - Segues transitions
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.destinationViewController isKindOfClass:[ReviewsTableViewController class]]) {
+        ReviewsTableViewController *detailsController = (ReviewsTableViewController *)segue.destinationViewController;
+        VenueButtonsCell *cell = (VenueButtonsCell *)sender;
+        ReviewsViewPresenter *reviewsPresenter = [[ReviewsViewPresenter alloc]initWithVenueIdentifier:((VenueContactItem *)cell.item).venueIdentifier];
+        detailsController.presenter = reviewsPresenter;
+    }
 }
 
 @end

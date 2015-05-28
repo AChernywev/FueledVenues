@@ -16,5 +16,3 @@
 
 - (NSURL *)urlWithSize:(CGSize)size;
 @end
-
-#import "Photo+Parsing.h"

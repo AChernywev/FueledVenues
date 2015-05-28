@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ksC-OX-kOt" customClass="ReviewTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="205"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ksC-OX-kOt" id="yt6-c0-ON4">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nYX-hK-g2z">
+                        <rect key="frame" x="10" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="oFq-8t-6Tp"/>
+                            <constraint firstAttribute="width" secondItem="nYX-hK-g2z" secondAttribute="height" multiplier="1:1" id="xRA-WH-bgE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Edward Smith" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxU-yt-JQa" customClass="TitleLabel">
+                        <rect key="frame" x="70" y="15" width="240" height="24"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" image="calendar_icon" translatesAutoresizingMaskIntoConstraints="NO" id="rNE-Ob-TmX">
+                        <rect key="frame" x="70" y="44" width="9" height="9"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 August 2014" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-e6-0Yd">
+                        <rect key="frame" x="84" y="41" width="226" height="16"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4j-Cc-SR4">
+                        <rect key="frame" x="0.0" y="203" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.71372549019607845" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ZiQ-eH-dK2"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="255" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="65n-br-XkY" customClass="TextLabel">
+                        <rect key="frame" x="10" y="63" width="300" height="136"/>
+                        <string key="text">Great food and service all round. It is of course a little expensive that's the only reason why I rated the value as average. That a side, it is on the top level of one of Sydney's iconic 
+buildings - "old customs house" great views of circular quay while enjoy well presented food and wine.</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="a4j-Cc-SR4" firstAttribute="leading" secondItem="yt6-c0-ON4" secondAttribute="leading" id="1NM-RL-OvO"/>
+                    <constraint firstItem="nYX-hK-g2z" firstAttribute="leading" secondItem="yt6-c0-ON4" secondAttribute="leading" constant="10" id="5QM-iI-EQb"/>
+                    <constraint firstItem="JxU-yt-JQa" firstAttribute="trailing" secondItem="YWG-e6-0Yd" secondAttribute="trailing" id="Gae-hu-scF"/>
+                    <constraint firstAttribute="trailing" secondItem="JxU-yt-JQa" secondAttribute="trailing" constant="10" id="Kav-dH-iP3"/>
+                    <constraint firstItem="rNE-Ob-TmX" firstAttribute="centerY" secondItem="YWG-e6-0Yd" secondAttribute="centerY" id="OII-kR-CCJ"/>
+                    <constraint firstItem="65n-br-XkY" firstAttribute="leading" secondItem="nYX-hK-g2z" secondAttribute="leading" id="OhD-VN-T8d"/>
+                    <constraint firstItem="rNE-Ob-TmX" firstAttribute="top" secondItem="JxU-yt-JQa" secondAttribute="bottom" constant="5" id="PZR-ai-P7T"/>
+                    <constraint firstAttribute="trailing" secondItem="a4j-Cc-SR4" secondAttribute="trailing" id="VnQ-UC-Ciu"/>
+                    <constraint firstItem="JxU-yt-JQa" firstAttribute="leading" secondItem="nYX-hK-g2z" secondAttribute="trailing" constant="10" id="W4D-Lr-X6z"/>
+                    <constraint firstAttribute="bottom" secondItem="65n-br-XkY" secondAttribute="bottom" constant="5" id="XSF-Lf-qpX"/>
+                    <constraint firstItem="JxU-yt-JQa" firstAttribute="top" secondItem="nYX-hK-g2z" secondAttribute="top" constant="5" id="ahq-A8-o7B"/>
+                    <constraint firstAttribute="bottom" secondItem="a4j-Cc-SR4" secondAttribute="bottom" id="bp7-Lr-jlh"/>
+                    <constraint firstItem="JxU-yt-JQa" firstAttribute="leading" secondItem="rNE-Ob-TmX" secondAttribute="leading" id="cNu-Az-jQ6"/>
+                    <constraint firstItem="nYX-hK-g2z" firstAttribute="top" secondItem="yt6-c0-ON4" secondAttribute="top" constant="10" id="e5l-Pk-eKr"/>
+                    <constraint firstItem="YWG-e6-0Yd" firstAttribute="leading" secondItem="rNE-Ob-TmX" secondAttribute="trailing" constant="5" id="kMO-mA-75L"/>
+                    <constraint firstItem="65n-br-XkY" firstAttribute="trailing" secondItem="JxU-yt-JQa" secondAttribute="trailing" id="ofi-uE-tER"/>
+                    <constraint firstItem="65n-br-XkY" firstAttribute="top" secondItem="nYX-hK-g2z" secondAttribute="bottom" constant="3" id="qHb-BN-SnJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="YWG-e6-0Yd" id="FkR-k4-M4g"/>
+                <outlet property="reviewTextLabel" destination="65n-br-XkY" id="9F8-k0-pY6"/>
+                <outlet property="separatorHeight" destination="ZiQ-eH-dK2" id="69s-3z-n52"/>
+                <outlet property="userImageView" destination="nYX-hK-g2z" id="BDJ-Jh-mL8"/>
+                <outlet property="userNameLabel" destination="JxU-yt-JQa" id="sjw-XS-Wpu"/>
+            </connections>
+            <point key="canvasLocation" x="213" y="90.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="calendar_icon" width="9" height="9"/>
+    </resources>
+</document>

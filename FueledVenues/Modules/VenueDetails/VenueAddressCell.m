@@ -9,6 +9,7 @@
 #import "VenueAddressCell.h"
 
 #import "Macroses.h"
+#import "UIColor+FVColors.h"
 
 NSString * kVenueAddressCellReuseIdentifier = @"VenueAddressCellReuseIdentifier";
 

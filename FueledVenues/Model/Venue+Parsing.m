@@ -8,6 +8,7 @@
 
 #import "Venue+Parsing.h"
 
+#import "Photo+Parsing.h"
 #import "NSArray+Map.h"
 #import "NSObject+SafeParsing.h"
 #import "NSDictionary+SafeParsing.h"

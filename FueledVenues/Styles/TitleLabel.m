@@ -18,7 +18,6 @@
 {
     [super setupAppearence];
     self.font = [UIFont titleFont];
-    self.textColor = [UIColor whiteTextColor];
 }
 
 @end

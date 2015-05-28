@@ -17,3 +17,4 @@
 @end
 
 #import "BaseEntity+Parsing.h"
+#import "BaseEntity+CacheParsing.h"

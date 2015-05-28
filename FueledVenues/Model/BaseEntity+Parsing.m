@@ -9,6 +9,7 @@
 #import "BaseEntity+Parsing.h"
 
 #import "NSDictionary+SafeParsing.h"
+#import "NSArray+Map.h"
 #import "NSMutableArray+Secure.h"
 
 #pragma mark - EntityID Helper method
@@ -32,21 +33,16 @@
 + (instancetype)objectWithDictionary:(NSDictionary *)values
 {
     EntityIDType identifier = [values entityIDAtKey:[[self class]idKey]];
-    if (identifier) {
-        id result = [[[self class] alloc] initWithIdentifier:identifier];
-        [result updateWithDictionary:values];
-        return result;
-    }
-    return nil;
+    id result = [[[self class] alloc] initWithIdentifier:identifier];
+    [result updateWithDictionary:values];
+    return result;
 }
 
 + (NSArray *)objectsArrayWithResponse:(NSArray *)response
 {
-    NSMutableArray *resultArray = [NSMutableArray arrayWithCapacity:response.count];
-    for(NSDictionary *dict in response) {
-        [resultArray addObjectSecure:[[self class] objectWithDictionary:dict]];
-    }
-    return resultArray;
+    return [response map:^id(id object) {
+        return [[self class] objectWithDictionary:object];
+    }];
 }
 
 - (void)updateWithDictionary:(NSDictionary *)values

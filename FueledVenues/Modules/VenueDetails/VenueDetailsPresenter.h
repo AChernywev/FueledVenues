@@ -9,6 +9,7 @@
 #import "MutableSectionsPresenter.h"
 
 #import "Venue.h"
+#import "VenueContactItem.h"
 
 @interface VenueDetailsPresenter : MutableSectionsPresenter
 @property (nonatomic, readonly) NSString *title;

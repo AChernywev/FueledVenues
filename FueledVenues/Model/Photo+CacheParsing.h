@@ -8,8 +8,6 @@
 
 #import "Photo.h"
 
-#import "BaseEntity+CacheParsing.h"
-
 @interface Photo (CacheParsing)
 
 @end

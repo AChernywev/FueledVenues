@@ -39,5 +39,3 @@ typedef NS_ENUM(int32_t, PriceTier)
 @property (nonatomic, readonly) NSString *openMessage;
 @property (nonatomic, readonly) NSString *tierMessage;
 @end
-
-#import "Venue+Parsing.h"

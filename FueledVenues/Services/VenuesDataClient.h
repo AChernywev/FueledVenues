@@ -9,9 +9,12 @@
 #import "APIService.h"
 
 #import "Venue.h"
+#import "Review.h"
 
 @interface VenuesDataClient : NSObject
 
 - (void)loadVenuesWithCount:(NSInteger)count
                  completion:(void(^)(NSArray *venues, NSError *error))completion;
+- (void)loadReviewsForVenueWithIdentifier:(EntityIDType)venueID
+                               completion:(void(^)(NSArray *reviews, NSError *error))completion;
 @end

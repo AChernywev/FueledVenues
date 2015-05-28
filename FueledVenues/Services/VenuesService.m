@@ -37,19 +37,33 @@ static NSInteger  const kDefaultNumberOfVenues = 50;
 {
     NSArray *blackListed = [self.cacheClient loadBlacklistedVenues];
     
-    NSArray *venues = [self.cacheClient loadVenues];
-    [self finishWithVenues:venues error:nil
-          blackListedArray:blackListed completion:completion];
-    
     __weak typeof(self)weakSelf = self;
     [self.dataClient loadVenuesWithCount:kDefaultNumberOfVenues + blackListed.count
                               completion:^(NSArray *venues, NSError *error) {
-                                  if(venues.count) {
+                                  if(!error && venues.count) {
                                       [weakSelf.cacheClient storeVenues:venues];
+                                  }
+                                  else {
+                                      venues = [weakSelf.cacheClient loadVenues];
+                                      error = venues.count ? nil : error;
                                   }
                                   [weakSelf finishWithVenues:venues error:error
                                         blackListedArray:blackListed completion:completion];
                               }
+     ];
+}
+
+- (void)loadReviewsForVenueWithIdentifier:(EntityIDType)venueID
+                               completion:(void(^)(NSArray *reviews, NSError *error))completion;
+{
+    [self.dataClient loadReviewsForVenueWithIdentifier:venueID
+                                            completion:^(NSArray *reviews, NSError *error) {
+                                                if(completion) {
+                                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                                        completion(reviews, error);
+                                                    });
+                                                }
+                                            }
      ];
 }
 
