@@ -26,7 +26,7 @@
         self.address = cache.address;
         self.longitude = cache.longitude;
         self.latitude = cache.latitude;
-        self.phone = cache.phone;
+        self.phoneURL = [NSURL URLWithString: cache.phone];
         self.websiteURL = [NSURL URLWithString:cache.webURL];
         self.menuURL = [NSURL URLWithString:cache.menuURL];
         self.reviewsCount = cache.reviewsCount;
@@ -46,7 +46,7 @@
     resultCache.address = self.address;
     resultCache.longitude = self.longitude;
     resultCache.latitude = self.latitude;
-    resultCache.phone = self.phone;
+    resultCache.phone = self.phoneURL.absoluteString;
     resultCache.webURL = self.websiteURL.absoluteString;
     resultCache.menuURL = self.menuURL.absoluteString;
     resultCache.reviewsCount = self.reviewsCount;

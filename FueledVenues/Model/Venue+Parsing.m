@@ -50,7 +50,7 @@
     self.tier = [priceDict intAtKey:@"tier"];
     self.rating = [values floatAtKey:@"rating"];
     
-    self.phone = [[values dictionaryAtKey:@"contact"] stringAtKey:@"phone"];
+    self.phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",[[values dictionaryAtKey:@"contact"] stringAtKey:@"phone"]]];
     self.websiteURL = [NSURL URLWithString: [values stringAtKey:@"url"]];
     NSDictionary *menuDict = [values dictionaryAtKey:@"menu"];
     self.menuURL = [NSURL URLWithString: [menuDict stringAtKey:@"mobileUrl"]];

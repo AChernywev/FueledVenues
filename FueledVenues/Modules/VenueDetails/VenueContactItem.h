@@ -12,7 +12,7 @@
 
 @interface VenueContactItem : BaseItem
 @property (nonatomic, readonly) EntityIDType venueIdentifier;
-@property (nonatomic, readonly) NSString *phone;
+@property (nonatomic, readonly) NSURL *phoneURL;
 @property (nonatomic, readonly) NSURL *websiteURL;
 @property (nonatomic, readonly) NSURL *menuURL;
 @property (nonatomic, readonly) NSInteger reviewsCount;

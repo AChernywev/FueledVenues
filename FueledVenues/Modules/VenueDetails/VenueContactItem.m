@@ -26,9 +26,9 @@
     return self.object.identifier;
 }
 
-- (NSString *)phone
+- (NSURL *)phoneURL
 {
-    return self.object.phone;
+    return self.object.phoneURL;
 }
 
 - (NSURL *)menuURL
@@ -48,7 +48,7 @@
 
 + (NSSet *)keyPathsForValuesAffectingPhone
 {
-    return [NSSet setWithObject:@"object.phone"];
+    return [NSSet setWithObject:@"object.phoneURL"];
 }
 
 + (NSSet *)keyPathsForValuesAffectingMenuURL

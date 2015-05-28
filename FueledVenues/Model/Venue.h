@@ -31,7 +31,7 @@ typedef NS_ENUM(int32_t, PriceTier)
 @property (nonatomic, assign) float latitude;
 @property (nonatomic, assign) float longitude;
 
-@property (nonatomic, strong) NSString *phone;
+@property (nonatomic, strong) NSURL *phoneURL;
 @property (nonatomic, strong) NSURL *websiteURL;
 @property (nonatomic, strong) NSURL *menuURL;
 @property (nonatomic, assign) int32_t reviewsCount;

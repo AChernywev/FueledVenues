@@ -8,13 +8,17 @@
 
 #import "VenueButtonsCell.h"
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+#import "VenueContactItem.h"
+
 NSString * kVenueButtonsCellReuseIdentifier = @"VenueButtonsCellReuseIdentifier";
 
 @interface VenueButtonsCell ()
 @property (nonatomic, weak) IBOutlet UIButton *menuButton;
 @property (nonatomic, weak) IBOutlet UIButton *reviewsButton;
-@property (nonatomic, weak) IBOutlet UIButton *dealsButton;
-@property (nonatomic, weak) IBOutlet UILabel *reviewsCountLabel;
+@property (nonatomic, weak) IBOutlet UIButton *callButton;
+@property (nonatomic, weak) IBOutlet UIButton *webButton;
 
 @end
 
@@ -49,20 +53,30 @@ NSString * kVenueButtonsCellReuseIdentifier = @"VenueButtonsCellReuseIdentifier"
     }
 }
 #pragma mark - public methods
-- (void)setItem:(id)item
+- (void)setItem:(VenueContactItem *)item
 {
     [super setItem:item];
-//    self.reviewsCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)restaurant.reviews.count];
-//    self.reviewsButton.enabled = (restaurant.reviews.count > 0);
-//    self.reviewsCountLabel.textColor = restaurant.reviews.count > 0 ? kOrangeBackgroundColor : RGBAColor(255, 142, 32, 0.6);
-//
-//    self.dealsButton.enabled = (restaurant.offers.count > 0);
+    RAC(self.callButton, enabled) = [[RACObserve(item, phoneURL) map:^id(NSString *value) {
+        return @(value != nil);
+    }] takeUntil:self.rac_prepareForReuseSignal];
+    RAC(self.webButton, enabled) = [[RACObserve(item, websiteURL) map:^id(NSString *value) {
+        return @(value != nil);
+    }] takeUntil:self.rac_prepareForReuseSignal];
+    RAC(self.menuButton, enabled) = [[RACObserve(item, menuURL) map:^id(NSString *value) {
+        return @(value != nil);
+    }] takeUntil:self.rac_prepareForReuseSignal];
+    RAC(self.reviewsButton, enabled) = [[RACObserve(item, reviewsCount) map:^id(NSNumber *value) {
+        return @(value.integerValue > 0);
+    }] takeUntil:self.rac_prepareForReuseSignal];
 }
 
 #pragma mark - UITableViewCell methods
 - (void)prepareForReuse
 {
     [super prepareForReuse];
-    self.reviewsCountLabel.text = nil;
+    self.callButton.enabled = YES;
+    self.webButton.enabled = YES;
+    self.menuButton.enabled = YES;
+    self.reviewsButton.enabled = YES;
 }
 @end

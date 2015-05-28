@@ -136,20 +136,12 @@
                                     <action selector="reviewsAction:" destination="Z5Y-IV-acJ" eventType="touchUpInside" id="IC3-wU-MA1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuF-Qe-DHd" userLabel="Label - Reviews Count">
-                                <rect key="frame" x="24" y="8" width="18" height="19"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="q66-ep-L80" secondAttribute="bottom" id="DfF-pB-Rww"/>
                             <constraint firstAttribute="height" constant="60" id="RW6-Ef-mqs"/>
-                            <constraint firstItem="iuF-Qe-DHd" firstAttribute="top" secondItem="SWF-uI-hrS" secondAttribute="top" constant="8" id="syX-bK-iXc"/>
                             <constraint firstAttribute="centerX" secondItem="q66-ep-L80" secondAttribute="centerX" id="t2g-tx-hJz"/>
-                            <constraint firstAttribute="centerX" secondItem="iuF-Qe-DHd" secondAttribute="centerX" id="tw2-1L-MVi"/>
                             <constraint firstItem="q66-ep-L80" firstAttribute="top" secondItem="SWF-uI-hrS" secondAttribute="top" id="y0V-Oe-N3R"/>
                         </constraints>
                     </view>
@@ -173,10 +165,10 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="dealsButton" destination="mH1-Kr-baf" id="gW8-9E-X2E"/>
+                <outlet property="callButton" destination="mH1-Kr-baf" id="P2P-IK-L9k"/>
                 <outlet property="menuButton" destination="Zbe-uo-m86" id="dHp-6Z-zYT"/>
                 <outlet property="reviewsButton" destination="q66-ep-L80" id="PKU-HK-xZW"/>
-                <outlet property="reviewsCountLabel" destination="iuF-Qe-DHd" id="m29-AB-Fk9"/>
+                <outlet property="webButton" destination="fp3-7C-iWd" id="gyG-d7-c6T"/>
             </connections>
             <point key="canvasLocation" x="211" y="-97.5"/>
         </tableViewCell>

@@ -55,7 +55,9 @@
 #pragma mark - <> methods
 - (void)venueButtonsCellDidSelectMenu:(VenueButtonsCell *)cell
 {
-    
+    if([[UIApplication sharedApplication] canOpenURL:((VenueContactItem *)cell.item).menuURL]) {
+        [[UIApplication sharedApplication] openURL:((VenueContactItem *)cell.item).menuURL];
+    }
 }
 
 - (void)venueButtonsCellDidSelectReviews:(VenueButtonsCell *)cell
@@ -65,12 +67,16 @@
 
 - (void)venueButtonsCellDidSelectCall:(VenueButtonsCell *)cell
 {
-    
+    if([[UIApplication sharedApplication] canOpenURL:((VenueContactItem *)cell.item).phoneURL]) {
+        [[UIApplication sharedApplication] openURL:((VenueContactItem *)cell.item).phoneURL];
+    }
 }
 
 - (void)venueButtonsCellDidSelectWeb:(VenueButtonsCell *)cell
 {
-    
+    if([[UIApplication sharedApplication] canOpenURL:((VenueContactItem *)cell.item).websiteURL]) {
+        [[UIApplication sharedApplication] openURL:((VenueContactItem *)cell.item).websiteURL];
+    }
 }
 
 #pragma mark - Segues transitions
