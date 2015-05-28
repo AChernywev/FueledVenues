@@ -11,11 +11,13 @@
 #import "BaseCacheEntity.h"
 
 @class VenueCache;
+@class UserCache;
 
 @interface PhotoCache : BaseCacheEntity
 
 @property (nonatomic, retain) NSString * prefix;
 @property (nonatomic, retain) NSString * suffix;
 @property (nonatomic, retain) VenueCache *venue;
+@property (nonatomic, retain) UserCache *user;
 
 @end

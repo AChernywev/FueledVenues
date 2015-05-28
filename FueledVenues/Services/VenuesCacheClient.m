@@ -9,9 +9,11 @@
 #import "VenuesCacheClient.h"
 
 #import "CacheClient.h"
-#import "VenueCache.h"
 #import "NSArray+Map.h"
+#import "VenueCache.h"
 #import "Venue+CacheParsing.h"
+#import "ReviewCache.h"
+#import "Review+CacheParsing.h"
 
 @interface VenuesCacheClient ()
 @property (nonatomic, readonly) CacheClient *cacheClient;
@@ -64,5 +66,37 @@
     VenueCache *venueCache = (VenueCache *)[venue fulfilledCacheWithClass:[VenueCache class] client:self.cacheClient];
     venueCache.blacklisted = YES;
     [self.cacheClient saveDatabase];
+}
+
+- (NSArray *)loadMyReviewsWithIdentifier:(EntityIDType)venueID
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:NSStringFromClass([ReviewCache class])];
+    request.predicate = [NSPredicate predicateWithFormat:@"venueID==%@&&ownReview==YES",venueID];
+    return [self reviewsWithFetchRequest:request];
+}
+
+- (NSArray *)loadOtherReviewsWithIdentifier:(EntityIDType)venueID
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:NSStringFromClass([ReviewCache class])];
+    request.predicate = [NSPredicate predicateWithFormat:@"venueID==%@ AND ownReview==NO",venueID];
+    return [self reviewsWithFetchRequest:request];
+}
+
+- (void)storeReviews:(NSArray *)reviews
+{
+    for(Review *review in reviews) {
+        [review fulfilledCacheWithClass:[ReviewCache class] client:self.cacheClient];
+    }
+    [self.cacheClient saveDatabase];
+}
+
+#pragma mark - working methods
+- (NSArray *)reviewsWithFetchRequest:(NSFetchRequest *)request
+{
+    NSArray *cachedReviews = [self.cacheClient getEntitiesWithRequest:request];
+    NSArray *modelReview = [cachedReviews map:^Review *(ReviewCache * object) {
+        return [[Review alloc]initWithCache:object];
+    }];
+    return modelReview;
 }
 @end

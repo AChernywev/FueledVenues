@@ -31,11 +31,10 @@
 - (void)loadReviewsWithCompletion:(void(^)(NSError *error))completion
 {
     __weak typeof(self)weakSelf = self;
-    [[ServiceLayer sharedDataProvider].venueService loadReviewsForVenueWithIdentifier:self.venueID completion:^(NSArray *reviews, NSError *error) {
-        if(reviews.count) {
-            MutableSectionItem *section = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: reviews]];
-            [weakSelf updateSections: @[section]];
-        }
+    [[ServiceLayer sharedDataProvider].venueService loadReviewsWithVenueIdentifier:self.venueID completion:^(NSArray *myReviews, NSArray *otherReview, NSError *error) {
+        MutableSectionItem *firstSection = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: myReviews]];
+        MutableSectionItem *secondSection = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: otherReview]];
+        [weakSelf updateSections: @[firstSection, secondSection]];
         if(completion) {
             completion(error);
         }

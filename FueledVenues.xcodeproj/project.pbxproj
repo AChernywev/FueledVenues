@@ -29,6 +29,10 @@
 		CE3844B71B17669500261D08 /* Review+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844B61B17669500261D08 /* Review+Parsing.m */; };
 		CE3844BB1B1768BD00261D08 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844BA1B1768BD00261D08 /* User.m */; };
 		CE3844BE1B1769A100261D08 /* User+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844BD1B1769A100261D08 /* User+Parsing.m */; };
+		CE3844C11B1779A300261D08 /* UserCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844C01B1779A300261D08 /* UserCache.m */; };
+		CE3844C41B1779A400261D08 /* ReviewCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844C31B1779A400261D08 /* ReviewCache.m */; };
+		CE3844C71B177A3D00261D08 /* Review+CacheParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844C61B177A3D00261D08 /* Review+CacheParsing.m */; };
+		CE3844CA1B177B0D00261D08 /* User+CacheParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3844C91B177B0D00261D08 /* User+CacheParsing.m */; };
 		CE4407071B15F445000464D3 /* CacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4407011B15F445000464D3 /* CacheClient.m */; };
 		CE4407081B15F445000464D3 /* FueledVenues.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE4407021B15F445000464D3 /* FueledVenues.xcdatamodeld */; };
 		CE44070D1B15F48E000464D3 /* BaseCacheEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44070C1B15F48E000464D3 /* BaseCacheEntity.m */; };
@@ -145,6 +149,14 @@
 		CE3844BA1B1768BD00261D08 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		CE3844BC1B1769A100261D08 /* User+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Parsing.h"; sourceTree = "<group>"; };
 		CE3844BD1B1769A100261D08 /* User+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Parsing.m"; sourceTree = "<group>"; };
+		CE3844BF1B1779A300261D08 /* UserCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCache.h; sourceTree = "<group>"; };
+		CE3844C01B1779A300261D08 /* UserCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCache.m; sourceTree = "<group>"; };
+		CE3844C21B1779A400261D08 /* ReviewCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCache.h; sourceTree = "<group>"; };
+		CE3844C31B1779A400261D08 /* ReviewCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCache.m; sourceTree = "<group>"; };
+		CE3844C51B177A3D00261D08 /* Review+CacheParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Review+CacheParsing.h"; sourceTree = "<group>"; };
+		CE3844C61B177A3D00261D08 /* Review+CacheParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Review+CacheParsing.m"; sourceTree = "<group>"; };
+		CE3844C81B177B0D00261D08 /* User+CacheParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CacheParsing.h"; sourceTree = "<group>"; };
+		CE3844C91B177B0D00261D08 /* User+CacheParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CacheParsing.m"; sourceTree = "<group>"; };
 		CE4406F61B15F12A000464D3 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		CE4407001B15F445000464D3 /* CacheClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheClient.h; sourceTree = "<group>"; };
 		CE4407011B15F445000464D3 /* CacheClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheClient.m; sourceTree = "<group>"; };
@@ -487,8 +499,8 @@
 			children = (
 				CE3053B31B15EE070063ED98 /* VenuesService.h */,
 				CE3053B41B15EE070063ED98 /* VenuesService.m */,
-				CE3053A61B15EBEC0063ED98 /* VenuesCacheClient */,
 				CE3053A21B15E9100063ED98 /* VenuesDataClient */,
+				CE3053A61B15EBEC0063ED98 /* VenuesCacheClient */,
 			);
 			name = VenuesService;
 			sourceTree = "<group>";
@@ -579,6 +591,10 @@
 				CE4407281B1604AE000464D3 /* VenueCache.m */,
 				CE44072A1B1604AF000464D3 /* PhotoCache.h */,
 				CE44072B1B1604AF000464D3 /* PhotoCache.m */,
+				CE3844C21B1779A400261D08 /* ReviewCache.h */,
+				CE3844C31B1779A400261D08 /* ReviewCache.m */,
+				CE3844BF1B1779A300261D08 /* UserCache.h */,
+				CE3844C01B1779A300261D08 /* UserCache.m */,
 			);
 			name = CacheEntities;
 			sourceTree = "<group>";
@@ -592,6 +608,10 @@
 				CE4407131B15F62E000464D3 /* Venue+CacheParsing.m */,
 				CE44071E1B160360000464D3 /* Photo+CacheParsing.h */,
 				CE44071F1B160360000464D3 /* Photo+CacheParsing.m */,
+				CE3844C51B177A3D00261D08 /* Review+CacheParsing.h */,
+				CE3844C61B177A3D00261D08 /* Review+CacheParsing.m */,
+				CE3844C81B177B0D00261D08 /* User+CacheParsing.h */,
+				CE3844C91B177B0D00261D08 /* User+CacheParsing.m */,
 			);
 			name = CacheParsing;
 			sourceTree = "<group>";
@@ -1146,12 +1166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3844CA1B177B0D00261D08 /* User+CacheParsing.m in Sources */,
 				FADA92A21B1078E50094BAA2 /* SectionsPresenter+Protected.m in Sources */,
 				CE130B621B14CB7500601160 /* APIService.m in Sources */,
 				CE2CE0AB1B139AC700119639 /* Photo+Parsing.m in Sources */,
 				FA826F481B10F9B90082B943 /* UIView+FVStyles.m in Sources */,
 				FADA92C31B107A170094BAA2 /* PresenterChangeSectionReload.m in Sources */,
 				FADA929C1B1075AB0094BAA2 /* SectionItem+Protected.m in Sources */,
+				CE3844C41B1779A400261D08 /* ReviewCache.m in Sources */,
 				CE3844B71B17669500261D08 /* Review+Parsing.m in Sources */,
 				FADA92CD1B107FBD0094BAA2 /* TableViewController.m in Sources */,
 				FADF41491B11FFB80083AE96 /* VenueDetailsPresenter.m in Sources */,
@@ -1183,9 +1205,11 @@
 				CE4407201B160360000464D3 /* Photo+CacheParsing.m in Sources */,
 				FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */,
 				FADA92BD1B107A170094BAA2 /* PresenterChangeItemDelete.m in Sources */,
+				CE3844C11B1779A300261D08 /* UserCache.m in Sources */,
 				CE3844A71B1761CA00261D08 /* ReviewsTableViewController.m in Sources */,
 				CE3844BB1B1768BD00261D08 /* User.m in Sources */,
 				FADF41371B11E4500083AE96 /* BaseTableViewCell.m in Sources */,
+				CE3844C71B177A3D00261D08 /* Review+CacheParsing.m in Sources */,
 				CE2CE09C1B138F9800119639 /* NSDictionary+SafeParsing.m in Sources */,
 				FADA92911B1072880094BAA2 /* MutableSectionItem.m in Sources */,
 				CE44073A1B162638000464D3 /* NavigationController.m in Sources */,

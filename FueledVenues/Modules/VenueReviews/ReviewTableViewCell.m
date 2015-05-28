@@ -42,7 +42,7 @@ NSString * kReviewCellReuseIdentifier = @"ReviewCellReuseIdentifier";
 - (void)setItem:(Review *)item
 {
     [super setItem:item];
-    [self.userImageView sd_setImageWithURL:[item.user.userPhoto urlWithSize:self.userImageView.bounds.size]];
+    [self.userImageView sd_setImageWithURL:[item.user.userPhoto urlWithSize:self.userImageView.bounds.size] placeholderImage:[UIImage imageNamed:@"default-avatar"]];
     RAC(self.reviewTextLabel, text) = [RACObserve(item, text) takeUntil:self.rac_prepareForReuseSignal];
     RAC(self.userNameLabel, text) = [RACObserve(item.user, userName) takeUntil:self.rac_prepareForReuseSignal];
     RAC(self.dateLabel, text) = [[RACObserve(item, createdAt) map:^id(id value) {

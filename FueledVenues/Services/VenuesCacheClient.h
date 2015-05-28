@@ -16,4 +16,8 @@
 - (NSArray *)loadVenues;
 - (void)storeVenues:(NSArray *)venues;
 - (void)addToBlackList:(Venue *)venue;
+
+- (NSArray *)loadMyReviewsWithIdentifier:(EntityIDType)venueID;
+- (NSArray *)loadOtherReviewsWithIdentifier:(EntityIDType)venueID;
+- (void)storeReviews:(NSArray *)reviews;
 @end

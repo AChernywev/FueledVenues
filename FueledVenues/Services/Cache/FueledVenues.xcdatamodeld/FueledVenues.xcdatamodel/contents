@@ -6,7 +6,21 @@
     <entity name="PhotoCache" representedClassName="PhotoCache" parentEntity="BaseCacheEntity" syncable="YES">
         <attribute name="prefix" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="suffix" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserCache" inverseName="userPhoto" inverseEntity="UserCache" syncable="YES"/>
         <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VenueCache" inverseName="mainImage" inverseEntity="VenueCache" syncable="YES"/>
+    </entity>
+    <entity name="ReviewCache" representedClassName="ReviewCache" parentEntity="BaseCacheEntity" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="ownReview" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="venueID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserCache" inverseName="reviews" inverseEntity="UserCache" syncable="YES"/>
+    </entity>
+    <entity name="UserCache" representedClassName="UserCache" parentEntity="BaseCacheEntity" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReviewCache" inverseName="user" inverseEntity="ReviewCache" syncable="YES"/>
+        <relationship name="userPhoto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoCache" inverseName="user" inverseEntity="PhotoCache" syncable="YES"/>
     </entity>
     <entity name="VenueCache" representedClassName="VenueCache" parentEntity="BaseCacheEntity" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,7 +40,9 @@
     </entity>
     <elements>
         <element name="BaseCacheEntity" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="PhotoCache" positionX="-36" positionY="99" width="128" height="105"/>
         <element name="VenueCache" positionX="-54" positionY="-9" width="128" height="255"/>
-        <element name="PhotoCache" positionX="-36" positionY="99" width="128" height="90"/>
+        <element name="ReviewCache" positionX="-45" positionY="99" width="128" height="120"/>
+        <element name="UserCache" positionX="-36" positionY="108" width="128" height="105"/>
     </elements>
 </model>

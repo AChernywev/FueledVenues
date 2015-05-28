@@ -15,6 +15,6 @@
 
 - (void)addToBlackList:(Venue *)venue;
 - (void)loadVenuesWithCompletion:(void(^)(NSArray *venues, NSError *error))completion;
-- (void)loadReviewsForVenueWithIdentifier:(EntityIDType)venueID
-                                completion:(void(^)(NSArray *reviews, NSError *error))completion;
+- (void)loadReviewsWithVenueIdentifier:(EntityIDType)venueID
+                            completion:(void(^)(NSArray *myReviews, NSArray *otherReview, NSError *error))completion;
 @end

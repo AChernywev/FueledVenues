@@ -12,6 +12,7 @@
 
 @interface Review : BaseEntity
 @property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) EntityIDType venueID;
 @property (nonatomic, strong) NSDate *  createdAt;
 @property (nonatomic, strong) User *    user;
 

@@ -15,5 +15,6 @@
 @dynamic prefix;
 @dynamic suffix;
 @dynamic venue;
+@dynamic user;
 
 @end

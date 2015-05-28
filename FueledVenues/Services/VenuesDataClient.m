@@ -12,6 +12,7 @@
 #import "NSDateFormatter+Singleton.h"
 #import "Venue+Parsing.h"
 #import "Review+Parsing.h"
+#import "NSArray+Map.h"
 
 static NSString * const kClientID               = @"CEUCXQN4ZTCXM51C2MCTPSPK4JK4IOQMGGTDLSDA0DOMHFST";
 static NSString * const kClientSecret           = @"ZEYHAQIABXIRDUJKVNPYXDZRDB0BMVYOZKILQWYA41FKBB1I";
@@ -82,6 +83,10 @@ static CGFloat    const kFueledOfficeLongitude  = -73.9975018;
                             NSArray *result = nil;
                             if(!error) {
                                 result = [Review reviewsArrayFromResponse: response];
+                                result = [result map:^Review *(Review *object) {
+                                    object.venueID = venueID;
+                                    return object;
+                                }];
                             }
                             if(completion) {
                                 completion(result, error);

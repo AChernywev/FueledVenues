@@ -53,14 +53,23 @@ static NSInteger  const kDefaultNumberOfVenues = 50;
      ];
 }
 
-- (void)loadReviewsForVenueWithIdentifier:(EntityIDType)venueID
-                               completion:(void(^)(NSArray *reviews, NSError *error))completion;
+- (void)loadReviewsWithVenueIdentifier:(EntityIDType)venueID
+                            completion:(void(^)(NSArray *myReviews, NSArray *otherReview, NSError *error))completion;
 {
+    __weak typeof(self)weakSelf = self;
     [self.dataClient loadReviewsForVenueWithIdentifier:venueID
                                             completion:^(NSArray *reviews, NSError *error) {
+                                                if(!error && reviews.count) {
+                                                    [weakSelf.cacheClient storeReviews:reviews];
+                                                }
+                                                else {
+                                                    reviews = [weakSelf.cacheClient loadOtherReviewsWithIdentifier:venueID];
+                                                    error = reviews.count ? nil : error;
+                                                }
+                                                NSArray *myReviews = [weakSelf.cacheClient loadMyReviewsWithIdentifier:venueID];
                                                 if(completion) {
                                                     dispatch_async(dispatch_get_main_queue(), ^{
-                                                        completion(reviews, error);
+                                                        completion(myReviews, reviews, error);
                                                     });
                                                 }
                                             }
