@@ -230,8 +230,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
         }
         [cell prepareForReuse];
         [self configureCell:cell forItem:item];
-        [cell layoutIfNeeded];
-        height = ceil([cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height) + 1;
+        height = ceil([cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height);
     }
     return height;
 }

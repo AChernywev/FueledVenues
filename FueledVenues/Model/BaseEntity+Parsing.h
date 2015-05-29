@@ -11,6 +11,7 @@
 @interface BaseEntity (Parsing)
 
 + (NSString *)idKey;
++ (EntityIDType)defaultIdentifierWithDictionary:(NSDictionary *)values;
 + (instancetype)objectWithDictionary:(NSDictionary *)values;
 + (NSArray *)objectsArrayWithResponse:(NSArray *)response;
 - (void)updateWithDictionary:(NSDictionary *)values;

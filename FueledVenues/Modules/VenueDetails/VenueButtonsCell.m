@@ -52,6 +52,7 @@ NSString * kVenueButtonsCellReuseIdentifier = @"VenueButtonsCellReuseIdentifier"
         [self.delegate venueButtonsCellDidSelectWeb:self];
     }
 }
+
 #pragma mark - public methods
 - (void)setItem:(VenueContactItem *)item
 {

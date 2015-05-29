@@ -30,9 +30,17 @@
     return @"id";
 }
 
++ (EntityIDType)defaultIdentifierWithDictionary:(NSDictionary *)values
+{
+    return nil;
+}
+
 + (instancetype)objectWithDictionary:(NSDictionary *)values
 {
     EntityIDType identifier = [values entityIDAtKey:[[self class]idKey]];
+    if(!identifier) {
+        identifier = [[self class] defaultIdentifierWithDictionary:values];
+    }
     id result = [[[self class] alloc] initWithIdentifier:identifier];
     [result updateWithDictionary:values];
     return result;
