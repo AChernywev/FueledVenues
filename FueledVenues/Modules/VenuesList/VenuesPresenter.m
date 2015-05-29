@@ -10,12 +10,18 @@
 
 #import "ServiceLayer.h"
 
+@interface VenuesPresenter()
+@property (nonatomic, readwrite) NSArray *venues;
+
+@end
+
 @implementation VenuesPresenter
 
 - (void)loadVenuesWithCompletion:(void(^)(NSError *error))completion
 {
     __weak typeof(self)weakSelf = self;
     [[ServiceLayer sharedDataProvider].venueService loadVenuesWithCompletion:^(NSArray *venues, NSError *error) {
+        weakSelf.venues = venues;
         if(venues.count) {
             MutableSectionItem *section = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: venues]];
             [weakSelf updateSections: @[section]];

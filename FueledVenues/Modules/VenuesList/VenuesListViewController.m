@@ -13,6 +13,7 @@
 #import "Macroses.h"
 #import "UIColor+FVColors.h"
 #import "VenueDetailsViewController.h"
+#import "VenueMapViewController.h"
 
 @implementation VenuesListViewController
 @dynamic presenter;
@@ -31,8 +32,17 @@
     [self.presenter loadVenuesWithCompletion:^(NSError *error) {
         if(!error) {
         }
+        else {
+            ShowError(error);
+        }
+        self.navigationItem.rightBarButtonItem.enabled = (self.presenter.venues.count > 0);
         [refreshControl endRefreshing];
     }];
+}
+
+- (IBAction)dismissMapAction:(UIStoryboardSegue *)sender
+{
+    
 }
 
 #pragma mark - lifecycle
@@ -40,6 +50,7 @@
 {
     [super viewDidLoad];
     self.title = LOC(@"venueslistcontroller.title");
+    self.navigationItem.rightBarButtonItem.enabled = NO;
     self.view.backgroundColor = [UIColor viewBackgroundColor];
     [self registerNibForCellClass:[VenueCell class] item:[Venue class] reuseIdentifier:kVenueCellReuseIdentifier];
     
@@ -74,6 +85,10 @@
         VenueDetailsPresenter *detailsPresenter = [[VenueDetailsPresenter alloc]initWithVenue:venue];
         detailsController.presenter = detailsPresenter;
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+    else if([segue.destinationViewController isKindOfClass:[VenueMapViewController class]]) {
+        VenueMapViewController *mapController = (VenueMapViewController *)segue.destinationViewController;
+        mapController.venues = self.presenter.venues;
     }
 }
 

@@ -104,12 +104,6 @@
      ];
 }
 
-#pragma mark - UIViewController methods
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
 #pragma mark - Segues transitions
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

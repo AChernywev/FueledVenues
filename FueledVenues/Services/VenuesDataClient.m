@@ -16,8 +16,6 @@
 
 static NSString * const kClientID               = @"CEUCXQN4ZTCXM51C2MCTPSPK4JK4IOQMGGTDLSDA0DOMHFST";
 static NSString * const kClientSecret           = @"ZEYHAQIABXIRDUJKVNPYXDZRDB0BMVYOZKILQWYA41FKBB1I";
-static CGFloat    const kFueledOfficeLatitude   = 40.7242727;
-static CGFloat    const kFueledOfficeLongitude  = -73.9975018;
 
 @interface VenuesDataClient()
 @property (nonatomic, readonly) APIService *apiService;

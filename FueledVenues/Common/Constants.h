@@ -10,6 +10,10 @@
 #define FueledVenues_Constants_h
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef NSString * EntityIDType;
+static CGFloat const kFueledOfficeLatitude   = 40.7242727;
+static CGFloat const kFueledOfficeLongitude  = -73.9975018;
+
 #endif

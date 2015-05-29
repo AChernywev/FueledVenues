@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CB114FA02124C90E2E1EC1DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC345F8B1DDD5F1CC155D26 /* libPods.a */; };
 		CE04B4011B18D1E100C5ECD0 /* ReviewCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04B4001B18D1E100C5ECD0 /* ReviewCreateViewController.m */; };
+		CE04B4091B18E94200C5ECD0 /* VenueMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04B4081B18E94200C5ECD0 /* VenueMapViewController.m */; };
+		CE04B40D1B18E96100C5ECD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04B40C1B18E96100C5ECD0 /* ViewController.m */; };
+		CE04B40F1B18F1EE00C5ECD0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04B40E1B18F1EE00C5ECD0 /* MapKit.framework */; };
 		CE130B621B14CB7500601160 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = CE130B5F1B14CB7500601160 /* APIService.m */; };
 		CE2CE09C1B138F9800119639 /* NSDictionary+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE09B1B138F9800119639 /* NSDictionary+SafeParsing.m */; };
 		CE2CE0A01B1394E700119639 /* NSObject+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE09F1B1394E700119639 /* NSObject+SafeParsing.m */; };
@@ -112,6 +115,11 @@
 		AAC432F46997FABFFF9157CA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CE04B3FF1B18D1E100C5ECD0 /* ReviewCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCreateViewController.h; sourceTree = "<group>"; };
 		CE04B4001B18D1E100C5ECD0 /* ReviewCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCreateViewController.m; sourceTree = "<group>"; };
+		CE04B4071B18E94200C5ECD0 /* VenueMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueMapViewController.h; sourceTree = "<group>"; };
+		CE04B4081B18E94200C5ECD0 /* VenueMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueMapViewController.m; sourceTree = "<group>"; };
+		CE04B40B1B18E96100C5ECD0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CE04B40C1B18E96100C5ECD0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE04B40E1B18F1EE00C5ECD0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE130B5E1B14CB7500601160 /* APIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIService.h; sourceTree = "<group>"; };
 		CE130B5F1B14CB7500601160 /* APIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
 		CE2CE09A1B138F9800119639 /* NSDictionary+SafeParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeParsing.h"; sourceTree = "<group>"; };
@@ -297,6 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE04B40F1B18F1EE00C5ECD0 /* MapKit.framework in Frameworks */,
 				CB114FA02124C90E2E1EC1DC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,9 +332,28 @@
 		33D14F6009D6C58B16852CE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE04B40E1B18F1EE00C5ECD0 /* MapKit.framework */,
 				4DC345F8B1DDD5F1CC155D26 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE04B4061B18E94200C5ECD0 /* VenueMap */ = {
+			isa = PBXGroup;
+			children = (
+				CE04B4071B18E94200C5ECD0 /* VenueMapViewController.h */,
+				CE04B4081B18E94200C5ECD0 /* VenueMapViewController.m */,
+			);
+			path = VenueMap;
+			sourceTree = "<group>";
+		};
+		CE04B40A1B18E95600C5ECD0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE04B40B1B18E96100C5ECD0 /* ViewController.h */,
+				CE04B40C1B18E96100C5ECD0 /* ViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		CE130B701B14D48200601160 /* Services */ = {
@@ -773,6 +801,7 @@
 		FAC950D91B10676900A89F9C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CE04B4061B18E94200C5ECD0 /* VenueMap */,
 				FADA92DA1B1089240094BAA2 /* VenuesList */,
 				FADF41431B11FF510083AE96 /* VenueDetails */,
 				CE38449F1B17607C00261D08 /* VenueReviews */,
@@ -828,6 +857,7 @@
 		FAC950E71B106ED200A89F9C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE04B40A1B18E95600C5ECD0 /* ViewController */,
 				CE4407371B162621000464D3 /* NavigationController */,
 				FADF41341B11E4400083AE96 /* TableViewCell */,
 				FADF41241B11D1B30083AE96 /* TableViewController */,
@@ -1088,6 +1118,11 @@
 				TargetAttributes = {
 					FAC950AD1B10666A00A89F9C = {
 						CreatedOnToolsVersion = 6.3.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FAC950C61B10666A00A89F9C = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -1227,6 +1262,7 @@
 				FAC950B71B10666A00A89F9C /* AppDelegate.m in Sources */,
 				CE4407071B15F445000464D3 /* CacheClient.m in Sources */,
 				FADA92EB1B10969E0094BAA2 /* Venue+Parsing.m in Sources */,
+				CE04B4091B18E94200C5ECD0 /* VenueMapViewController.m in Sources */,
 				FADA92E41B10928E0094BAA2 /* VenueCell.m in Sources */,
 				CE3844B41B17656400261D08 /* Review.m in Sources */,
 				FADA92BC1B107A170094BAA2 /* PresenterChangeItem.m in Sources */,
@@ -1249,6 +1285,7 @@
 				CE3053B81B15EE980063ED98 /* ServiceLayer.m in Sources */,
 				CE3053A91B15EBFD0063ED98 /* VenuesCacheClient.m in Sources */,
 				FADA92DD1B1089380094BAA2 /* VenuesListViewController.m in Sources */,
+				CE04B40D1B18E96100C5ECD0 /* ViewController.m in Sources */,
 				CE3053B51B15EE070063ED98 /* VenuesService.m in Sources */,
 				FADA92D91B1085530094BAA2 /* Venue.m in Sources */,
 				CE44072F1B160B81000464D3 /* BaseItem.m in Sources */,

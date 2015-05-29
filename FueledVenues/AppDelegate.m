@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "VenuesListViewController.h"
+#import "UIColor+FVColors.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,7 @@
 - (BOOL)          application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window.backgroundColor = [UIColor viewBackgroundColor];
     VenuesListViewController *listController = (VenuesListViewController *)[(UINavigationController *)self.window.rootViewController topViewController];
     listController.presenter = [VenuesPresenter new];
     [self.window makeKeyAndVisible];

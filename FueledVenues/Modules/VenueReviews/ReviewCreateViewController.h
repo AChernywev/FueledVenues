@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Alexandr Chernyshev. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 #import "Constants.h"
 
-@interface ReviewCreateViewController : UIViewController
+@interface ReviewCreateViewController : ViewController
 @property (nonatomic, strong) EntityIDType venueIdentifier;
 
 @end
