@@ -10,6 +10,7 @@
 
 #import "ServiceLayer.h"
 #import "SectionsPresenter+Protected.h"
+#import "Macroses.h"
 
 @interface HeaderItem : NSObject <HeaderFooterItemProtocol>
 @property (nonatomic, readwrite) NSString *title;
@@ -51,12 +52,12 @@
         MutableSectionItem *firstSection = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: myReviews]];
         if(myReviews.count) {
             firstSection.headerItem = [HeaderItem new];
-            ((HeaderItem*)firstSection.headerItem).title = @"My Reviews";
+            ((HeaderItem*)firstSection.headerItem).title = LOC(@"reviewscontroller.myreview");
         }
         MutableSectionItem *secondSection = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: otherReview]];
         if(otherReview.count) {
             secondSection.headerItem = [HeaderItem new];
-            ((HeaderItem*)secondSection.headerItem).title = @"Other Reviews";
+            ((HeaderItem*)secondSection.headerItem).title = LOC(@"reviewscontroller.otherreview");
         }
         [weakSelf updateSections: @[firstSection, secondSection]];
         if(completion) {

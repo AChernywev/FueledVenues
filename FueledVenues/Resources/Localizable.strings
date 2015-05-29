@@ -14,6 +14,7 @@
 //Venue
 "venue.opentitle"                               = "Open";
 "venue.closetitle"                              = "Close";
+"venue.unknowntier"                             = "Unknown";
 "venue.cheaptier"                               = "Cheap";
 "venue.economytier"                             = "Economy";
 "venue.expensivetier"                           = "Expensive";
@@ -23,6 +24,8 @@
 "venueslistcontroller.deletebutton"             = "Delete";
 
 "reviewscontroller.title"                       = "Reviews";
+"reviewscontroller.myreview"                    = "My reviews";
+"reviewscontroller.otherreview"                 = "Other reviews";
 
 "reviewcreatecontroller.title"                  = "Create Review";
 "reviewcreatecontroller.canceltitle"            = "Cancel";

@@ -35,6 +35,7 @@
                         <connections>
                             <outlet property="dataSource" destination="7Qy-m7-AAa" id="G90-Lo-sEG"/>
                             <outlet property="delegate" destination="7Qy-m7-AAa" id="S6f-Mb-vvr"/>
+                            <outlet property="placeholderView" destination="T2K-xK-bIr" id="u1B-aS-3en"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Afy-O7-UoW">
@@ -49,6 +50,13 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUz-Sa-KB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ooops. It seems like we have nothing to display." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T2K-xK-bIr" customClass="TitleLabel">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
             <point key="canvasLocation" x="894" y="-575"/>
         </scene>
@@ -84,6 +92,7 @@
                         <connections>
                             <outlet property="dataSource" destination="qHX-8U-Wfu" id="XHp-o0-SdP"/>
                             <outlet property="delegate" destination="qHX-8U-Wfu" id="XOV-Bz-o8z"/>
+                            <outlet property="placeholderView" destination="x9i-iU-csj" id="U2k-IW-CMi"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="Yto-9u-EOD">
@@ -95,6 +104,13 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TlR-YE-bCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ooops. It seems like we have nothing to display." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x9i-iU-csj" customClass="TitleLabel">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
             <point key="canvasLocation" x="2254" y="-575"/>
         </scene>

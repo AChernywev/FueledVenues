@@ -869,8 +869,8 @@
 		FAC950E81B106F2100A89F9C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CE04B41C1B19106500C5ECD0 /* Images.xcassets */,
 				FADF412F1B11E0BC0083AE96 /* Localizable.strings */,
+				CE04B41C1B19106500C5ECD0 /* Images.xcassets */,
 				FADA927D1B10701A0094BAA2 /* LaunchScreen.xib */,
 				FADA927E1B10701A0094BAA2 /* Main.storyboard */,
 			);

@@ -12,6 +12,7 @@
 
 typedef NS_ENUM(int32_t, PriceTier)
 {
+    PriceTierUnknown,
     PriceTierMinimum,
     PriceTierLow,
     PriceTierHight,

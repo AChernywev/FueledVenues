@@ -25,6 +25,10 @@
 - (NSString *)tierMessage
 {
     switch (self.tier) {
+        case PriceTierUnknown: {
+            return LOC(@"venue.unknowntier");
+        }
+            break;
         case PriceTierMinimum: {
             return LOC(@"venue.cheaptier");
         }
