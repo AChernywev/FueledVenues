@@ -95,11 +95,25 @@ const CGFloat kDynamicRowHeight = -1;
     return self.tableView.rowHeight;
 }
 
-- (CGFloat)headerFooterHeightForItem:(id)item
+- (CGFloat)headerHeightForItem:(id<HeaderFooterItemProtocol>)item
 {
     NSString* reuseIdentifier = [self.reuseIdentifierMatcher reuseIdentifierForItem:item];
-    UIView<HeaderFooterItemProtocol>* view = [self.tableView dequeueReusableHeaderFooterViewWithIdentifier:reuseIdentifier];
-    return view.bounds.size.height;
+    UIView<ViewItemProtocol>* view = self.prototypes[reuseIdentifier];
+    if (!view) {
+        view = [self.tableView dequeueReusableHeaderFooterViewWithIdentifier:reuseIdentifier];
+    }
+    return MAX(view.bounds.size.height, 0.01);
+    
+}
+
+- (CGFloat)footerHeightForItem:(id<HeaderFooterItemProtocol>)item
+{
+    NSString* reuseIdentifier = [self.reuseIdentifierMatcher reuseIdentifierForItem:item];
+    UIView<ViewItemProtocol>* view = self.prototypes[reuseIdentifier];
+    if (!view) {
+        view = [self.tableView dequeueReusableHeaderFooterViewWithIdentifier:reuseIdentifier];
+    }
+    return MAX(view.bounds.size.height, 0.01);
 }
 
 #pragma mark - setters/getters
@@ -162,11 +176,9 @@ const CGFloat kDynamicRowHeight = -1;
 {
     if ([self.presenter respondsToSelector:@selector(itemForHeaderInSection:)]) {
         id<HeaderFooterItemProtocol> item = [self.presenter itemForHeaderInSection:section];
-        if (item.hasView) {
-            return [self headerFooterHeightForItem:item];
-        }
+        return [self headerHeightForItem:item];
     }
-    return 0;
+    return 0.01;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -186,11 +198,9 @@ const CGFloat kDynamicRowHeight = -1;
 {
     if ([self.presenter respondsToSelector:@selector(itemForFooterInSection:)]) {
         id<HeaderFooterItemProtocol> item = [self.presenter itemForFooterInSection:section];
-        if (item.hasView) {
-            return [self headerFooterHeightForItem:item];
-        }
+        return [self footerHeightForItem:item];
     }
-    return 0;
+    return 0.01;
 }
 
 #pragma mark - UITableViewDataSource cells

@@ -12,6 +12,8 @@
 		CE04B4091B18E94200C5ECD0 /* VenueMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04B4081B18E94200C5ECD0 /* VenueMapViewController.m */; };
 		CE04B40D1B18E96100C5ECD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04B40C1B18E96100C5ECD0 /* ViewController.m */; };
 		CE04B40F1B18F1EE00C5ECD0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04B40E1B18F1EE00C5ECD0 /* MapKit.framework */; };
+		CE04B4191B19048300C5ECD0 /* VenueAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE04B4171B19048300C5ECD0 /* VenueAddressCell.xib */; };
+		CE04B41D1B19106500C5ECD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE04B41C1B19106500C5ECD0 /* Images.xcassets */; };
 		CE130B621B14CB7500601160 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = CE130B5F1B14CB7500601160 /* APIService.m */; };
 		CE2CE09C1B138F9800119639 /* NSDictionary+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE09B1B138F9800119639 /* NSDictionary+SafeParsing.m */; };
 		CE2CE0A01B1394E700119639 /* NSObject+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE09F1B1394E700119639 /* NSObject+SafeParsing.m */; };
@@ -55,7 +57,6 @@
 		FA826F4C1B10FAF40082B943 /* FVNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F4B1B10FAF40082B943 /* FVNavigationBar.m */; };
 		FAC950B71B10666A00A89F9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC950B61B10666A00A89F9C /* AppDelegate.m */; };
 		FAC950CE1B10666A00A89F9C /* FueledVenuesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC950CD1B10666A00A89F9C /* FueledVenuesTests.m */; };
-		FADA927F1B10701A0094BAA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADA927C1B10701A0094BAA2 /* Images.xcassets */; };
 		FADA92801B10701A0094BAA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADA927D1B10701A0094BAA2 /* LaunchScreen.xib */; };
 		FADA92811B10701A0094BAA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADA927E1B10701A0094BAA2 /* Main.storyboard */; };
 		FADA92861B1070300094BAA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA92841B1070300094BAA2 /* main.m */; };
@@ -96,7 +97,6 @@
 		FADF414D1B12519E0083AE96 /* VenueButtonsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF414B1B12519E0083AE96 /* VenueButtonsCell.m */; };
 		FADF414E1B12519E0083AE96 /* VenueButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADF414C1B12519E0083AE96 /* VenueButtonsCell.xib */; };
 		FADF41521B1253A30083AE96 /* VenueAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41501B1253A30083AE96 /* VenueAddressCell.m */; };
-		FADF41531B1253A30083AE96 /* VenueAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADF41511B1253A30083AE96 /* VenueAddressCell.xib */; };
 		FADF41571B125BC00083AE96 /* NSArray+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF41561B125BC00083AE96 /* NSArray+Map.m */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +120,8 @@
 		CE04B40B1B18E96100C5ECD0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CE04B40C1B18E96100C5ECD0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CE04B40E1B18F1EE00C5ECD0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CE04B4171B19048300C5ECD0 /* VenueAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueAddressCell.xib; sourceTree = "<group>"; };
+		CE04B41C1B19106500C5ECD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE130B5E1B14CB7500601160 /* APIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIService.h; sourceTree = "<group>"; };
 		CE130B5F1B14CB7500601160 /* APIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
 		CE2CE09A1B138F9800119639 /* NSDictionary+SafeParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeParsing.h"; sourceTree = "<group>"; };
@@ -210,7 +212,6 @@
 		FAC950CC1B10666A00A89F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC950CD1B10666A00A89F9C /* FueledVenuesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FueledVenuesTests.m; sourceTree = "<group>"; };
 		FAC950E31B106BD700A89F9C /* Macroses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macroses.h; sourceTree = "<group>"; };
-		FADA927C1B10701A0094BAA2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FADA927D1B10701A0094BAA2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		FADA927E1B10701A0094BAA2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FADA92831B1070300094BAA2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -295,7 +296,6 @@
 		FADF414C1B12519E0083AE96 /* VenueButtonsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueButtonsCell.xib; sourceTree = "<group>"; };
 		FADF414F1B1253A30083AE96 /* VenueAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueAddressCell.h; sourceTree = "<group>"; };
 		FADF41501B1253A30083AE96 /* VenueAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAddressCell.m; sourceTree = "<group>"; };
-		FADF41511B1253A30083AE96 /* VenueAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueAddressCell.xib; sourceTree = "<group>"; };
 		FADF41551B125BC00083AE96 /* NSArray+Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Map.h"; sourceTree = "<group>"; };
 		FADF41561B125BC00083AE96 /* NSArray+Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Map.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -489,7 +489,7 @@
 				FADF414C1B12519E0083AE96 /* VenueButtonsCell.xib */,
 				FADF414F1B1253A30083AE96 /* VenueAddressCell.h */,
 				FADF41501B1253A30083AE96 /* VenueAddressCell.m */,
-				FADF41511B1253A30083AE96 /* VenueAddressCell.xib */,
+				CE04B4171B19048300C5ECD0 /* VenueAddressCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -869,8 +869,8 @@
 		FAC950E81B106F2100A89F9C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE04B41C1B19106500C5ECD0 /* Images.xcassets */,
 				FADF412F1B11E0BC0083AE96 /* Localizable.strings */,
-				FADA927C1B10701A0094BAA2 /* Images.xcassets */,
 				FADA927D1B10701A0094BAA2 /* LaunchScreen.xib */,
 				FADA927E1B10701A0094BAA2 /* Main.storyboard */,
 			);
@@ -1154,12 +1154,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADF41301B11E0BC0083AE96 /* Localizable.strings in Resources */,
+				CE04B41D1B19106500C5ECD0 /* Images.xcassets in Resources */,
 				FADA92811B10701A0094BAA2 /* Main.storyboard in Resources */,
 				FADA92E51B10928E0094BAA2 /* VenueCell.xib in Resources */,
-				FADF41531B1253A30083AE96 /* VenueAddressCell.xib in Resources */,
 				FADA92801B10701A0094BAA2 /* LaunchScreen.xib in Resources */,
+				CE04B4191B19048300C5ECD0 /* VenueAddressCell.xib in Resources */,
 				CE3844A41B17607C00261D08 /* ReviewTableViewCell.xib in Resources */,
-				FADA927F1B10701A0094BAA2 /* Images.xcassets in Resources */,
 				FADF414E1B12519E0083AE96 /* VenueButtonsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

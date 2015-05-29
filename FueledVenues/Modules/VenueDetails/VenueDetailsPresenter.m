@@ -13,7 +13,7 @@
 #import "ServiceLayer.h"
 
 @interface VenueDetailsPresenter()
-@property (nonatomic, strong) Venue *venue;
+@property (nonatomic, readwrite) Venue *venue;
 
 @end
 
@@ -28,12 +28,6 @@
         _venue = venue;
     }
     return self;
-}
-
-#pragma mark - properties
-- (NSString *)title
-{
-    return self.venue.name;
 }
 
 #pragma mark - pubic methods

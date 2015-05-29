@@ -12,7 +12,7 @@
 #import "VenueContactItem.h"
 
 @interface VenueDetailsPresenter : MutableSectionsPresenter
-@property (nonatomic, readonly) NSString *title;
+@property (nonatomic, readonly) Venue *venue;
 
 - (instancetype)initWithVenue:(Venue *)venue;
 - (void)updateInfo;

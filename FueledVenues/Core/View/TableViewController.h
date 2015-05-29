@@ -37,5 +37,6 @@ extern const CGFloat kDynamicRowHeight;
               forItem:(id)item;
 
 - (CGFloat)rowHeightForItem:(id)item;
-- (CGFloat)headerFooterHeightForItem:(id<HeaderFooterItemProtocol>)item;
+- (CGFloat)headerHeightForItem:(id<HeaderFooterItemProtocol>)item;
+- (CGFloat)footerHeightForItem:(id<HeaderFooterItemProtocol>)item;
 @end

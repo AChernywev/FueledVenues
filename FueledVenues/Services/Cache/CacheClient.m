@@ -183,8 +183,6 @@
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
     if (!_persistentStoreCoordinator) {
-        
-        #warning CHECK THIS SHIT MZFCR!!!
         NSError *error = nil;
         NSDictionary *options = @{
                                   NSMigratePersistentStoresAutomaticallyOption : @(YES),

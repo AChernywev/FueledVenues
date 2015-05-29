@@ -75,7 +75,6 @@
 
 - (void)insertItem:(id)item atIndexPath:(NSIndexPath *)indexPath
 {
-    #warning maybe add here some else handlers
     if ([self canWorkWithSection:indexPath.section]) {
         id<MutableCollectionProtocol>section = (id<MutableCollectionProtocol>)[self sectionAtIndex:indexPath.section];
         [section insertObject:item atIndex:indexPath.item];
@@ -84,7 +83,6 @@
 
 - (void)removeItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    #warning maybe add here some else handlers
     if ([self canWorkWithSection:indexPath.section]) {
         id<MutableCollectionProtocol>section = (id<MutableCollectionProtocol>)[self sectionAtIndex:indexPath.section];
         [section removeObjectAtIndex:indexPath.item];

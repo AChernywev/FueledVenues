@@ -45,6 +45,7 @@
 {
     [super viewDidLoad];
     self.title = LOC(@"reviewscontroller.title");
+    self.tableView.backgroundView = [UIView new];
     self.view.backgroundColor = [UIColor viewBackgroundColor];
     
     [self registerNibForCellClass:[ReviewTableViewCell class] item:[Review class] reuseIdentifier:kReviewCellReuseIdentifier];
@@ -64,6 +65,21 @@
 - (CGFloat)rowHeightForItem:(id)item
 {
     return kDynamicRowHeight;
+}
+
+- (CGFloat)headerHeightForItem:(id<HeaderFooterItemProtocol>)item
+{
+    if(item) {
+        return 44.0;
+    }
+    else {
+        return 0.01f;
+    }
+}
+
+- (CGFloat)footerHeightForItem:(id<HeaderFooterItemProtocol>)item
+{
+    return 0.01;
 }
 
 #pragma mark - Segues transitions

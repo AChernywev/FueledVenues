@@ -15,6 +15,7 @@
 #import "VenueContactItem.h"
 #import "ReviewsTableViewController.h"
 #import "UIColor+FVColors.h"
+#import "VenueMapViewController.h"
 
 @implementation VenueDetailsViewController
 @dynamic presenter;
@@ -30,8 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = self.presenter.title;
+    self.title = self.presenter.venue.name;
     self.view.backgroundColor = [UIColor viewBackgroundColor];
+    
     [self registerNibForCellClass:[VenueCell class] item:[Venue class] reuseIdentifier:kVenueCellReuseIdentifier];
     [self registerNibForCellClass:[VenueButtonsCell class] item:[VenueContactItem class] reuseIdentifier:kVenueButtonsCellReuseIdentifier];
     [self registerNibForCellClass:[VenueAddressCell class] item:[NSString class] reuseIdentifier:kVenueAddressCellReuseIdentifier];
@@ -53,7 +55,12 @@
     }
 }
 
-#pragma mark - <> methods
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Aasd; ka;sdka;sdk a;d");
+}
+
+#pragma mark - <VenueButtonsCellDelegate> methods
 - (void)venueButtonsCellDidSelectMenu:(VenueButtonsCell *)cell
 {
     if([[UIApplication sharedApplication] canOpenURL:((VenueContactItem *)cell.item).menuURL]) {
@@ -88,6 +95,10 @@
         VenueButtonsCell *cell = (VenueButtonsCell *)sender;
         ReviewsViewPresenter *reviewsPresenter = [[ReviewsViewPresenter alloc]initWithVenueIdentifier:((VenueContactItem *)cell.item).venueIdentifier];
         detailsController.presenter = reviewsPresenter;
+    }
+    else if([segue.destinationViewController isKindOfClass:[VenueMapViewController class]]) {
+        VenueMapViewController *mapController = (VenueMapViewController *)segue.destinationViewController;
+        mapController.venues = @[self.presenter.venue];
     }
 }
 

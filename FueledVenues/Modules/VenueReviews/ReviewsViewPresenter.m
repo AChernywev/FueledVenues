@@ -11,6 +11,21 @@
 #import "ServiceLayer.h"
 #import "SectionsPresenter+Protected.h"
 
+@interface HeaderItem : NSObject <HeaderFooterItemProtocol>
+@property (nonatomic, readwrite) NSString *title;
+
+@end
+
+@implementation HeaderItem
+@synthesize title = _title;
+
+- (BOOL)hasView
+{
+    return NO;
+}
+
+@end
+
 @interface ReviewsViewPresenter()
 @property (nonatomic, readwrite) EntityIDType venueIdentifier;
 
@@ -34,7 +49,15 @@
     __weak typeof(self)weakSelf = self;
     [[ServiceLayer sharedDataProvider].venueService loadReviewsWithVenueIdentifier:self.venueIdentifier completion:^(NSArray *myReviews, NSArray *otherReview, NSError *error) {
         MutableSectionItem *firstSection = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: myReviews]];
+        if(myReviews.count) {
+            firstSection.headerItem = [HeaderItem new];
+            ((HeaderItem*)firstSection.headerItem).title = @"My Reviews";
+        }
         MutableSectionItem *secondSection = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: otherReview]];
+        if(otherReview.count) {
+            secondSection.headerItem = [HeaderItem new];
+            ((HeaderItem*)secondSection.headerItem).title = @"Other Reviews";
+        }
         [weakSelf updateSections: @[firstSection, secondSection]];
         if(completion) {
             completion(error);
