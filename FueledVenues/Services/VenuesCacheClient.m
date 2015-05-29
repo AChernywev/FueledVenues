@@ -71,7 +71,7 @@
 - (NSArray *)loadMyReviewsWithIdentifier:(EntityIDType)venueID
 {
     NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:NSStringFromClass([ReviewCache class])];
-    request.predicate = [NSPredicate predicateWithFormat:@"venueID==%@&&ownReview==YES",venueID];
+    request.predicate = [NSPredicate predicateWithFormat:@"venueID==%@ AND ownReview==YES",venueID];
     return [self reviewsWithFetchRequest:request];
 }
 
@@ -90,9 +90,25 @@
     [self.cacheClient saveDatabase];
 }
 
+- (Review *)createReviewWithVenueIdentifier:(EntityIDType)venueID
+                                       text:(NSString *)text
+{
+    ReviewCache *review = [self.cacheClient createObjectWithType:[ReviewCache class]];
+    review.identifier = [[NSUUID UUID] UUIDString];
+    review.ownReview = YES;
+    review.text = text;
+    review.venueID = venueID;
+    review.createdAt = [NSDate date];
+    review.user = nil;
+    [self.cacheClient saveDatabase];
+    
+    return [[Review alloc]initWithCache:review];
+}
+
 #pragma mark - working methods
 - (NSArray *)reviewsWithFetchRequest:(NSFetchRequest *)request
 {
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO]];
     NSArray *cachedReviews = [self.cacheClient getEntitiesWithRequest:request];
     NSArray *modelReview = [cachedReviews map:^Review *(ReviewCache * object) {
         return [[Review alloc]initWithCache:object];

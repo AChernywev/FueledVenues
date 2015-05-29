@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "Venue.h"
+#import "Review.h"
 
 @interface VenuesCacheClient : NSObject
 
@@ -20,4 +21,6 @@
 - (NSArray *)loadMyReviewsWithIdentifier:(EntityIDType)venueID;
 - (NSArray *)loadOtherReviewsWithIdentifier:(EntityIDType)venueID;
 - (void)storeReviews:(NSArray *)reviews;
+- (Review *)createReviewWithVenueIdentifier:(EntityIDType)venueID
+                                       text:(NSString *)text;
 @end

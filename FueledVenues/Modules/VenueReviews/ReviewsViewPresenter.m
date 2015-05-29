@@ -9,9 +9,10 @@
 #import "ReviewsViewPresenter.h"
 
 #import "ServiceLayer.h"
+#import "SectionsPresenter+Protected.h"
 
 @interface ReviewsViewPresenter()
-@property (nonatomic, copy) EntityIDType venueID;
+@property (nonatomic, readwrite) EntityIDType venueIdentifier;
 
 @end
 
@@ -22,7 +23,7 @@
 {
     self = [super init];
     if(self) {
-        _venueID = [venueIdentifier copy];
+        _venueIdentifier = [venueIdentifier copy];
     }
     return self;
 }
@@ -31,7 +32,7 @@
 - (void)loadReviewsWithCompletion:(void(^)(NSError *error))completion
 {
     __weak typeof(self)weakSelf = self;
-    [[ServiceLayer sharedDataProvider].venueService loadReviewsWithVenueIdentifier:self.venueID completion:^(NSArray *myReviews, NSArray *otherReview, NSError *error) {
+    [[ServiceLayer sharedDataProvider].venueService loadReviewsWithVenueIdentifier:self.venueIdentifier completion:^(NSArray *myReviews, NSArray *otherReview, NSError *error) {
         MutableSectionItem *firstSection = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: myReviews]];
         MutableSectionItem *secondSection = [[MutableSectionItem alloc]initWithRows:[NSMutableArray arrayWithArray: otherReview]];
         [weakSelf updateSections: @[firstSection, secondSection]];
@@ -39,5 +40,11 @@
             completion(error);
         }
     }];
+}
+
+- (void)addReview:(Review *)review
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
+    [self insertItem:review atIndexPath:indexPath];
 }
 @end

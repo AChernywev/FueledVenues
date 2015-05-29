@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     self.title = LOC(@"venueslistcontroller.title");
-    self.view.backgroundColor = RGBColor(249, 244, 227);
+    self.view.backgroundColor = [UIColor viewBackgroundColor];
     [self registerNibForCellClass:[VenueCell class] item:[Venue class] reuseIdentifier:kVenueCellReuseIdentifier];
     
     self.refreshControl = [[UIRefreshControl alloc]init];

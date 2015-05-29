@@ -14,18 +14,28 @@
 
 - (instancetype)initWithCache:(BaseCacheEntity *)cache
 {
-    return [self initWithIdentifier:cache.identifier];
+    if(cache) {
+        return [self initWithIdentifier:cache.identifier];
+    }
+    else {
+        return nil;
+    }
 }
 
 - (BaseCacheEntity *)fulfilledCacheWithClass:(Class)aClass client:(CacheClient *)cacheClient;
 {
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:NSStringFromClass([aClass class])];
-    request.predicate = [NSPredicate predicateWithFormat:@"identifier==%@",self.identifier];
-    BaseCacheEntity *cache = (BaseCacheEntity *)[cacheClient getEntityWithRequest:request];
-    if(!cache) {
-        cache = [cacheClient createObjectWithType:[aClass class]];
+    if(cacheClient) {
+        NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:NSStringFromClass([aClass class])];
+        request.predicate = [NSPredicate predicateWithFormat:@"identifier==%@",self.identifier];
+        BaseCacheEntity *cache = (BaseCacheEntity *)[cacheClient getEntityWithRequest:request];
+        if(!cache) {
+            cache = [cacheClient createObjectWithType:[aClass class]];
+        }
+        cache.identifier = self.identifier;
+        return cache;
     }
-    cache.identifier = self.identifier;
-    return cache;
+    else {
+        return nil;
+    }
 }
 @end

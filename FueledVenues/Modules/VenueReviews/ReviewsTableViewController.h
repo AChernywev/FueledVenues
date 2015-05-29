@@ -8,10 +8,12 @@
 
 #import "TableViewController.h"
 
+#import "Review.h"
 #import "ReviewsViewPresenter.h"
 
 @interface ReviewsTableViewController : TableViewController
 @property (nonatomic, strong) ReviewsViewPresenter *presenter;
 
 - (instancetype)initWithPresenter:(ReviewsViewPresenter *)presenter;
+- (void)addReview:(Review *)review;
 @end

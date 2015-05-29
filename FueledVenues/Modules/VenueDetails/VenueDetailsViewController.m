@@ -14,6 +14,7 @@
 #import "VenueAddressCell.h"
 #import "VenueContactItem.h"
 #import "ReviewsTableViewController.h"
+#import "UIColor+FVColors.h"
 
 @implementation VenueDetailsViewController
 @dynamic presenter;
@@ -30,7 +31,7 @@
 {
     [super viewDidLoad];
     self.title = self.presenter.title;
-    self.view.backgroundColor = RGBColor(249, 244, 227);
+    self.view.backgroundColor = [UIColor viewBackgroundColor];
     [self registerNibForCellClass:[VenueCell class] item:[Venue class] reuseIdentifier:kVenueCellReuseIdentifier];
     [self registerNibForCellClass:[VenueButtonsCell class] item:[VenueContactItem class] reuseIdentifier:kVenueButtonsCellReuseIdentifier];
     [self registerNibForCellClass:[VenueAddressCell class] item:[NSString class] reuseIdentifier:kVenueAddressCellReuseIdentifier];

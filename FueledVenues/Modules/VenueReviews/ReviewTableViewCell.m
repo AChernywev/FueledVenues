@@ -15,7 +15,8 @@
 #import "NSDateFormatter+Singleton.h"
 #import "UIColor+FVColors.h"
 
-NSString * kReviewCellReuseIdentifier = @"ReviewCellReuseIdentifier";
+static CGFloat const kDefaultUserViewHeight = 50.f;
+NSString const * kReviewCellReuseIdentifier = @"ReviewCellReuseIdentifier";
 
 @interface ReviewTableViewCell ()
 @property (nonatomic, weak) IBOutlet UIImageView *  userImageView;
@@ -23,6 +24,7 @@ NSString * kReviewCellReuseIdentifier = @"ReviewCellReuseIdentifier";
 @property (nonatomic, weak) IBOutlet UILabel *      dateLabel;
 @property (nonatomic, weak) IBOutlet UILabel *       reviewTextLabel;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *separatorHeight;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *userViewHeight;
 
 @end
 
@@ -36,12 +38,17 @@ NSString * kReviewCellReuseIdentifier = @"ReviewCellReuseIdentifier";
     self.userImageView.layer.masksToBounds = YES;
     self.dateLabel.textColor = [UIColor grayTextColor];
     self.separatorHeight.constant = 0.5;
+
+    self.reviewTextLabel.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - 20;
 }
 
 #pragma mark - properties
 - (void)setItem:(Review *)item
 {
     [super setItem:item];
+    
+    self.userViewHeight.constant = item.user ? kDefaultUserViewHeight : 0;
+
     [self.userImageView sd_setImageWithURL:[item.user.userPhoto urlWithSize:self.userImageView.bounds.size] placeholderImage:[UIImage imageNamed:@"default-avatar"]];
     RAC(self.reviewTextLabel, text) = [RACObserve(item, text) takeUntil:self.rac_prepareForReuseSignal];
     RAC(self.userNameLabel, text) = [RACObserve(item.user, userName) takeUntil:self.rac_prepareForReuseSignal];

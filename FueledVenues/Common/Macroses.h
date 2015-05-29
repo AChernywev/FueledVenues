@@ -7,6 +7,7 @@
 //
 
 #define NavigationController(root)  [[UINavigationController alloc]initWithRootViewController:root]
+#define ShowError(error)             [[[UIAlertView alloc]initWithTitle:nil message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show]
 
 #define RGBColor(R,G,B)             [UIColor colorWithRed:(R)/255.0f green:(G)/255.0f blue:(B)/255.0f alpha:1.0f]
 #define RGBAColor(R,G,B,A)          [UIColor colorWithRed:(R)/255.0f green:(G)/255.0f blue:(B)/255.0f alpha:(A)]

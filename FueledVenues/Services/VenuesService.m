@@ -81,6 +81,16 @@ static NSInteger  const kDefaultNumberOfVenues = 50;
     [self.cacheClient addToBlackList:venue];
 }
 
+- (void)createReviewWithVenueIdentifier:(EntityIDType)venueID
+                                   text:(NSString *)text
+                             completion:(void(^)(Review *review, NSError *error))completion
+{
+    Review *review = [self.cacheClient createReviewWithVenueIdentifier:venueID text:text];
+    if(completion) {
+        completion(review, nil);
+    }
+}
+
 #pragma mark - working methods
 - (void)finishWithVenues:(NSArray *)venues
                    error:(NSError *)error

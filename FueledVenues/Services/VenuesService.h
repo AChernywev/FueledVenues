@@ -17,4 +17,7 @@
 - (void)loadVenuesWithCompletion:(void(^)(NSArray *venues, NSError *error))completion;
 - (void)loadReviewsWithVenueIdentifier:(EntityIDType)venueID
                             completion:(void(^)(NSArray *myReviews, NSArray *otherReview, NSError *error))completion;
+- (void)createReviewWithVenueIdentifier:(EntityIDType)venueID
+                                   text:(NSString *)text
+                             completion:(void(^)(Review *review, NSError *error))completion;
 @end

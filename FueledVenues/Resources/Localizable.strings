@@ -23,3 +23,7 @@
 "venueslistcontroller.deletebutton"             = "Delete";
 
 "reviewscontroller.title"                       = "Reviews";
+
+"reviewcreatecontroller.title"                  = "Create Review";
+"reviewcreatecontroller.canceltitle"            = "Cancel";
+"reviewcreatecontroller.donetitle"              = "Done";

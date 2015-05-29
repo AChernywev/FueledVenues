@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB114FA02124C90E2E1EC1DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC345F8B1DDD5F1CC155D26 /* libPods.a */; };
+		CE04B4011B18D1E100C5ECD0 /* ReviewCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04B4001B18D1E100C5ECD0 /* ReviewCreateViewController.m */; };
 		CE130B621B14CB7500601160 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = CE130B5F1B14CB7500601160 /* APIService.m */; };
 		CE2CE09C1B138F9800119639 /* NSDictionary+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE09B1B138F9800119639 /* NSDictionary+SafeParsing.m */; };
 		CE2CE0A01B1394E700119639 /* NSObject+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CE09F1B1394E700119639 /* NSObject+SafeParsing.m */; };
@@ -43,6 +44,7 @@
 		CE44072C1B1604AF000464D3 /* PhotoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44072B1B1604AF000464D3 /* PhotoCache.m */; };
 		CE44072F1B160B81000464D3 /* BaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE44072E1B160B81000464D3 /* BaseItem.m */; };
 		CE44073A1B162638000464D3 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4407391B162638000464D3 /* NavigationController.m */; };
+		CE95426F1B18B44D00153C27 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95426E1B18B44D00153C27 /* NSObject+Swizzle.m */; };
 		FA826F361B10D3500082B943 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F351B10D3500082B943 /* RatingView.m */; };
 		FA826F3D1B10F74E0082B943 /* UIColor+FVColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3C1B10F74E0082B943 /* UIColor+FVColors.m */; };
 		FA826F401B10F8420082B943 /* UIFont+FVFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826F3F1B10F8420082B943 /* UIFont+FVFonts.m */; };
@@ -108,6 +110,8 @@
 /* Begin PBXFileReference section */
 		4DC345F8B1DDD5F1CC155D26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC432F46997FABFFF9157CA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CE04B3FF1B18D1E100C5ECD0 /* ReviewCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCreateViewController.h; sourceTree = "<group>"; };
+		CE04B4001B18D1E100C5ECD0 /* ReviewCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCreateViewController.m; sourceTree = "<group>"; };
 		CE130B5E1B14CB7500601160 /* APIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIService.h; sourceTree = "<group>"; };
 		CE130B5F1B14CB7500601160 /* APIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
 		CE2CE09A1B138F9800119639 /* NSDictionary+SafeParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeParsing.h"; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 		CE4407311B1611F5000464D3 /* BaseItem_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseItem_Protected.h; sourceTree = "<group>"; };
 		CE4407381B162638000464D3 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		CE4407391B162638000464D3 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		CE95426D1B18B44D00153C27 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		CE95426E1B18B44D00153C27 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
 		DCFDEC1D33375EB9363000B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA826F341B10D3500082B943 /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
 		FA826F351B10D3500082B943 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
@@ -378,6 +384,8 @@
 			children = (
 				CE2CE09E1B1394E700119639 /* NSObject+SafeParsing.h */,
 				CE2CE09F1B1394E700119639 /* NSObject+SafeParsing.m */,
+				CE95426D1B18B44D00153C27 /* NSObject+Swizzle.h */,
+				CE95426E1B18B44D00153C27 /* NSObject+Swizzle.m */,
 			);
 			name = NSObject;
 			sourceTree = "<group>";
@@ -538,6 +546,8 @@
 			children = (
 				CE3844A51B1761CA00261D08 /* ReviewsTableViewController.h */,
 				CE3844A61B1761CA00261D08 /* ReviewsTableViewController.m */,
+				CE04B3FF1B18D1E100C5ECD0 /* ReviewCreateViewController.h */,
+				CE04B4001B18D1E100C5ECD0 /* ReviewCreateViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1194,6 +1204,7 @@
 				CE3844BE1B1769A100261D08 /* User+Parsing.m in Sources */,
 				FADF41211B11D07F0083AE96 /* UIStoryboard+Links.m in Sources */,
 				FADF41461B11FF510083AE96 /* VenueDetailsViewController.m in Sources */,
+				CE04B4011B18D1E100C5ECD0 /* ReviewCreateViewController.m in Sources */,
 				FADA92C11B107A170094BAA2 /* PresenterChangeSectionDelete.m in Sources */,
 				FADA92861B1070300094BAA2 /* main.m in Sources */,
 				FADA92C21B107A170094BAA2 /* PresenterChangeSectionInsert.m in Sources */,
@@ -1231,6 +1242,7 @@
 				FA826F4C1B10FAF40082B943 /* FVNavigationBar.m in Sources */,
 				CE3099651B14A24C00678C6F /* NSDateFormatter+Singleton.m in Sources */,
 				FADA92BE1B107A170094BAA2 /* PresenterChangeItemInsert.m in Sources */,
+				CE95426F1B18B44D00153C27 /* NSObject+Swizzle.m in Sources */,
 				CE4407081B15F445000464D3 /* FueledVenues.xcdatamodeld in Sources */,
 				CE3844B11B17646C00261D08 /* BackgroundView.m in Sources */,
 				FADF413E1B11F6010083AE96 /* RatingStarView.m in Sources */,

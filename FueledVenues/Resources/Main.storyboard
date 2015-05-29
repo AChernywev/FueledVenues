@@ -67,11 +67,11 @@
             </objects>
             <point key="canvasLocation" x="1578" y="-575"/>
         </scene>
-        <!--Reviews Table View Controller-->
+        <!--Title-->
         <scene sceneID="7l4-eW-x3o">
             <objects>
                 <tableViewController id="qHX-8U-Wfu" customClass="ReviewsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OIe-fG-oBx" customClass="PlaceholderTableView">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="245" sectionHeaderHeight="22" sectionFooterHeight="22" id="OIe-fG-oBx" customClass="PlaceholderTableView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -80,10 +80,81 @@
                             <outlet property="delegate" destination="qHX-8U-Wfu" id="XOV-Bz-o8z"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="Yto-9u-EOD">
+                        <barButtonItem key="rightBarButtonItem" image="create_review" id="2Li-Xt-cS0">
+                            <connections>
+                                <segue destination="v4A-OY-2V8" kind="presentation" id="YfZ-ky-MTV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TlR-YE-bCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2254" y="-575"/>
         </scene>
+        <!--Review Create View Controller-->
+        <scene sceneID="hSy-DB-zKZ">
+            <objects>
+                <viewController id="v4A-OY-2V8" customClass="ReviewCreateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RYZ-Hh-7Ty"/>
+                        <viewControllerLayoutGuide type="bottom" id="tzk-ij-vTo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EBz-Jh-wgl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzZ-XU-kdw">
+                                <rect key="frame" x="0.0" y="74" width="600" height="526"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGP-sJ-yEO" customClass="FVNavigationBar">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="xWp-tF-Iyb"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="IJM-QK-eQa">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="Wec-Mn-FGy">
+                                            <connections>
+                                                <segue destination="pob-65-Gf6" kind="unwind" identifier="DismissSegue" unwindAction="dismissSegueAction:" id="2Ep-lb-7QZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="Ibv-hf-msk">
+                                            <connections>
+                                                <action selector="done:" destination="v4A-OY-2V8" id="D8q-fV-OUj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YGP-sJ-yEO" firstAttribute="top" secondItem="EBz-Jh-wgl" secondAttribute="top" id="206-p2-Wpi"/>
+                            <constraint firstItem="EzZ-XU-kdw" firstAttribute="top" secondItem="YGP-sJ-yEO" secondAttribute="bottom" constant="10" id="Df1-ES-YsV"/>
+                            <constraint firstItem="EzZ-XU-kdw" firstAttribute="leading" secondItem="EBz-Jh-wgl" secondAttribute="leading" id="G0Q-yK-xwZ"/>
+                            <constraint firstAttribute="trailing" secondItem="EzZ-XU-kdw" secondAttribute="trailing" id="cUL-rh-szS"/>
+                            <constraint firstItem="tzk-ij-vTo" firstAttribute="top" secondItem="EzZ-XU-kdw" secondAttribute="bottom" id="hfe-fE-svj"/>
+                            <constraint firstItem="YGP-sJ-yEO" firstAttribute="leading" secondItem="EBz-Jh-wgl" secondAttribute="leading" id="kis-OE-ZuI"/>
+                            <constraint firstAttribute="trailing" secondItem="YGP-sJ-yEO" secondAttribute="trailing" id="qhI-sI-4Se"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customItem" destination="IJM-QK-eQa" id="49p-bj-qaK"/>
+                        <outlet property="textView" destination="EzZ-XU-kdw" id="tTo-3W-jEL"/>
+                        <outlet property="textViewBottomConstraint" destination="hfe-fE-svj" id="LgX-Ux-xx8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8q-DZ-UKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pob-65-Gf6" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2254" y="127"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="create_review" width="30" height="30"/>
+    </resources>
 </document>
