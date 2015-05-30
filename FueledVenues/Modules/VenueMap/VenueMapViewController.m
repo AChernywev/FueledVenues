@@ -58,7 +58,7 @@
 #pragma mark - working methods
 - (void)requestUserPermission
 {
-    if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+    if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0") && [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
         self.locationManager = [[CLLocationManager alloc]init];
         self.locationManager.delegate = self;
         [self.locationManager requestWhenInUseAuthorization];
