@@ -20,14 +20,6 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - DACircularProgress (2.3.1)
-  - MBProgressHUD (0.9.1)
-  - MWPhotoBrowser (1.4.1):
-    - DACircularProgress
-    - MBProgressHUD (~> 0.8)
-    - PSTCollectionView (~> 1.2)
-    - SDWebImage (~> 3.7)
-  - PSTCollectionView (1.2.3)
   - ReactiveCocoa (2.4.7):
     - ReactiveCocoa/UI (= 2.4.7)
   - ReactiveCocoa/Core (2.4.7):
@@ -42,18 +34,14 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - MWPhotoBrowser
   - ReactiveCocoa (= 2.4.7)
+  - SDWebImage
   - SWTableViewCell
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
-  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  MWPhotoBrowser: 2531e682860d62b8a7ba8659de02eb9040e431e5
-  PSTCollectionView: 6749df92885353521f55279a7ce2b293762e2be4
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 
-COCOAPODS: 0.37.1
+COCOAPODS: 0.37.2

@@ -40,11 +40,11 @@
                         <rect key="frame" x="8" y="152" width="304" height="61"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRv-ST-yH6" customClass="RatingView">
-                                <rect key="frame" x="8" y="5" width="160" height="30"/>
+                                <rect key="frame" x="8" y="10" width="160" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="9fI-Dz-clV"/>
-                                    <constraint firstAttribute="height" constant="30" id="FrG-aa-itv"/>
+                                    <constraint firstAttribute="height" constant="20" id="FrG-aa-itv"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="numberOfStars">
@@ -182,12 +182,12 @@
                             <constraint firstItem="8IO-Ko-nAe" firstAttribute="width" secondItem="bK6-Wz-kR0" secondAttribute="width" constant="-20" id="5Gx-mZ-dSb"/>
                             <constraint firstItem="8IO-Ko-nAe" firstAttribute="width" secondItem="CwQ-Z1-AhO" secondAttribute="width" id="QB5-6x-ul9"/>
                             <constraint firstItem="bK6-Wz-kR0" firstAttribute="top" secondItem="8IO-Ko-nAe" secondAttribute="top" id="SXH-Nw-SKW"/>
-                            <constraint firstItem="bK6-Wz-kR0" firstAttribute="top" secondItem="KRv-ST-yH6" secondAttribute="bottom" id="XHp-jh-N1e"/>
+                            <constraint firstItem="bK6-Wz-kR0" firstAttribute="top" secondItem="KRv-ST-yH6" secondAttribute="bottom" constant="5" id="XHp-jh-N1e"/>
                             <constraint firstItem="CwQ-Z1-AhO" firstAttribute="leading" secondItem="J1Q-ts-GJf" secondAttribute="leading" constant="8" id="aVN-x5-sDN"/>
                             <constraint firstItem="bK6-Wz-kR0" firstAttribute="bottom" secondItem="8IO-Ko-nAe" secondAttribute="bottom" id="beZ-iT-ixs"/>
                             <constraint firstItem="bK6-Wz-kR0" firstAttribute="leading" secondItem="CwQ-Z1-AhO" secondAttribute="trailing" constant="8" id="fZp-KV-y6V"/>
                             <constraint firstItem="bK6-Wz-kR0" firstAttribute="bottom" secondItem="CwQ-Z1-AhO" secondAttribute="bottom" id="mWm-eo-mXk"/>
-                            <constraint firstItem="KRv-ST-yH6" firstAttribute="top" secondItem="J1Q-ts-GJf" secondAttribute="top" constant="5" id="o80-EP-nfp"/>
+                            <constraint firstItem="KRv-ST-yH6" firstAttribute="top" secondItem="J1Q-ts-GJf" secondAttribute="top" constant="10" id="o80-EP-nfp"/>
                             <constraint firstItem="bK6-Wz-kR0" firstAttribute="top" secondItem="CwQ-Z1-AhO" secondAttribute="top" id="vVO-Nd-IoH"/>
                             <constraint firstItem="8IO-Ko-nAe" firstAttribute="leading" secondItem="bK6-Wz-kR0" secondAttribute="trailing" constant="8" id="wwm-a3-42M"/>
                             <constraint firstAttribute="trailing" secondItem="8IO-Ko-nAe" secondAttribute="trailing" constant="8" id="xGl-kp-IAu"/>
@@ -224,7 +224,7 @@
                 <outlet property="shadowView" destination="boN-gM-ep4" id="LRW-cQ-59l"/>
                 <outlet property="venueImageView" destination="nkz-6a-tm8" id="QYG-VK-NQg"/>
             </connections>
-            <point key="canvasLocation" x="298" y="232"/>
+            <point key="canvasLocation" x="123" y="194"/>
         </tableViewCell>
     </objects>
     <resources>

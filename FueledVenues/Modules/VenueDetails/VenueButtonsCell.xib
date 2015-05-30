@@ -15,10 +15,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7V-oA-zcW">
-                        <rect key="frame" x="10" y="15" width="68" height="60"/>
+                        <rect key="frame" x="5" y="15" width="70" height="60"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-Kr-baf">
-                                <rect key="frame" x="4" y="0.0" width="60" height="60"/>
+                                <rect key="frame" x="5" y="0.0" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mH1-Kr-baf" secondAttribute="height" multiplier="1:1" id="MZ0-9A-sFU"/>
                                 </constraints>
@@ -47,10 +47,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjC-f3-vMt">
-                        <rect key="frame" x="88" y="15" width="67" height="60"/>
+                        <rect key="frame" x="85" y="15" width="70" height="60"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fp3-7C-iWd">
-                                <rect key="frame" x="3" y="0.0" width="60" height="60"/>
+                                <rect key="frame" x="5" y="0.0" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fp3-7C-iWd" secondAttribute="height" multiplier="1:1" id="Wod-NO-nQx"/>
                                 </constraints>
@@ -79,10 +79,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UbV-xm-zdQ">
-                        <rect key="frame" x="165" y="15" width="68" height="60"/>
+                        <rect key="frame" x="165" y="15" width="70" height="60"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbe-uo-m86">
-                                <rect key="frame" x="4" y="0.0" width="60" height="60"/>
+                                <rect key="frame" x="5" y="0.0" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zbe-uo-m86" secondAttribute="height" multiplier="1:1" id="qvb-Gj-g53"/>
                                 </constraints>
@@ -111,10 +111,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWF-uI-hrS">
-                        <rect key="frame" x="243" y="15" width="67" height="60"/>
+                        <rect key="frame" x="245" y="15" width="70" height="60"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q66-ep-L80">
-                                <rect key="frame" x="3" y="0.0" width="60" height="60"/>
+                                <rect key="frame" x="5" y="0.0" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="q66-ep-L80" secondAttribute="height" multiplier="1:1" id="8J3-kA-UxT"/>
                                 </constraints>
@@ -141,6 +141,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="q66-ep-L80" secondAttribute="bottom" id="DfF-pB-Rww"/>
                             <constraint firstAttribute="height" constant="60" id="RW6-Ef-mqs"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="gxu-bM-EcI"/>
                             <constraint firstAttribute="centerX" secondItem="q66-ep-L80" secondAttribute="centerX" id="t2g-tx-hJz"/>
                             <constraint firstItem="q66-ep-L80" firstAttribute="top" secondItem="SWF-uI-hrS" secondAttribute="top" id="y0V-Oe-N3R"/>
                         </constraints>
@@ -149,17 +150,19 @@
                 <constraints>
                     <constraint firstItem="SWF-uI-hrS" firstAttribute="width" secondItem="UbV-xm-zdQ" secondAttribute="width" id="1Oh-VS-Ba8"/>
                     <constraint firstItem="SWF-uI-hrS" firstAttribute="width" secondItem="L7V-oA-zcW" secondAttribute="width" id="5Qz-yd-eoH"/>
-                    <constraint firstItem="L7V-oA-zcW" firstAttribute="leading" secondItem="p76-n6-wDC" secondAttribute="leading" constant="10" id="FIg-9n-B8G"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SWF-uI-hrS" secondAttribute="trailing" constant="5" id="EfN-gO-OLx"/>
+                    <constraint firstItem="L7V-oA-zcW" firstAttribute="leading" secondItem="p76-n6-wDC" secondAttribute="leading" priority="250" constant="10" id="FIg-9n-B8G"/>
                     <constraint firstAttribute="bottom" secondItem="UbV-xm-zdQ" secondAttribute="bottom" constant="15" id="G3b-Pc-Yin"/>
                     <constraint firstItem="SWF-uI-hrS" firstAttribute="width" secondItem="LjC-f3-vMt" secondAttribute="width" id="HGR-Oq-xY4"/>
                     <constraint firstAttribute="centerY" secondItem="SWF-uI-hrS" secondAttribute="centerY" id="KSD-Wx-Hsh"/>
                     <constraint firstItem="SWF-uI-hrS" firstAttribute="centerY" secondItem="L7V-oA-zcW" secondAttribute="centerY" id="QAh-ad-5Ec"/>
+                    <constraint firstItem="L7V-oA-zcW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="p76-n6-wDC" secondAttribute="leading" constant="5" id="QpX-ee-7oZ"/>
                     <constraint firstItem="UbV-xm-zdQ" firstAttribute="leading" secondItem="LjC-f3-vMt" secondAttribute="trailing" constant="10" id="Wdh-QO-kKw"/>
                     <constraint firstItem="SWF-uI-hrS" firstAttribute="leading" secondItem="UbV-xm-zdQ" secondAttribute="trailing" constant="10" id="ZCP-MK-zFN"/>
                     <constraint firstItem="LjC-f3-vMt" firstAttribute="leading" secondItem="L7V-oA-zcW" secondAttribute="trailing" constant="10" id="ain-Du-XF3"/>
                     <constraint firstItem="SWF-uI-hrS" firstAttribute="centerY" secondItem="UbV-xm-zdQ" secondAttribute="centerY" id="dEm-Ql-apB"/>
                     <constraint firstItem="SWF-uI-hrS" firstAttribute="centerY" secondItem="LjC-f3-vMt" secondAttribute="centerY" id="dcW-d8-be5"/>
-                    <constraint firstAttribute="trailing" secondItem="SWF-uI-hrS" secondAttribute="trailing" constant="10" id="ukB-JG-J9K"/>
+                    <constraint firstAttribute="trailing" secondItem="SWF-uI-hrS" secondAttribute="trailing" priority="250" constant="10" id="ukB-JG-J9K"/>
                     <constraint firstItem="UbV-xm-zdQ" firstAttribute="top" secondItem="p76-n6-wDC" secondAttribute="top" constant="15" id="ySw-0j-IVJ"/>
                 </constraints>
             </tableViewCellContentView>
@@ -170,7 +173,7 @@
                 <outlet property="reviewsButton" destination="q66-ep-L80" id="PKU-HK-xZW"/>
                 <outlet property="webButton" destination="fp3-7C-iWd" id="gyG-d7-c6T"/>
             </connections>
-            <point key="canvasLocation" x="211" y="-97.5"/>
+            <point key="canvasLocation" x="22" y="-8.5"/>
         </tableViewCell>
     </objects>
     <resources>
